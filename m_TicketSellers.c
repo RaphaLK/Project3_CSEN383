@@ -27,12 +27,45 @@
 #define HOUR 60 
 #define NUM_SEATS 100
 
-int time = 0;
+pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+
+int done = 0;
+pthread_cond_t all_done = PTHREAD_COND_INITIALIZER;
+
+int minute = 0;
 typedef struct statistics {
   float averageResponseTime;
   float averageTurnaroundTime;
   float averageThroughput;
 } statistics;
+
+void* sell(void *s_t) {
+  pthread_mutex_lock(&mutex);
+  done++;
+  if (done == 10) {
+    pthread_cond_signal(&all_done);
+  }
+  pthread_cond_wait(&cond, &mutex);
+
+  pthread_mutex_unlock(&mutex);
+  printf("%s\n", (char*) s_t);
+
+  return NULL;
+}
+
+void wakeup_all_seller_threads() {
+  pthread_mutex_lock(&mutex);
+
+  /* Ensure that all threads are waiting */
+  while (done < 10) {
+    pthread_cond_wait(&all_done, &mutex);
+  }
+  done = 0;
+
+  pthread_cond_broadcast(&cond);
+  pthread_mutex_unlock(&mutex);
+}
 
 int main(int argc, char *argv[])
 {
@@ -42,5 +75,27 @@ int main(int argc, char *argv[])
     return -1;
   }
 
+  int i;
+  pthread_t tids[10];
+  char *seller_type;
+
+  seller_type = "H";
+  pthread_create(&tids[0], NULL, sell, seller_type);
+
+  seller_type = "M";
+  for (i = 1; i < 4; i++) {
+    pthread_create(&tids[i], NULL, sell, seller_type);
+  }
+
+  seller_type = "L";
+  for (i = 4; i < 10; i++) {
+    pthread_create(&tids[i], NULL, sell, seller_type);
+  }
+
+  wakeup_all_seller_threads();
+
+  for (i = 0; i < 10; i++) {
+    pthread_join(tids[i], NULL);
+  }
 
 }
