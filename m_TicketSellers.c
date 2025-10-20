@@ -43,6 +43,9 @@ pthread_mutex_t time_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t minute_cond = PTHREAD_COND_INITIALIZER;
 int minute = 0;
 
+// Track number of sellers currently in the middle of a sale
+int active_sales = 0;
+
 int customer_id = 0;
 typedef struct customer
 {
@@ -99,12 +102,17 @@ seat_cursor h_cursor = {0, 0}; // H sellers: rows 0->9
 seat_cursor m_cursor = {0, 0}; // M sellers: rows 4,5,3,6,2,7,1,8,0,9 (shared by 3 sellers)
 seat_cursor l_cursor = {0, 0}; // L sellers: rows 9->0 (shared by 6 sellers)
 
+pthread_mutex_t h_cursor_mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t m_cursor_mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t l_cursor_mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t seat_assignment_mutex = PTHREAD_MUTEX_INITIALIZER; // For atomic seat assignment only
+
 pthread_mutex_t seats_mutex = PTHREAD_MUTEX_INITIALIZER; // Protects seat array AND cursors
 seat *all_seats[ROWS][SEATS_PER_ROW];
 
 void init_seats()
 {
-  int seat_number = 0;
+  int seat_number = 1;
   for (int r = 0; r < ROWS; r++)
   {
     for (int s = 0; s < SEATS_PER_ROW; s++)
@@ -226,13 +234,22 @@ void init_sellers()
 }
 
 /**
- * Assign seat to customer after checking availability
+ * Atomically assign a seat if available
+ * Returns seat number on success, -1 if already taken
  */
-int assign_seat(int row, int seat, customer *customer)
+int try_assign_seat(int row, int seat, customer *customer)
 {
-  all_seats[row][seat]->customer_id = customer->id;
-  available_seats--;
-  return all_seats[row][seat]->seat_number;
+  pthread_mutex_lock(&seat_assignment_mutex);
+  if (all_seats[row][seat]->customer_id == -1)
+  {
+    all_seats[row][seat]->customer_id = customer->id;
+    available_seats--;
+    int seat_number = all_seats[row][seat]->seat_number;
+    pthread_mutex_unlock(&seat_assignment_mutex);
+    return seat_number;
+  }
+  pthread_mutex_unlock(&seat_assignment_mutex);
+  return -1;
 }
 
 /**
@@ -257,28 +274,30 @@ void update_cursor(seat_cursor *cursor, int current_row_index, int current_seat)
  */
 int h_assign_seats(customer *customer)
 {
-  pthread_mutex_lock(&seats_mutex);
-  if (available_seats > 0)
-  {
-    // Start from cursor position
-    for (int r = h_cursor.row_index; r < ROWS; r++)
-    {
-      int start_seat = (r == h_cursor.row_index) ? h_cursor.seat_index : 0;
-      for (int s = start_seat; s < SEATS_PER_ROW; s++)
-      {
-        if (all_seats[r][s]->customer_id == -1)
-        {
-          int seat_number = assign_seat(r, s, customer);
-          update_cursor(&h_cursor, r, s);
+  pthread_mutex_lock(&h_cursor_mutex);
+  int start_row = h_cursor.row_index;
+  int start_seat = h_cursor.seat_index;
+  pthread_mutex_unlock(&h_cursor_mutex);
 
-          pthread_mutex_unlock(&seats_mutex);
-          return seat_number;
-        }
+  if (available_seats <= 0) return -1;
+
+  // Scan from cursor position
+  for (int i = start_row; i < ROWS; i++)
+  {
+    int s_start = (i == start_row) ? start_seat : 0;
+    for (int s = s_start; s < SEATS_PER_ROW; s++)
+    {
+      int seat_number = try_assign_seat(i, s, customer);
+      if (seat_number != -1)
+      {
+        // Update cursor after successful assignment
+        pthread_mutex_lock(&h_cursor_mutex);
+        update_cursor(&h_cursor, i, s);
+        pthread_mutex_unlock(&h_cursor_mutex);
+        return seat_number;
       }
     }
   }
-
-  pthread_mutex_unlock(&seats_mutex);
   return -1;
 }
 
@@ -288,30 +307,31 @@ int h_assign_seats(customer *customer)
 int m_assign_seats(customer *customer)
 {
   static const int order[ROWS] = {4, 5, 3, 6, 2, 7, 1, 8, 0, 9};
-  pthread_mutex_lock(&seats_mutex);
-  if (available_seats > 0)
+  
+  pthread_mutex_lock(&m_cursor_mutex);
+  int start_idx = m_cursor.row_index;
+  int start_seat = m_cursor.seat_index;
+  pthread_mutex_unlock(&m_cursor_mutex);
+
+  if (available_seats <= 0) return -1;
+
+  for (int i = start_idx; i < ROWS; i++)
   {
-    // Start from cursor position
-    for (int i = m_cursor.row_index; i < ROWS; i++)
+    int r = order[i];
+    int s_start = (i == start_idx) ? start_seat : 0;
+    
+    for (int s = s_start; s < SEATS_PER_ROW; s++)
     {
-      int r = order[i]; // Map i to actual index of the row to scan
-      int start_seat = (i == m_cursor.row_index) ? m_cursor.seat_index : 0;
-
-      for (int s = start_seat; s < SEATS_PER_ROW; s++)
+      int seat_number = try_assign_seat(r, s, customer);
+      if (seat_number != -1)
       {
-        if (all_seats[r][s]->customer_id == -1)
-        {
-          int seat_number = assign_seat(r, s, customer);
-          update_cursor(&m_cursor, i, s);
-
-          pthread_mutex_unlock(&seats_mutex);
-          return seat_number;
-        }
+        pthread_mutex_lock(&m_cursor_mutex);
+        update_cursor(&m_cursor, i, s);
+        pthread_mutex_unlock(&m_cursor_mutex);
+        return seat_number;
       }
     }
   }
-
-  pthread_mutex_unlock(&seats_mutex);
   return -1;
 }
 
@@ -320,29 +340,30 @@ int m_assign_seats(customer *customer)
  */
 int l_assign_seats(customer *customer)
 {
-  pthread_mutex_lock(&seats_mutex);
-  if (available_seats > 0)
-  {
-    // Start from cursor position
-    for (int i = l_cursor.row_index; i < ROWS; i++)
-    {
-      int r = ROWS - 1 - i; // Map i to actual index of the row to scan
-      int start_seat = (i == l_cursor.row_index) ? l_cursor.seat_index : 0;
-      for (int s = start_seat; s < SEATS_PER_ROW; s++)
-      {
-        if (all_seats[r][s]->customer_id == -1)
-        {
-          int seat_number = assign_seat(r, s, customer);
-          update_cursor(&l_cursor, i, s);
+  pthread_mutex_lock(&l_cursor_mutex);
+  int start_idx = l_cursor.row_index;
+  int start_seat = l_cursor.seat_index;
+  pthread_mutex_unlock(&l_cursor_mutex);
 
-          pthread_mutex_unlock(&seats_mutex);
-          return seat_number;
-        }
+  if (available_seats <= 0) return -1;
+
+  for (int i = start_idx; i < ROWS; i++)
+  {
+    int r = ROWS - 1 - i;
+    int s_start = (i == start_idx) ? start_seat : 0;
+    
+    for (int s = s_start; s < SEATS_PER_ROW; s++)
+    {
+      int seat_number = try_assign_seat(r, s, customer);
+      if (seat_number != -1)
+      {
+        pthread_mutex_lock(&l_cursor_mutex);
+        update_cursor(&l_cursor, i, s);
+        pthread_mutex_unlock(&l_cursor_mutex);
+        return seat_number;
       }
     }
   }
-
-  pthread_mutex_unlock(&seats_mutex);
   return -1;
 }
 
@@ -394,26 +415,30 @@ void *sell(void *p_seller)
   while (minute < HOUR)
   {
     customer *curr_customer = dequeue(curr_queue);
-    int start_time = minute;
     if (curr_customer != NULL)
     {
+      int start_time = minute; // Record start time AFTER dequeuing
       int seat_number = assign_by_seller_type(curr_customer, curr_seller);
 
       if (seat_number != -1)
       {
-        printf("at %d: Seller %s sells a ticket to: %d assigned to seat %d\n", minute, curr_seller->s_id, curr_customer->id, seat_number);
         int sell_time = get_sell_times(curr_seller->seller_type);
 
-        for (int i = 0; i < sell_time; i++)
+        // Mark sale in progress and wait until the sale completes
+        pthread_mutex_lock(&time_mutex);
+        int deadline = start_time + sell_time;  // complete at this minute
+        active_sales++;
+        while (minute < deadline)
         {
-          pthread_mutex_lock(&time_mutex);
-          // let them sell beyond 1 hour
-          while (minute < start_time + i + 1 && minute < HOUR)
-          {
-            pthread_cond_wait(&minute_cond, &time_mutex);
-          }
-          pthread_mutex_unlock(&time_mutex);
+          pthread_cond_wait(&minute_cond, &time_mutex);
         }
+        active_sales--;
+        pthread_mutex_unlock(&time_mutex);
+
+        printf("at %d: Seller %s sells a ticket to: %d assigned to seat %d\n",
+               minute, curr_seller->s_id, curr_customer->id, seat_number);
+
+        
       }
       else
       {
@@ -435,45 +460,23 @@ void *sell(void *p_seller)
 
 void *sell_clock()
 {
-  while (minute < HOUR)
+  while(1)
   {
     sleep(1);
+
     pthread_mutex_lock(&time_mutex);
     minute++;
     pthread_cond_broadcast(&minute_cond);
+
+    // Stop ticking only after the hour has ended AND no sales are in progress
+    int should_stop = (minute >= HOUR && active_sales == 0);
     pthread_mutex_unlock(&time_mutex);
 
-    // Check if all queues are empty
-    int empty_check = 1;
-    pthread_mutex_lock(&h_price->q_lock);
-    if (h_price->size > 0) empty_check = 0;
-    pthread_mutex_unlock(&h_price->q_lock);
-    
-    for (int i = 0; i < 3 && empty_check; i++) {
-      pthread_mutex_lock(&m_price[i]->q_lock);
-      if (m_price[i]->size > 0) empty_check = 0;
-      pthread_mutex_unlock(&m_price[i]->q_lock);
-    }
-    
-    for (int i = 0; i < 6 && empty_check; i++) {
-      pthread_mutex_lock(&l_price[i]->q_lock);
-      if (l_price[i]->size > 0) empty_check = 0;
-      pthread_mutex_unlock(&l_price[i]->q_lock);
-    }
-    
-    // Check da arrival queue
-    pthread_mutex_lock(&arrival_list_mutex);
-    if (customer_arrival_list != NULL) empty_check = 0;
-    pthread_mutex_unlock(&arrival_list_mutex);
-    
-    if (empty_check) {
-      pthread_mutex_lock(&time_mutex);
-      minute = HOUR; // Set the time to max to turn off the program automatically.
-      pthread_cond_broadcast(&minute_cond);
-      pthread_mutex_unlock(&time_mutex);
+    if (should_stop)
       break;
-    }
   }
+
+  // Wake any remaining waiters so threads can exit cleanly
   pthread_mutex_lock(&time_mutex);
   pthread_cond_broadcast(&minute_cond);
   pthread_mutex_unlock(&time_mutex);
