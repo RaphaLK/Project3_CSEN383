@@ -26,6 +26,8 @@
 
 #define HOUR 60
 #define NUM_SEATS 100
+#define ROWS 10
+#define SEATS_PER_ROW 10
 
 pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -68,6 +70,29 @@ typedef struct statistics
   float averageTurnaroundTime;
   float averageThroughput;
 } statistics;
+
+typedef struct seat 
+{
+  int seat_number;
+  int customer_id;
+} seat;
+
+pthread_mutex_t seats_mutex = PTHREAD_MUTEX_INITIALIZER;
+seat *all_seats[ROWS][SEATS_PER_ROW];
+
+void init_seats() 
+{
+  int seat_number = 0;
+  for (int r = 0; r < ROWS; r++)
+  {
+    for (int s = 0; s < SEATS_PER_ROW; s++) {
+      all_seats[r][s] = malloc(sizeof(seat));
+      all_seats[r][s]->seat_number = seat_number;
+      all_seats[r][s]->customer_id = -1;
+      seat_number++;
+    }
+  }
+}
 
 // We need the aggregate response time, turnaround, and throughput for each type of seller later.
 queue *h_price;
@@ -180,6 +205,80 @@ void init_sellers()
   }
 }
 
+int h_assign_seats(customer *customer) {
+  // start at 1st row and move up the rows (rows 0..9), seats left-to-right
+  pthread_mutex_lock(&seats_mutex);
+  if (available_seats > 0) {
+    for (int r = 0; r < ROWS; r++) {
+      for (int s = 0; s < SEATS_PER_ROW; s++) {
+        if (all_seats[r][s]->customer_id == -1) {
+          all_seats[r][s]->customer_id = customer->id;
+          available_seats--;
+          int seat_number = all_seats[r][s]->seat_number;
+          pthread_mutex_unlock(&seats_mutex);
+          return seat_number;
+        }
+      }
+    }
+  }
+  pthread_mutex_unlock(&seats_mutex);
+  return -1;
+}
+
+int m_assign_seats(customer *customer) {
+  // start at 5th row then 6th, 4th, 7th, 3rd, 8th, 2nd, 9th, 1st, 10th (0-indexed: 4,5,3,6,2,7,1,8,0,9)
+  static const int order[ROWS] = {4,5,3,6,2,7,1,8,0,9};
+  pthread_mutex_lock(&seats_mutex);
+  if (available_seats > 0) {
+    for (int i = 0; i < ROWS; i++) {
+      int r = order[i];
+      for (int s = 0; s < SEATS_PER_ROW; s++) {
+        if (all_seats[r][s]->customer_id == -1) {
+          all_seats[r][s]->customer_id = customer->id;
+          available_seats--;
+          int sn = all_seats[r][s]->seat_number;
+          pthread_mutex_unlock(&seats_mutex);
+          return sn;
+        }
+      }
+    }
+  }
+  pthread_mutex_unlock(&seats_mutex);
+  return -1;
+}
+
+int l_assign_seats(customer *customer) {
+  // start at row 10 and move down the rows (rows 9..0), seats left-to-right
+  pthread_mutex_lock(&seats_mutex);
+  if (available_seats > 0) {
+    for (int r = ROWS - 1; r >= 0; r--) {
+      for (int s = 0; s < SEATS_PER_ROW; s++) {
+        if (all_seats[r][s]->customer_id == -1) {
+          all_seats[r][s]->customer_id = customer->id;
+          available_seats--;
+          int sn = all_seats[r][s]->seat_number;
+          pthread_mutex_unlock(&seats_mutex);
+          return sn;
+        }
+      }
+    }
+  }
+  pthread_mutex_unlock(&seats_mutex);
+  return -1;
+}
+
+int assign_seats(customer *customer, seller *seller) {
+  // Seat assignment helpers
+  switch (seller->seller_type) {
+    case 0:
+      return h_assign_seats(customer);
+    case 1:
+      return m_assign_seats(customer);
+    default:
+      return l_assign_seats(customer);
+  }
+}
+
 void *sell(void *p_seller)
 {
   seller *curr_seller = (seller *)p_seller;
@@ -214,8 +313,7 @@ void *sell(void *p_seller)
     int start_time = minute;
     if (curr_customer != NULL)
     {
-      // Assign a seat HERE
-      int seat_number = 0;
+      int seat_number = assign_seats(curr_customer, curr_seller);
 
       if (seat_number != -1)
       {
@@ -316,6 +414,7 @@ int main(int argc, char *argv[])
     return -1;
   }
 
+  init_seats();
   init_sellers();
   // at some random time -- generate_customers()
   print_stats();
