@@ -131,7 +131,7 @@ int get_sell_times(int seller_type)
   case 1:
     return 2 + rand() % 3; // M price
   case 2:
-    return 3 + rand() % 4; // L price
+    return 4 + rand() % 4; // L price
   }
 }
 
@@ -555,8 +555,6 @@ void *customer_arrival()
       // Remove from arrival list
       customer *arrived_customer = customer_arrival_list;
       customer_arrival_list = customer_arrival_list->next;
-
-      // Enqueue to the target seller's queue
       enqueue(arrived_customer->seller_queue, arrived_customer);
     }
     pthread_mutex_unlock(&arrival_list_mutex);
