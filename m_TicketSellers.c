@@ -41,13 +41,18 @@ typedef struct customer
   customer *next;
 } customer;
 
+typedef struct seller
+{
+  char *s_id;
+  statistics stats;
+} seller;
 // Queue using a LL implementation
 typedef struct queue
 {
   customer *front;
   customer *rear;
   int size;
-  char *s_id;
+  seller* seller_info;
   pthread_mutex_t q_lock;
 } queue;
 
@@ -59,16 +64,9 @@ typedef struct statistics
 } statistics;
 
 // We need the aggregate response time, turnaround, and throughput for each type of seller later.
-typedef struct seller
-{
-  char *s_id;
-  statistics stats;
-} seller;
-
 queue *h_price;
 queue *m_price[3];
-queue *l_queues[6];
-seller *sellers[10];
+queue *l_price[6];
 
 void *sell(void *s_t)
 {
@@ -86,10 +84,12 @@ void *sell(void *s_t)
   return NULL;
 }
 
-void setup_queue(char *seller_name)
+queue* setup_queue(char *seller_name)
 {
   queue *q = malloc(sizeof(queue));
-  q->s_id = seller_name;
+  q->seller_info = malloc(sizeof(seller));
+  q->seller_info->s_id = malloc(strlen(seller_name) + 2);
+  strcpy(q->seller_info->s_id, seller_name);
   q->front = NULL;
   q->rear = NULL;
   q->size = 0;
@@ -110,7 +110,7 @@ void enqueue(queue *q, int customer_id)
   // insert the customer
   pthread_mutex_lock(&q->q_lock);
   // if empty, initialize front and rear to customer
-  printf("Customer has arrived at tail of %s\n\n", q->s_id);
+  printf("Customer has arrived at tail of %s\n\n", q->seller_info->s_id);
   if (q->rear == NULL)
   {
     q->front = q->rear = in_customer;
@@ -125,7 +125,8 @@ void enqueue(queue *q, int customer_id)
   pthread_mutex_unlock(&q->q_lock);
 }
 
-void dequeue(queue *q)
+// Reason == 0: Customer gets a ticket, Reason == 1: Concert sold out, Reason == 2:
+void dequeue(queue *q, int reason)
 {
   pthread_mutex_lock(&q->q_lock);
 
@@ -147,6 +148,25 @@ void dequeue(queue *q)
 
   q->size--;
   pthread_mutex_unlock(&q->q_lock);
+}
+
+void init_sellers()
+{
+  h_price = setup_queue("H1");
+
+  char seller_name[4];
+  for (int i = 0; i < 3; i++)
+  {
+    sprintf(seller_name, "M%d", i+1);
+    m_price[i] = setup_queue(seller_name);
+  }
+  for (int i = 0; i < 6; i++)
+  {
+    l_price[i] = setup_queue("L");
+    sprintf(seller_name, "L%d", i+1); 
+    l_price[i] = setup_queue(seller_name);
+  }
+
 }
 
 void wakeup_all_seller_threads()
