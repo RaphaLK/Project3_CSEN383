@@ -94,7 +94,6 @@ typedef struct seat
   char seller_label[5]; 
 } seat;
 
-// Track next available position for each seller type to avoid redundant scanning
 // Note: These cursors are protected by seats_mutex (not separate mutexes)
 // since cursor updates always happen atomically with seat assignments
 typedef struct seat_cursor
@@ -194,11 +193,14 @@ N Customers will show up at random times during the hour, each seller will have 
 void enqueue(queue *q, customer *in_customer)
 {
   in_customer->next = NULL;
+  pthread_mutex_lock(&q->q_lock);
+  pthread_mutex_lock(&print_mutex);
 
   // insert the customer
-  pthread_mutex_lock(&q->q_lock);
   // if empty, initialize front and rear to customer
   printf("at %d: Customer %d has arrived at tail of %s.\n", minute, in_customer->id, q->seller_info->s_id);
+  pthread_mutex_unlock(&print_mutex);
+
   if (q->rear == NULL)
   {
     q->front = q->rear = in_customer;
