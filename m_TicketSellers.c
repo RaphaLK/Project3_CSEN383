@@ -43,7 +43,7 @@ pthread_mutex_t time_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t minute_cond = PTHREAD_COND_INITIALIZER;
 int minute = 0;
 
-// Track number of sellers currently in the middle of a sale
+// Track number of sellers currently in the middle of a sale, shoild never exceed 10
 int active_sales = 0;
 
 int customer_id = 0;
@@ -270,7 +270,7 @@ void init_sellers()
 /**
  * Atomically assign a seat if available
  * Returns seat number on success, -1 if already taken
- *
+ * This is the real seating arrangement, after try_assign_temp_seat, it operates here.
  */
 int try_assign_seat(int row, int seat, customer *customer, seller *seller)
 {
@@ -304,8 +304,11 @@ int try_assign_seat(int row, int seat, customer *customer, seller *seller)
   return -1;
 }
 
-// Reserve (hold) a seat in temp_seats if it's free and not already held.
-// Do NOT decrement available_seats here.
+/*
+* Reserve (hold) a seat in temp_seats if it's free and not already held.
+* Then we do try_assign_seat, to officially seat them into the concert.
+* The main idea is that this checks and reserves a seat.
+*/ 
 int try_assign_temp_seat(int row, int seat, customer *customer, seller *seller)
 {
   pthread_mutex_lock(&seat_assignment_mutex);
@@ -611,6 +614,7 @@ void wakeup_all_seller_threads()
   pthread_mutex_unlock(&mutex);
 }
 
+// Generates all N customers for each seller, sorts them in a customer list based on arrival times.
 void generate_customers(int N)
 {
   srand(time(NULL));
@@ -664,6 +668,8 @@ void generate_customers(int N)
   }
 }
 
+// Look at our customer list, if it's time to get onto the queue, send them through
+// All customers arrive within the hour.
 void *customer_arrival()
 {
   while (minute < HOUR)
@@ -695,7 +701,6 @@ void print_stats()
   return;
 }
 
-// Add this helper function to print the seat matrix
 
 int main(int argc, char *argv[])
 {
@@ -709,9 +714,10 @@ int main(int argc, char *argv[])
 
   init_seats();
   init_sellers();
-  // at some random time -- generate_customers()
   generate_customers(atoi(argv[1]));
 
+
+  // all the seller threads
   pthread_create(&seller_threads[0], NULL, sell, (void *)h_price->seller_info);
   for (int i = 0; i < 3; i++)
   {
@@ -722,7 +728,7 @@ int main(int argc, char *argv[])
     pthread_create(&seller_threads[i + 4], NULL, sell, (void *)l_price[i]->seller_info);
   }
 
-  // Create customer arrival and clock threads
+  // customer arrival and clock threads
   pthread_create(&customer_thread, NULL, customer_arrival, NULL);
   pthread_create(&clock_thread, NULL, sell_clock, NULL);
 
