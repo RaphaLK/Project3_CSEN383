@@ -201,6 +201,12 @@ queue *setup_queue(char *seller_name)
   return q;
 }
 
+void print_time(int minute) {
+  int hours = minute / 60;
+  int mins = minute % 60;
+  printf("%02d:%02d", hours, mins);
+}
+
 /*
 Fill the high-price, medium-price, and low-price queues
 N Customers will show up at random times during the hour, each seller will have N Customers.
@@ -213,7 +219,9 @@ void enqueue(queue *q, customer *in_customer)
 
   // insert the customer
   // if empty, initialize front and rear to customer
-  printf("at %d: Customer %d has arrived at tail of %s.\n", minute, in_customer->id, q->seller_info->s_id);
+  printf("at ");
+  print_time(minute);
+  printf(": Customer %d has arrived at tail of %s.\n", in_customer->id, q->seller_info->s_id);
   pthread_mutex_unlock(&print_mutex);
 
   if (q->rear == NULL)
@@ -572,10 +580,13 @@ void *sell(void *p_seller)
 
         // Print customer completion event
         pthread_mutex_lock(&print_mutex);
-        printf("at %d: Customer %d completes ticket purchase and leaves.\n", 
-               minute, curr_customer->id);
-        printf("at %d: Seller %s sells a ticket to: %d assigned to seat %d\n",
-               minute, curr_seller->s_id, curr_customer->id, seat_number);
+        printf("at ");
+        print_time(minute);
+        printf(": Customer %d completes ticket purchase and leaves.\n", curr_customer->id);
+        printf("at ");
+        print_time(minute);
+        printf(": Seller %s sells a ticket to: %d assigned to seat %d\n",
+               curr_seller->s_id, curr_customer->id, seat_number);
         print_seat_matrix();
         pthread_mutex_unlock(&print_mutex);
       }
@@ -588,7 +599,9 @@ void *sell(void *p_seller)
         total_customers++;
         pthread_mutex_unlock(&stats_mutex);
         
-        printf("at %d: Customer leaves as concert is sold out.\n", minute);
+        printf("at ");
+        print_time(minute);
+        printf(": Customer leaves as concert is sold out.\n");
       }
       free(curr_customer);
     }
@@ -864,12 +877,6 @@ void free_all_memory()
 
 int main(int argc, char *argv[])
 {
-  if (argc != 2)
-  {
-    printf("Please supply a second commmand line param\n\n");
-    return -1;
-  }
-  
   // Redirect output to file
   FILE *output_file = fopen("simulation_output.txt", "w");
   if (output_file == NULL) {
