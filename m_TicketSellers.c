@@ -47,6 +47,19 @@ int minute = 0;
 int active_sales = 0;
 
 int customer_id = 0;
+
+// Statistics tracking structures
+typedef struct customer_stats {
+  int arrival_time;
+  int service_start_time;  // when dequeued
+  int service_end_time;    // when sale completes
+  int seller_type;
+  int got_seat;  // 1 if got seat, 0 if turned away
+} customer_stats;
+
+customer_stats *all_customer_stats = NULL;
+int total_customers = 0;
+pthread_mutex_t stats_mutex = PTHREAD_MUTEX_INITIALIZER;
 // Add seller_type and seller_number to customer struct
 typedef struct customer
 {
@@ -171,6 +184,8 @@ int get_sell_times(int seller_type)
     return 2 + rand() % 3; // M price
   case 2:
     return 4 + rand() % 4; // L price
+  default:
+    return 1; // Default case
   }
 }
 
@@ -527,6 +542,18 @@ void *sell(void *p_seller)
     if (curr_customer != NULL)
     {
       int start_time = minute; // Record start time AFTER dequeuing
+      
+      // Record service start time for statistics
+      pthread_mutex_lock(&stats_mutex);
+      if (all_customer_stats == NULL) {
+        all_customer_stats = malloc(sizeof(customer_stats) * 1000); // Allocate space for up to 1000 customers
+      }
+      all_customer_stats[total_customers].arrival_time = curr_customer->arrival_time;
+      all_customer_stats[total_customers].service_start_time = start_time;
+      all_customer_stats[total_customers].seller_type = curr_seller->seller_type;
+      all_customer_stats[total_customers].got_seat = 0; // Will be set to 1 if successful
+      pthread_mutex_unlock(&stats_mutex);
+      
       int seat_number = assign_by_seller_type(curr_customer, curr_seller);
 
       if (seat_number != -1)
@@ -547,8 +574,17 @@ void *sell(void *p_seller)
         // Sale time elapsed; commit the reservation
         commit_temp_seat(seat_number);
 
-        // Protect both the sale message and matrix print atomically
+        // Record service end time and mark as successful
+        pthread_mutex_lock(&stats_mutex);
+        all_customer_stats[total_customers].service_end_time = minute;
+        all_customer_stats[total_customers].got_seat = 1;
+        total_customers++;
+        pthread_mutex_unlock(&stats_mutex);
+
+        // Print customer completion event
         pthread_mutex_lock(&print_mutex);
+        printf("at %d: Customer %d completes ticket purchase and leaves.\n", 
+               minute, curr_customer->id);
         printf("at %d: Seller %s sells a ticket to: %d assigned to seat %d\n",
                minute, curr_seller->s_id, curr_customer->id, seat_number);
         print_seat_matrix();
@@ -556,6 +592,13 @@ void *sell(void *p_seller)
       }
       else
       {
+        // Record service end time for sold out case
+        pthread_mutex_lock(&stats_mutex);
+        all_customer_stats[total_customers].service_end_time = minute;
+        all_customer_stats[total_customers].got_seat = 0;
+        total_customers++;
+        pthread_mutex_unlock(&stats_mutex);
+        
         printf("at %d: Customer leaves as concert is sold out.\n", minute);
       }
       free(curr_customer);
@@ -571,6 +614,7 @@ void *sell(void *p_seller)
       pthread_mutex_unlock(&time_mutex);
     }
   }
+  return NULL;
 }
 
 void *sell_clock()
@@ -697,8 +741,135 @@ void *customer_arrival()
 
 void print_stats()
 {
-  /*** TODO */
-  return;
+  printf("\n============== SIMULATION STATISTICS ==============\n");
+  
+  // Calculate statistics for each seller type (H=0, M=1, L=2)
+  for (int seller_type = 0; seller_type < 3; seller_type++) {
+    char *type_name = (seller_type == 0) ? "High-Price (H)" : 
+                     (seller_type == 1) ? "Medium-Price (M)" : "Low-Price (L)";
+    
+    int customers_served = 0;
+    int customers_turned_away = 0;
+    float total_response_time = 0;
+    float total_turnaround_time = 0;
+    
+    // Calculate statistics for this seller type
+    for (int i = 0; i < total_customers; i++) {
+      if (all_customer_stats[i].seller_type == seller_type) {
+        if (all_customer_stats[i].got_seat) {
+          customers_served++;
+          total_response_time += (all_customer_stats[i].service_start_time - all_customer_stats[i].arrival_time);
+          total_turnaround_time += (all_customer_stats[i].service_end_time - all_customer_stats[i].arrival_time);
+        } else {
+          customers_turned_away++;
+        }
+      }
+    }
+    
+    // Calculate averages
+    float avg_response_time = (customers_served > 0) ? total_response_time / customers_served : 0;
+    float avg_turnaround_time = (customers_served > 0) ? total_turnaround_time / customers_served : 0;
+    float throughput = (float)customers_served / HOUR; // customers per minute
+    
+    printf("\n%s Sellers:\n", type_name);
+    printf("  Customers Served: %d\n", customers_served);
+    printf("  Customers Turned Away: %d\n", customers_turned_away);
+    printf("  Average Response Time: %.2f minutes\n", avg_response_time);
+    printf("  Average Turnaround Time: %.2f minutes\n", avg_turnaround_time);
+    printf("  Average Throughput: %.2f customers/minute\n", throughput);
+  }
+  
+  printf("\nTotal Seats Available: %d\n", NUM_SEATS);
+  printf("Total Seats Sold: %d\n", NUM_SEATS - available_seats);
+  printf("==================================================\n\n");
+}
+
+void reset_simulation()
+{
+  // Reset global state variables
+  minute = 0;
+  customer_id = 0;
+  available_seats = NUM_SEATS;
+  active_sales = 0;
+  done = 0;
+  total_customers = 0;
+  
+  // Reset seat cursors
+  h_cursor.row_index = 0;
+  h_cursor.seat_index = 0;
+  m_cursor.row_index = 0;
+  m_cursor.seat_index = 0;
+  l_cursor.row_index = 0;
+  l_cursor.seat_index = 0;
+  
+  // Reset all seats to unsold
+  for (int r = 0; r < ROWS; r++) {
+    for (int s = 0; s < SEATS_PER_ROW; s++) {
+      all_seats[r][s]->customer_id = -1;
+      strcpy(all_seats[r][s]->seller_label, "----");
+      temp_seats[r][s]->customer_id = -1;
+      strcpy(temp_seats[r][s]->seller_label, "----");
+    }
+  }
+  
+  // Clear customer arrival list
+  customer_arrival_list = NULL;
+  
+  // Clear customer statistics
+  if (all_customer_stats != NULL) {
+    free(all_customer_stats);
+    all_customer_stats = NULL;
+  }
+  
+  // Reset queue sizes
+  h_price->size = 0;
+  h_price->front = NULL;
+  h_price->rear = NULL;
+  
+  for (int i = 0; i < 3; i++) {
+    m_price[i]->size = 0;
+    m_price[i]->front = NULL;
+    m_price[i]->rear = NULL;
+  }
+  
+  for (int i = 0; i < 6; i++) {
+    l_price[i]->size = 0;
+    l_price[i]->front = NULL;
+    l_price[i]->rear = NULL;
+  }
+}
+
+void free_all_memory()
+{
+  // Free seats
+  for (int r = 0; r < ROWS; r++) {
+    for (int s = 0; s < SEATS_PER_ROW; s++) {
+      free(all_seats[r][s]);
+      free(temp_seats[r][s]);
+    }
+  }
+  
+  // Free customer statistics
+  if (all_customer_stats != NULL) {
+    free(all_customer_stats);
+  }
+  
+  // Free queues and seller info
+  free(h_price->seller_info->s_id);
+  free(h_price->seller_info);
+  free(h_price);
+  
+  for (int i = 0; i < 3; i++) {
+    free(m_price[i]->seller_info->s_id);
+    free(m_price[i]->seller_info);
+    free(m_price[i]);
+  }
+  
+  for (int i = 0; i < 6; i++) {
+    free(l_price[i]->seller_info->s_id);
+    free(l_price[i]->seller_info);
+    free(l_price[i]);
+  }
 }
 
 
@@ -709,39 +880,78 @@ int main(int argc, char *argv[])
     printf("Please supply a second commmand line param\n\n");
     return -1;
   }
-  pthread_t seller_threads[10];
-  pthread_t clock_thread, customer_thread;
-
-  init_seats();
-  init_sellers();
-  generate_customers(atoi(argv[1]));
-
-
-  // all the seller threads
-  pthread_create(&seller_threads[0], NULL, sell, (void *)h_price->seller_info);
-  for (int i = 0; i < 3; i++)
-  {
-    pthread_create(&seller_threads[i + 1], NULL, sell, (void *)m_price[i]->seller_info);
+  
+  // Redirect output to file
+  FILE *output_file = fopen("simulation_output.txt", "w");
+  if (output_file == NULL) {
+    printf("Error: Could not create output file\n");
+    return -1;
   }
-  for (int i = 0; i < 6; i++)
-  {
-    pthread_create(&seller_threads[i + 4], NULL, sell, (void *)l_price[i]->seller_info);
+  
+  // Redirect stdout to file
+  freopen("simulation_output.txt", "w", stdout);
+  
+  // Array of N values to test
+  int n_values[] = {5, 10, 15};
+  int num_runs = 3;
+  
+  for (int run = 0; run < num_runs; run++) {
+    int N = n_values[run];
+    
+    printf("===== SIMULATION RUN: N=%d =====\n", N);
+    printf("Starting simulation with %d customers per seller...\n\n", N);
+    
+    pthread_t seller_threads[10];
+    pthread_t clock_thread, customer_thread;
+
+    init_seats();
+    init_sellers();
+    generate_customers(N);
+
+    // all the seller threads
+    pthread_create(&seller_threads[0], NULL, sell, (void *)h_price->seller_info);
+    for (int i = 0; i < 3; i++)
+    {
+      pthread_create(&seller_threads[i + 1], NULL, sell, (void *)m_price[i]->seller_info);
+    }
+    for (int i = 0; i < 6; i++)
+    {
+      pthread_create(&seller_threads[i + 4], NULL, sell, (void *)l_price[i]->seller_info);
+    }
+
+    // customer arrival and clock threads
+    pthread_create(&customer_thread, NULL, customer_arrival, NULL);
+    pthread_create(&clock_thread, NULL, sell_clock, NULL);
+
+    // Start simulation
+    wakeup_all_seller_threads();
+
+    // Wait for threads to finish
+    for (int i = 0; i < 10; i++)
+    {
+      pthread_join(seller_threads[i], NULL);
+    }
+    pthread_join(clock_thread, NULL);
+    pthread_join(customer_thread, NULL);
+    
+    // Print statistics for this run
+    print_stats();
+    
+    // Reset for next run (except for the last run)
+    if (run < num_runs - 1) {
+      reset_simulation();
+      printf("\n\n");
+    }
   }
-
-  // customer arrival and clock threads
-  pthread_create(&customer_thread, NULL, customer_arrival, NULL);
-  pthread_create(&clock_thread, NULL, sell_clock, NULL);
-
-  // Start simulation
-  wakeup_all_seller_threads();
-
-  // Wait for threads to finish
-  for (int i = 0; i < 10; i++)
-  {
-    pthread_join(seller_threads[i], NULL);
-  }
-  pthread_join(clock_thread, NULL);
-  pthread_join(customer_thread, NULL);
-  print_stats();
-  return 1;
+  
+  // Close file and restore stdout
+  fclose(output_file);
+  freopen("/dev/tty", "w", stdout);
+  
+  printf("Simulation complete! Results saved to simulation_output.txt\n");
+  
+  // Clean up memory
+  free_all_memory();
+  
+  return 0;
 }
