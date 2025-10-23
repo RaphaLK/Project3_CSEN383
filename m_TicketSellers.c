@@ -150,7 +150,7 @@ void init_seats()
   }
 }
 
-// We need the aggregate response time, turnaround, and throughput for each type of seller later.
+// Need the aggregate response time, turnaround, and throughput for each type of seller later.
 queue *h_price;
 queue *m_price[3];
 queue *l_price[6];
@@ -158,7 +158,6 @@ queue *l_price[6];
 void print_seat_matrix()
 {
   // No lock needed here - caller holds print_mutex
-  // We do need to read seats safely though:
   pthread_mutex_lock(&seat_assignment_mutex);
   printf("\n============== Concert Seats ====================\n");
   for (int r = 0; r < ROWS; r++)
@@ -377,9 +376,7 @@ void commit_temp_seat(int seat_number)
   pthread_mutex_unlock(&seat_assignment_mutex);
 }
 
-/**
- * Updates cursor for the next seat position after assigning a seat
- */
+// Updates cursor for the next seat position after assigning a seat
 void update_cursor(seat_cursor *cursor, int current_row_index, int current_seat)
 {
   cursor->seat_index = current_seat + 1;
@@ -394,9 +391,7 @@ void update_cursor(seat_cursor *cursor, int current_row_index, int current_seat)
   }
 }
 
-/**
- * Seat assignment by High-priced seller (order: rows 1 -> 10)
- */
+// Seat assignment by High-priced seller (order: rows 1 -> 10)
 int h_assign_seats(customer *customer, seller *seller)
 {
   pthread_mutex_lock(&h_cursor_mutex);
@@ -425,9 +420,7 @@ int h_assign_seats(customer *customer, seller *seller)
   return -1;
 }
 
-/**
- * Seat assignment by Medium-priced seller (order: row 5, 6, 4, 7, 3, 8, 2, 9, 1, 10)
- */
+// Seat assignment by Medium-priced seller (order: row 5, 6, 4, 7, 3, 8, 2, 9, 1, 10)
 int m_assign_seats(customer *customer, seller *seller)
 {
   static const int order[ROWS] = {4, 5, 3, 6, 2, 7, 1, 8, 0, 9};
@@ -459,9 +452,7 @@ int m_assign_seats(customer *customer, seller *seller)
   return -1;
 }
 
-/**
- * Seat assignment by Low-priced seller (order: rows 10 -> 1)
- */
+// Seat assignment by Low-priced seller (order: rows 10 -> 1)
 int l_assign_seats(customer *customer, seller *seller)
 {
   pthread_mutex_lock(&l_cursor_mutex);
@@ -491,9 +482,7 @@ int l_assign_seats(customer *customer, seller *seller)
   return -1;
 }
 
-/**
- * Assign seat based on seller type
- */
+// Assign seat based on seller type
 int assign_by_seller_type(customer *customer, seller *seller)
 {
   switch (seller->seller_type)
