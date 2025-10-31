@@ -44,13 +44,14 @@ typedef struct {
 // Function declarations
 void initializeMemory(Memory *memory);
 void generateWorkload(JobQueue *jobQueue);
-void sortJobsByArrivalTime(JobQueue *jobQueue);
 void runSimulation(JobQueue *jobQueue, Memory *memory, int (*replacementAlgorithm)(Memory *, char, int, int), char *algorithmName, double *hitRatioSum, double *missRatioSum, int *swappedInSum);
 int FIFO(Memory *memory, char processName, int pageNumber, int timestamp);
 int LRU(Memory *memory, char processName, int pageNumber, int timestamp);
 int LFU(Memory *memory, char processName, int pageNumber, int timestamp);
 int MFU(Memory *memory, char processName, int pageNumber, int timestamp);
 int RandomPick(Memory *memory, char processName, int pageNumber, int timestamp);
+int generateNextPageReference(int currentPage, int processSize);
+void removeJobPages(Memory *memory, char processName);
 void runSimulation(JobQueue *jobQueue, Memory *memory, int (*replacementAlgorithm)(Memory *, char, int, int), char *algorithmName, double *hitRatioSum, double *missRatioSum, int *swappedInSum);
 
 #endif // COMMON_H
