@@ -1,0 +1,2930 @@
+
+Running LFU Algorithm Simulation
+Time	Process	Page	Result	Evicted
+----	-------	----	------	-------
+0.0	H	Enter	5	2	<....................................................................................................>
+
+0.0	H	0	MISS	-
+0.0	H	0	HIT	-
+0.1	H	2	MISS	-
+0.2	H	1	MISS	-
+0.3	H	4	MISS	-
+0.4	H	3	MISS	-
+0.5	H	1	HIT	-
+0.6	H	2	HIT	-
+0.7	H	2	HIT	-
+0.8	H	1	HIT	-
+0.9	H	2	HIT	-
+1.0	L	Enter	11	1	<HHHHH...............................................................................................>
+
+1.0	L	0	MISS	-
+1.0	S	Enter	31	2	<HHHHHL..............................................................................................>
+
+1.0	S	0	MISS	-
+1.0	H	1	HIT	-
+1.0	L	0	HIT	-
+1.0	S	10	MISS	-
+1.1	H	1	HIT	-
+1.1	L	3	MISS	-
+1.1	S	10	HIT	-
+1.2	H	1	HIT	-
+1.2	L	4	MISS	-
+1.2	S	10	HIT	-
+1.3	H	2	HIT	-
+1.3	L	4	HIT	-
+1.3	S	14	MISS	-
+1.4	H	2	HIT	-
+1.4	L	3	HIT	-
+1.4	S	13	MISS	-
+1.5	H	3	HIT	-
+1.5	L	4	HIT	-
+1.5	S	13	HIT	-
+1.6	H	3	HIT	-
+1.6	L	4	HIT	-
+1.6	S	7	MISS	-
+1.7	H	0	HIT	-
+1.7	L	3	HIT	-
+1.7	S	6	MISS	-
+1.8	H	1	HIT	-
+1.8	L	2	MISS	-
+1.8	S	7	HIT	-
+1.9	H	1	HIT	-
+1.9	L	3	HIT	-
+1.9	S	7	HIT	-
+2.0	X	Enter	17	5	<HHHHHLSSLLSSSSL.....................................................................................>
+
+2.0	X	0	MISS	-
+2.0	S	8	MISS	-
+2.0	X	16	MISS	-
+
+2.0	H	Exit	5	2	<HHHHHLSSLLSSSSLXSX..................................................................................>
+
+2.0	L	Exit	11	1	<.....LSSLLSSSSLXSX..................................................................................>
+2.1	S	13	HIT	-
+2.1	X	9	MISS	-
+2.2	S	27	MISS	-
+2.2	X	6	MISS	-
+2.3	S	24	MISS	-
+2.3	X	7	MISS	-
+2.4	S	24	HIT	-
+2.4	X	7	HIT	-
+2.5	S	4	MISS	-
+2.5	X	4	MISS	-
+2.6	S	4	HIT	-
+2.6	X	5	MISS	-
+2.7	S	4	HIT	-
+2.7	X	15	MISS	-
+2.8	S	1	MISS	-
+2.8	X	9	HIT	-
+2.9	S	1	HIT	-
+2.9	X	8	MISS	-
+3.0	O	Enter	5	4	<......SS..SSSS.XSXXSXSXSXXXSX.......................................................................>
+
+3.0	O	0	MISS	-
+3.0	A	Enter	11	5	<......SS..SSSS.XSXXSXSXSXXXSXO......................................................................>
+
+3.0	A	0	MISS	-
+3.0	N	Enter	11	5	<......SS..SSSS.XSXXSXSXSXXXSXOA.....................................................................>
+
+3.0	N	0	MISS	-
+3.0	X	7	HIT	-
+3.0	O	1	MISS	-
+3.0	A	3	MISS	-
+3.0	N	10	MISS	-
+
+3.0	S	Exit	31	2	<......SS..SSSS.XSXXSXSXSXXXSXOANOAN.................................................................>
+3.1	X	6	HIT	-
+3.1	O	0	HIT	-
+3.1	A	4	MISS	-
+3.1	N	0	HIT	-
+3.2	X	9	HIT	-
+3.2	O	3	MISS	-
+3.2	A	5	MISS	-
+3.2	N	1	MISS	-
+3.3	X	3	MISS	-
+3.3	O	4	MISS	-
+3.3	A	6	MISS	-
+3.3	N	10	HIT	-
+3.4	X	3	HIT	-
+3.4	O	4	HIT	-
+3.4	A	9	MISS	-
+3.4	N	1	HIT	-
+3.5	X	12	MISS	-
+3.5	O	0	HIT	-
+3.5	A	10	MISS	-
+3.5	N	0	HIT	-
+3.6	X	12	HIT	-
+3.6	O	4	HIT	-
+3.6	A	0	HIT	-
+3.6	N	0	HIT	-
+3.7	X	4	HIT	-
+3.7	O	3	HIT	-
+3.7	A	1	MISS	-
+3.7	N	1	HIT	-
+3.8	X	3	HIT	-
+3.8	O	2	MISS	-
+3.8	A	4	HIT	-
+3.8	N	1	HIT	-
+3.9	X	12	HIT	-
+3.9	O	3	HIT	-
+3.9	A	4	HIT	-
+3.9	N	0	HIT	-
+4.0	O	Enter	17	5	<...............X.XX.X.X.XXX.XOANOANAOANXOAAXAAO.....................................................>
+
+4.0	O	0	HIT	-
+4.0	F	Enter	17	5	<...............X.XX.X.X.XXX.XOANOANAOANXOAAXAAO.....................................................>
+
+4.0	F	0	MISS	-
+4.0	X	11	MISS	-
+4.0	O	3	HIT	-
+4.0	A	9	HIT	-
+4.0	N	0	HIT	-
+4.0	O	16	MISS	-
+4.0	F	1	MISS	-
+4.1	X	10	MISS	-
+4.1	O	2	HIT	-
+4.1	A	7	MISS	-
+4.1	N	1	HIT	-
+4.1	O	15	MISS	-
+4.1	F	2	MISS	-
+4.2	X	11	HIT	-
+4.2	O	3	HIT	-
+4.2	A	7	HIT	-
+4.2	N	7	MISS	-
+4.2	O	4	HIT	-
+4.2	F	4	MISS	-
+4.3	X	12	HIT	-
+4.3	O	3	HIT	-
+4.3	A	7	HIT	-
+4.3	N	6	MISS	-
+4.3	O	3	HIT	-
+4.3	F	5	MISS	-
+4.4	X	11	HIT	-
+4.4	O	2	HIT	-
+4.4	A	7	HIT	-
+4.4	N	5	MISS	-
+4.4	O	2	HIT	-
+4.4	F	14	MISS	-
+4.5	X	12	HIT	-
+4.5	O	2	HIT	-
+4.5	A	2	MISS	-
+4.5	N	0	HIT	-
+4.5	O	1	HIT	-
+4.5	F	10	MISS	-
+4.6	X	11	HIT	-
+4.6	O	4	HIT	-
+4.6	A	1	HIT	-
+4.6	N	3	MISS	-
+4.6	O	0	HIT	-
+4.6	F	7	MISS	-
+4.7	X	4	HIT	-
+4.7	O	3	HIT	-
+4.7	A	0	HIT	-
+4.7	N	4	MISS	-
+4.7	O	1	HIT	-
+4.7	F	5	HIT	-
+4.8	X	4	HIT	-
+4.8	O	3	HIT	-
+4.8	A	8	MISS	-
+4.8	N	5	HIT	-
+4.8	O	0	HIT	-
+4.8	F	5	HIT	-
+4.9	X	5	HIT	-
+4.9	O	0	HIT	-
+4.9	A	9	HIT	-
+4.9	N	3	HIT	-
+4.9	O	0	HIT	-
+4.9	F	6	MISS	-
+5.0	G	Enter	5	3	<...............X.XX.X.X.XXX.XOANOANAOANXOAAXAAOFXOFXAOFNFNFNFAFNFNAF................................>
+
+5.0	G	0	MISS	-
+5.0	Z	Enter	5	2	<...............X.XX.X.X.XXX.XOANOANAOANXOAAXAAOFXOFXAOFNFNFNFAFNFNAFG...............................>
+
+5.0	Z	0	MISS	-
+5.0	C	Enter	11	2	<...............X.XX.X.X.XXX.XOANOANAOANXOAAXAAOFXOFXAOFNFNFNFAFNFNAFGZ..............................>
+
+5.0	C	0	MISS	-
+5.0	D	Enter	31	1	<...............X.XX.X.X.XXX.XOANOANAOANXOAAXAAOFXOFXAOFNFNFNFAFNFNAFGZC.............................>
+
+5.0	D	0	MISS	-
+5.0	G	Enter	17	3	<...............X.XX.X.X.XXX.XOANOANAOANXOAAXAAOFXOFXAOFNFNFNFAFNFNAFGZCD............................>
+
+5.0	G	0	HIT	-
+5.0	U	Enter	11	5	<...............X.XX.X.X.XXX.XOANOANAOANXOAAXAAOFXOFXAOFNFNFNFAFNFNAFGZCD............................>
+
+5.0	U	0	MISS	-
+5.0	X	2	MISS	-
+5.0	O	4	HIT	-
+5.0	A	9	HIT	-
+5.0	N	2	MISS	-
+5.0	O	16	HIT	-
+5.0	F	7	HIT	-
+5.0	G	4	MISS	-
+5.0	Z	4	MISS	-
+5.0	C	8	MISS	-
+5.0	D	1	MISS	-
+5.0	G	16	MISS	-
+5.0	U	10	MISS	-
+5.1	X	2	HIT	-
+5.1	O	2	HIT	-
+5.1	A	10	HIT	-
+5.1	N	1	HIT	-
+5.1	O	15	HIT	-
+5.1	F	6	HIT	-
+5.1	G	4	HIT	-
+5.1	Z	2	MISS	-
+5.1	C	9	MISS	-
+5.1	D	0	HIT	-
+5.1	G	11	MISS	-
+5.1	U	3	MISS	-
+5.2	X	1	MISS	-
+5.2	O	2	HIT	-
+5.2	A	10	HIT	-
+5.2	N	1	HIT	-
+5.2	O	14	MISS	-
+5.2	F	7	HIT	-
+5.2	G	0	HIT	-
+5.2	Z	4	HIT	-
+5.2	C	1	MISS	-
+5.2	D	8	MISS	-
+5.2	G	12	MISS	-
+5.2	U	4	MISS	-
+5.3	X	0	HIT	-
+5.3	O	1	HIT	-
+5.3	A	9	HIT	-
+5.3	N	1	HIT	-
+5.3	O	15	HIT	-
+5.3	F	7	HIT	-
+5.3	G	0	HIT	-
+5.3	Z	2	HIT	-
+5.3	C	1	HIT	-
+5.3	D	7	MISS	-
+5.3	G	13	MISS	-
+5.3	U	3	HIT	-
+5.4	X	16	HIT	-
+5.4	O	4	HIT	-
+5.4	A	5	HIT	-
+5.4	N	2	HIT	-
+5.4	O	16	HIT	-
+5.4	F	7	HIT	-
+5.4	G	4	HIT	-
+5.4	Z	1	MISS	-
+5.4	C	5	MISS	-
+5.4	D	7	HIT	-
+5.4	G	14	MISS	-
+5.4	U	1	MISS	-
+5.5	X	15	HIT	-
+5.5	O	1	HIT	-
+5.5	A	5	HIT	-
+5.5	N	0	HIT	-
+5.5	O	0	HIT	-
+5.5	F	2	HIT	-
+5.5	G	0	HIT	-
+5.5	Z	4	HIT	-
+5.5	C	7	MISS	-
+5.5	D	7	HIT	-
+5.5	G	15	MISS	-
+5.5	U	0	HIT	-
+5.6	X	8	HIT	-
+5.6	O	2	HIT	-
+5.6	A	6	HIT	-
+5.6	N	1	HIT	-
+5.6	O	1	HIT	-
+5.6	F	3	MISS	-
+5.6	G	1	MISS	-
+5.6	Z	0	HIT	-
+5.6	C	8	HIT	-
+5.6	D	8	HIT	-
+5.6	G	14	HIT	-
+5.6	U	9	MISS	-
+5.7	X	7	HIT	-
+5.7	O	1	HIT	-
+5.7	A	7	HIT	-
+5.7	N	0	HIT	-
+5.7	O	0	HIT	-
+5.7	F	4	HIT	-
+5.7	G	4	HIT	-
+5.7	Z	0	HIT	-
+5.7	C	2	MISS	-
+5.7	D	7	HIT	-
+5.7	G	13	HIT	-
+5.7	U	2	MISS	-
+5.8	X	8	HIT	-
+5.8	O	2	HIT	-
+5.8	A	7	HIT	-
+5.8	N	1	HIT	-
+5.8	O	0	HIT	-
+5.8	F	4	HIT	-
+5.8	G	0	HIT	-
+5.8	Z	1	HIT	-
+5.8	C	1	HIT	-
+5.8	D	8	HIT	-
+5.8	G	12	HIT	-
+5.8	U	9	HIT	-
+5.9	X	9	HIT	-
+5.9	O	3	HIT	-
+5.9	A	7	HIT	-
+5.9	N	0	HIT	-
+5.9	O	0	HIT	-
+5.9	F	5	HIT	-
+5.9	G	4	HIT	-
+5.9	Z	2	HIT	-
+5.9	C	1	HIT	-
+5.9	D	7	HIT	-
+5.9	G	13	HIT	-
+5.9	U	7	MISS	-
+6.0	X	9	HIT	-
+6.0	O	0	HIT	-
+6.0	A	8	HIT	-
+6.0	N	0	HIT	-
+6.0	O	0	HIT	-
+6.0	F	5	HIT	-
+6.0	G	3	MISS	-
+6.0	Z	3	MISS	-
+6.0	C	0	HIT	-
+6.0	G	13	HIT	-
+6.0	U	7	HIT	-
+
+6.0	D	Exit	31	1	<GUCUUGZ........X.XX.X.X.XXX.XOANOANAOANXOAAXAAOFXOFXAOFNFNFNFAFNFNAFGZCDUXNGZCDGUZCGUXOCDGUDGZCGUCGF>
+6.1	X	9	HIT	-
+6.1	O	4	HIT	-
+6.1	A	8	HIT	-
+6.1	N	3	HIT	-
+6.1	O	16	HIT	-
+6.1	F	6	HIT	-
+6.1	G	3	HIT	-
+6.1	Z	1	HIT	-
+6.1	C	0	HIT	-
+6.1	G	14	HIT	-
+6.1	U	8	MISS	-
+6.2	X	14	MISS	-
+6.2	O	0	HIT	-
+6.2	A	8	HIT	-
+6.2	N	10	HIT	-
+6.2	O	16	HIT	-
+6.2	F	5	HIT	-
+6.2	G	0	HIT	-
+6.2	Z	1	HIT	-
+6.2	C	2	HIT	-
+6.2	G	15	HIT	-
+6.2	U	7	HIT	-
+6.3	X	11	HIT	-
+6.3	O	4	HIT	-
+6.3	A	1	HIT	-
+6.3	N	8	MISS	-
+6.3	O	4	HIT	-
+6.3	F	5	HIT	-
+6.3	G	4	HIT	-
+6.3	Z	0	HIT	-
+6.3	C	8	HIT	-
+6.3	G	5	MISS	-
+6.3	U	10	HIT	-
+6.4	X	10	HIT	-
+6.4	O	1	HIT	-
+6.4	A	10	HIT	-
+6.4	N	9	MISS	-
+6.4	O	4	HIT	-
+6.4	F	4	HIT	-
+6.4	G	3	HIT	-
+6.4	Z	4	HIT	-
+6.4	C	7	HIT	-
+6.4	G	6	MISS	-
+6.4	U	9	HIT	-
+6.5	X	10	HIT	-
+6.5	O	2	HIT	-
+6.5	A	10	HIT	-
+6.5	N	8	HIT	-
+6.5	O	15	HIT	-
+6.5	F	8	MISS	-
+6.5	G	1	HIT	-
+6.5	Z	3	HIT	-
+6.5	C	6	MISS	-
+6.5	G	6	HIT	-
+6.5	U	7	HIT	-
+6.6	X	9	HIT	-
+6.6	O	4	HIT	-
+6.6	A	3	HIT	-
+6.6	N	9	HIT	-
+6.6	O	15	HIT	-
+6.6	F	8	HIT	-
+6.6	G	1	HIT	-
+6.6	Z	2	HIT	-
+6.6	C	6	HIT	-
+6.6	G	15	HIT	-
+6.6	U	9	HIT	-
+6.7	X	9	HIT	-
+6.7	O	3	HIT	-
+6.7	A	10	HIT	-
+6.7	N	10	HIT	-
+6.7	O	4	HIT	-
+6.7	F	13	MISS	-
+6.7	G	3	HIT	-
+6.7	Z	2	HIT	-
+6.7	C	6	HIT	-
+6.7	G	16	HIT	-
+6.7	U	8	HIT	-
+6.8	X	8	HIT	-
+6.8	O	3	HIT	-
+6.8	A	10	HIT	-
+6.8	N	9	HIT	-
+6.8	O	4	HIT	-
+6.8	F	12	MISS	-
+6.8	G	0	HIT	-
+6.8	Z	3	HIT	-
+6.8	C	5	HIT	-
+6.8	G	15	HIT	-
+6.8	U	6	MISS	-
+6.9	X	7	HIT	-
+6.9	O	2	HIT	-
+6.9	A	8	HIT	-
+6.9	N	10	HIT	-
+6.9	O	3	HIT	-
+6.9	F	13	HIT	-
+6.9	G	1	HIT	-
+6.9	Z	2	HIT	-
+6.9	C	4	MISS	-
+6.9	G	15	HIT	-
+6.9	U	8	HIT	-
+7.0	A	9	HIT	-
+7.0	N	5	HIT	-
+7.0	O	10	MISS	-
+7.0	F	14	HIT	-
+7.0	G	2	MISS	-
+7.0	G	15	HIT	-
+7.0	U	7	HIT	-
+
+7.0	X	Exit	17	5	<GUCUUGZUXNGNGFCXFXXFXUXCXXXOXOANOANAOANXOAAXAAOFXOFXAOFNFNFNFAFNFNAFGZCGUXNGZC.GUZCGUXOC.GU.GZCGUCGF>
+
+7.0	O	Exit	5	4	<GUCUUGZU.NGNGFC.F..F.U.C...O.OANOANAOAN.OAA.AAOF.OF.AOFNFNFNFAFNFNAFGZCGU.NGZC.GUZCGU.OC.GU.GZCGUCGF>
+
+7.0	Z	Exit	5	2	<GUCUUGZU.NGNGFC.F..F.U.C......AN.ANA.AN..AA.AA.F..F.A.FNFNFNFAFNFNAFGZCGU.NGZC.GUZCGU..C.GU.GZCGUCGF>
+
+7.0	C	Exit	11	2	<GUCUUG.U.NGNGFC.F..F.U.C......AN.ANA.AN..AA.AA.F..F.A.FNFNFNFAFNFNAFG.CGU.NG.C.GU.CGU..C.GU.G.CGUCGF>
+7.1	A	6	HIT	-
+7.1	N	4	HIT	-
+7.1	O	2	MISS	-
+7.1	F	15	MISS	-
+7.1	G	4	HIT	-
+7.1	G	15	HIT	-
+7.1	U	9	HIT	-
+7.2	A	5	HIT	-
+7.2	N	3	HIT	-
+7.2	O	3	MISS	-
+7.2	F	1	HIT	-
+7.2	G	0	HIT	-
+7.2	G	15	HIT	-
+7.2	U	8	HIT	-
+7.3	A	5	HIT	-
+7.3	N	4	HIT	-
+7.3	O	12	MISS	-
+7.3	F	16	MISS	-
+7.3	G	1	HIT	-
+7.3	G	15	HIT	-
+7.3	U	8	HIT	-
+7.4	A	5	HIT	-
+7.4	N	4	HIT	-
+7.4	O	11	MISS	-
+7.4	F	1	HIT	-
+7.4	G	3	HIT	-
+7.4	G	14	HIT	-
+7.4	U	4	HIT	-
+7.5	A	6	HIT	-
+7.5	N	3	HIT	-
+7.5	O	12	HIT	-
+7.5	F	1	HIT	-
+7.5	G	4	HIT	-
+7.5	G	14	HIT	-
+7.5	U	5	MISS	-
+7.6	A	5	HIT	-
+7.6	N	0	HIT	-
+7.6	O	7	MISS	-
+7.6	F	11	MISS	-
+7.6	G	4	HIT	-
+7.6	G	14	HIT	-
+7.6	U	5	HIT	-
+7.7	A	5	HIT	-
+7.7	N	1	HIT	-
+7.7	O	6	MISS	-
+7.7	F	6	HIT	-
+7.7	G	4	HIT	-
+7.7	G	15	HIT	-
+7.7	U	5	HIT	-
+7.8	A	9	HIT	-
+7.8	N	0	HIT	-
+7.8	O	5	MISS	-
+7.8	F	6	HIT	-
+7.8	G	3	HIT	-
+7.8	G	4	HIT	-
+7.8	U	2	HIT	-
+7.9	A	10	HIT	-
+7.9	N	10	HIT	-
+7.9	O	6	HIT	-
+7.9	F	5	HIT	-
+7.9	G	4	HIT	-
+7.9	G	11	HIT	-
+7.9	U	2	HIT	-
+8.0	O	9	MISS	-
+8.0	F	1	HIT	-
+8.0	U	2	HIT	-
+
+8.0	A	Exit	11	5	<GUOUUGFUONGNGFOFFOUFOUFOOO....AN.ANA.AN..AA.AA.F..F.A.FNFNFNFAFNFNAFG..GU.NG...GU..GU....GU.G..GU.GF>
+
+8.0	N	Exit	11	5	<GUOUUGFUONGNGFOFFOUFOUFOOO.....N..N...N........F..F...FNFNFNF.FNFN.FG..GU.NG...GU..GU....GU.G..GU.GF>
+
+8.0	G	Exit	5	3	<GUOUUGFUO.G.GFOFFOUFOUFOOO.....................F..F...F.F.F.F.F.F..FG..GU..G...GU..GU....GU.G..GU.GF>
+
+8.0	G	Exit	17	3	<.UOUU.FUO....FOFFOUFOUFOOO.....................F..F...F.F.F.F.F.F..F....U.......U...U.....U.....U..F>
+8.1	O	8	MISS	-
+8.1	F	1	HIT	-
+8.1	U	1	HIT	-
+8.2	O	7	HIT	-
+8.2	F	0	HIT	-
+8.2	U	0	HIT	-
+8.3	O	6	HIT	-
+8.3	F	16	HIT	-
+8.3	U	0	HIT	-
+8.4	O	6	HIT	-
+8.4	F	4	HIT	-
+8.4	U	0	HIT	-
+8.5	O	5	HIT	-
+8.5	F	7	HIT	-
+8.5	U	6	HIT	-
+8.6	O	15	MISS	-
+8.6	F	7	HIT	-
+8.6	U	5	HIT	-
+8.7	O	1	MISS	-
+8.7	F	7	HIT	-
+8.7	U	4	HIT	-
+8.8	O	1	HIT	-
+8.8	F	8	HIT	-
+8.8	U	4	HIT	-
+8.9	O	3	HIT	-
+8.9	F	8	HIT	-
+8.9	U	3	HIT	-
+9.0	U	2	HIT	-
+
+9.0	O	Exit	17	5	<OUOUUOFUOO...FOFFOUFOUFOOO.....................F..F...F.F.F.F.F.F..F....U.......U...U.....U.....U..F>
+
+9.0	F	Exit	17	5	<.U.UU.FU.....F.FF.UF.UF........................F..F...F.F.F.F.F.F..F....U.......U...U.....U.....U..F>
+9.1	U	0	HIT	-
+9.2	U	10	HIT	-
+9.3	U	0	HIT	-
+9.4	U	10	HIT	-
+9.5	U	10	HIT	-
+9.6	U	10	HIT	-
+9.7	U	9	HIT	-
+9.8	U	8	HIT	-
+9.9	U	9	HIT	-
+
+10.0	U	Exit	11	5	<.U.UU..U..........U..U..................................................U.......U...U.....U.....U...>
+
+Simulation Results:
+Total References: 515
+Hits: 379, Misses: 136
+Hit Ratio: 0.74, Miss Ratio: 0.26
+Processes Swapped In: 15
+
+Running LFU Algorithm Simulation
+Time	Process	Page	Result	Evicted
+----	-------	----	------	-------
+0.0	H	Enter	5	2	<....................................................................................................>
+
+0.0	H	0	MISS	-
+0.0	H	2	MISS	-
+0.1	H	2	HIT	-
+0.2	H	2	HIT	-
+0.3	H	1	MISS	-
+0.4	H	1	HIT	-
+0.5	H	1	HIT	-
+0.6	H	0	HIT	-
+0.7	H	4	MISS	-
+0.8	H	1	HIT	-
+0.9	H	2	HIT	-
+1.0	L	Enter	11	1	<HHHH................................................................................................>
+
+1.0	L	0	MISS	-
+1.0	S	Enter	31	2	<HHHHL...............................................................................................>
+
+1.0	S	0	MISS	-
+1.0	H	1	HIT	-
+1.0	L	4	MISS	-
+1.0	S	1	MISS	-
+1.1	H	2	HIT	-
+1.1	L	10	MISS	-
+1.1	S	2	MISS	-
+1.2	H	3	MISS	-
+1.2	L	5	MISS	-
+1.2	S	1	HIT	-
+1.3	H	3	HIT	-
+1.3	L	10	HIT	-
+1.3	S	2	HIT	-
+1.4	H	3	HIT	-
+1.4	L	0	HIT	-
+1.4	S	3	MISS	-
+1.5	H	0	HIT	-
+1.5	L	10	HIT	-
+1.5	S	23	MISS	-
+1.6	H	4	HIT	-
+1.6	L	10	HIT	-
+1.6	S	11	MISS	-
+1.7	H	4	HIT	-
+1.7	L	10	HIT	-
+1.7	S	12	MISS	-
+1.8	H	0	HIT	-
+1.8	L	9	MISS	-
+1.8	S	13	MISS	-
+1.9	H	3	HIT	-
+1.9	L	8	MISS	-
+1.9	S	12	HIT	-
+2.0	X	Enter	17	5	<HHHHLSLSLSHLSSSSLSL.................................................................................>
+
+2.0	X	0	MISS	-
+2.0	S	13	HIT	-
+2.0	X	8	MISS	-
+
+2.0	H	Exit	5	2	<HHHHLSLSLSHLSSSSLSLXX...............................................................................>
+
+2.0	L	Exit	11	1	<....LSLSLS.LSSSSLSLXX...............................................................................>
+2.1	S	14	MISS	-
+2.1	X	8	HIT	-
+2.2	S	15	MISS	-
+2.2	X	7	MISS	-
+2.3	S	15	HIT	-
+2.3	X	4	MISS	-
+2.4	S	15	HIT	-
+2.4	X	5	MISS	-
+2.5	S	16	MISS	-
+2.5	X	6	MISS	-
+2.6	S	3	HIT	-
+2.6	X	7	HIT	-
+2.7	S	3	HIT	-
+2.7	X	2	MISS	-
+2.8	S	4	MISS	-
+2.8	X	1	MISS	-
+2.9	S	5	MISS	-
+2.9	X	1	HIT	-
+3.0	O	Enter	5	4	<.....S.S.S..SSSS.S.XXSSXXXSXXSXS....................................................................>
+
+3.0	O	0	MISS	-
+3.0	A	Enter	11	5	<.....S.S.S..SSSS.S.XXSSXXXSXXSXSO...................................................................>
+
+3.0	A	0	MISS	-
+3.0	N	Enter	11	5	<.....S.S.S..SSSS.S.XXSSXXXSXXSXSOA..................................................................>
+
+3.0	N	0	MISS	-
+3.0	X	0	HIT	-
+3.0	O	3	MISS	-
+3.0	A	0	HIT	-
+3.0	N	10	MISS	-
+
+3.0	S	Exit	31	2	<.....S.S.S..SSSS.S.XXSSXXXSXXSXSOANON...............................................................>
+3.1	X	1	HIT	-
+3.1	O	3	HIT	-
+3.1	A	1	MISS	-
+3.1	N	0	HIT	-
+3.2	X	2	HIT	-
+3.2	O	3	HIT	-
+3.2	A	0	HIT	-
+3.2	N	10	HIT	-
+3.3	X	3	MISS	-
+3.3	O	2	MISS	-
+3.3	A	10	MISS	-
+3.3	N	10	HIT	-
+3.4	X	12	MISS	-
+3.4	O	3	HIT	-
+3.4	A	10	HIT	-
+3.4	N	9	MISS	-
+3.5	X	12	HIT	-
+3.5	O	4	MISS	-
+3.5	A	9	MISS	-
+3.5	N	10	HIT	-
+3.6	X	16	MISS	-
+3.6	O	4	HIT	-
+3.6	A	2	MISS	-
+3.6	N	0	HIT	-
+3.7	X	16	HIT	-
+3.7	O	4	HIT	-
+3.7	A	1	HIT	-
+3.7	N	10	HIT	-
+3.8	X	16	HIT	-
+3.8	O	2	HIT	-
+3.8	A	9	HIT	-
+3.8	N	9	HIT	-
+3.9	X	0	HIT	-
+3.9	O	3	HIT	-
+3.9	A	9	HIT	-
+3.9	N	9	HIT	-
+4.0	O	Enter	17	5	<...................XX..XXX.XX.X.OANONAXOAXNOAXA.....................................................>
+
+4.0	O	0	HIT	-
+4.0	F	Enter	17	5	<...................XX..XXX.XX.X.OANONAXOAXNOAXA.....................................................>
+
+4.0	F	0	MISS	-
+4.0	X	0	HIT	-
+4.0	O	3	HIT	-
+4.0	A	0	HIT	-
+4.0	N	0	HIT	-
+4.0	O	12	MISS	-
+4.0	F	8	MISS	-
+4.1	X	0	HIT	-
+4.1	O	2	HIT	-
+4.1	A	0	HIT	-
+4.1	N	0	HIT	-
+4.1	O	0	HIT	-
+4.1	F	8	HIT	-
+4.2	X	16	HIT	-
+4.2	O	1	MISS	-
+4.2	A	10	HIT	-
+4.2	N	7	MISS	-
+4.2	O	12	HIT	-
+4.2	F	7	MISS	-
+4.3	X	0	HIT	-
+4.3	O	0	HIT	-
+4.3	A	10	HIT	-
+4.3	N	8	MISS	-
+4.3	O	13	MISS	-
+4.3	F	8	HIT	-
+4.4	X	0	HIT	-
+4.4	O	1	HIT	-
+4.4	A	2	HIT	-
+4.4	N	8	HIT	-
+4.4	O	13	HIT	-
+4.4	F	8	HIT	-
+4.5	X	6	HIT	-
+4.5	O	1	HIT	-
+4.5	A	1	HIT	-
+4.5	N	4	MISS	-
+4.5	O	14	MISS	-
+4.5	F	7	HIT	-
+4.6	X	0	HIT	-
+4.6	O	2	HIT	-
+4.6	A	2	HIT	-
+4.6	N	3	MISS	-
+4.6	O	9	MISS	-
+4.6	F	7	HIT	-
+4.7	X	16	HIT	-
+4.7	O	0	HIT	-
+4.7	A	3	MISS	-
+4.7	N	4	HIT	-
+4.7	O	6	MISS	-
+4.7	F	8	HIT	-
+4.8	X	15	MISS	-
+4.8	O	4	HIT	-
+4.8	A	2	HIT	-
+4.8	N	5	MISS	-
+4.8	O	6	HIT	-
+4.8	F	8	HIT	-
+4.9	X	14	MISS	-
+4.9	O	0	HIT	-
+4.9	A	2	HIT	-
+4.9	N	4	HIT	-
+4.9	O	7	MISS	-
+4.9	F	9	MISS	-
+5.0	G	Enter	5	3	<...................XX..XXX.XX.X.OANONAXOAXNOAXAFOFONFNONONOAOXNXOF..................................>
+
+5.0	G	0	MISS	-
+5.0	Z	Enter	5	2	<...................XX..XXX.XX.X.OANONAXOAXNOAXAFOFONFNONONOAOXNXOFG.................................>
+
+5.0	Z	0	MISS	-
+5.0	C	Enter	11	2	<...................XX..XXX.XX.X.OANONAXOAXNOAXAFOFONFNONONOAOXNXOFGZ................................>
+
+5.0	C	0	MISS	-
+5.0	D	Enter	31	1	<...................XX..XXX.XX.X.OANONAXOAXNOAXAFOFONFNONONOAOXNXOFGZC...............................>
+
+5.0	D	0	MISS	-
+5.0	G	Enter	17	3	<...................XX..XXX.XX.X.OANONAXOAXNOAXAFOFONFNONONOAOXNXOFGZCD..............................>
+
+5.0	G	0	HIT	-
+5.0	U	Enter	11	5	<...................XX..XXX.XX.X.OANONAXOAXNOAXAFOFONFNONONOAOXNXOFGZCD..............................>
+
+5.0	U	0	MISS	-
+5.0	X	14	HIT	-
+5.0	O	0	HIT	-
+5.0	A	1	HIT	-
+5.0	N	4	HIT	-
+5.0	O	8	MISS	-
+5.0	F	8	HIT	-
+5.0	G	4	MISS	-
+5.0	Z	1	MISS	-
+5.0	C	5	MISS	-
+5.0	D	7	MISS	-
+5.0	G	4	HIT	-
+5.0	U	9	MISS	-
+5.1	X	15	HIT	-
+5.1	O	2	HIT	-
+5.1	A	0	HIT	-
+5.1	N	4	HIT	-
+5.1	O	5	MISS	-
+5.1	F	8	HIT	-
+5.1	G	4	HIT	-
+5.1	Z	1	HIT	-
+5.1	C	4	MISS	-
+5.1	D	7	HIT	-
+5.1	G	3	MISS	-
+5.1	U	0	HIT	-
+5.2	X	16	HIT	-
+5.2	O	1	HIT	-
+5.2	A	0	HIT	-
+5.2	N	4	HIT	-
+5.2	O	16	MISS	-
+5.2	F	15	MISS	-
+5.2	G	4	HIT	-
+5.2	Z	4	MISS	-
+5.2	C	5	HIT	-
+5.2	D	6	MISS	-
+5.2	G	2	MISS	-
+5.2	U	1	MISS	-
+5.3	X	16	HIT	-
+5.3	O	0	HIT	-
+5.3	A	10	HIT	-
+5.3	N	10	HIT	-
+5.3	O	2	HIT	-
+5.3	F	6	MISS	-
+5.3	G	2	HIT	-
+5.3	Z	0	HIT	-
+5.3	C	5	HIT	-
+5.3	D	5	MISS	-
+5.3	G	1	MISS	-
+5.3	U	2	MISS	-
+5.4	X	8	HIT	-
+5.4	O	0	HIT	-
+5.4	A	9	HIT	-
+5.4	N	10	HIT	-
+5.4	O	3	HIT	-
+5.4	F	5	MISS	-
+5.4	G	2	HIT	-
+5.4	Z	4	HIT	-
+5.4	C	4	HIT	-
+5.4	D	27	MISS	-
+5.4	G	11	MISS	-
+5.4	U	2	HIT	-
+5.5	X	9	MISS	-
+5.5	O	1	HIT	-
+5.5	A	8	MISS	-
+5.5	N	5	HIT	-
+5.5	O	3	HIT	-
+5.5	F	5	HIT	-
+5.5	G	0	HIT	-
+5.5	Z	0	HIT	-
+5.5	C	9	MISS	-
+5.5	D	27	HIT	-
+5.5	G	7	MISS	-
+5.5	U	4	MISS	-
+5.6	X	9	HIT	-
+5.6	O	0	HIT	-
+5.6	A	1	HIT	-
+5.6	N	6	MISS	-
+5.6	O	2	HIT	-
+5.6	F	5	HIT	-
+5.6	G	4	HIT	-
+5.6	Z	4	HIT	-
+5.6	C	10	MISS	-
+5.6	D	14	MISS	-
+5.6	G	6	MISS	-
+5.6	U	4	HIT	-
+5.7	X	8	HIT	-
+5.7	O	4	HIT	-
+5.7	A	10	HIT	-
+5.7	N	3	HIT	-
+5.7	O	1	HIT	-
+5.7	F	15	HIT	-
+5.7	G	3	HIT	-
+5.7	Z	4	HIT	-
+5.7	C	3	MISS	-
+5.7	D	13	MISS	-
+5.7	G	5	MISS	-
+5.7	U	3	MISS	-
+5.8	X	0	HIT	-
+5.8	O	0	HIT	-
+5.8	A	10	HIT	-
+5.8	N	3	HIT	-
+5.8	O	2	HIT	-
+5.8	F	15	HIT	-
+5.8	G	2	HIT	-
+5.8	Z	2	MISS	-
+5.8	C	4	HIT	-
+5.8	D	0	HIT	-
+5.8	G	5	HIT	-
+5.8	U	7	MISS	-
+5.9	X	0	HIT	-
+5.9	O	4	HIT	-
+5.9	A	0	HIT	-
+5.9	N	4	HIT	-
+5.9	O	1	HIT	-
+5.9	F	15	HIT	-
+5.9	G	1	HIT	-
+5.9	Z	3	MISS	-
+5.9	C	3	HIT	-
+5.9	D	30	MISS	-
+5.9	G	5	HIT	-
+5.9	U	0	HIT	-
+6.0	X	16	HIT	-
+6.0	O	1	HIT	-
+6.0	A	10	HIT	-
+6.0	N	5	HIT	-
+6.0	O	0	HIT	-
+6.0	F	1	MISS	-
+6.0	G	2	HIT	-
+6.0	Z	4	HIT	-
+6.0	C	10	HIT	-
+6.0	G	5	HIT	-
+6.0	U	9	HIT	-
+
+6.0	D	Exit	31	1	<DGCDGUZUZDF........XX..XXX.XX.X.OANONAXOAXNOAXAFOFONFNONONOAOXNXOFGZCDUOGZCDUOCGOFZDGUFDGUFDGXACGUNC>
+6.1	X	0	HIT	-
+6.1	O	4	HIT	-
+6.1	A	0	HIT	-
+6.1	N	7	HIT	-
+6.1	O	0	HIT	-
+6.1	F	0	HIT	-
+6.1	G	2	HIT	-
+6.1	Z	3	HIT	-
+6.1	C	9	HIT	-
+6.1	G	4	HIT	-
+6.1	U	8	MISS	-
+6.2	X	16	HIT	-
+6.2	O	0	HIT	-
+6.2	A	10	HIT	-
+6.2	N	6	HIT	-
+6.2	O	1	HIT	-
+6.2	F	1	HIT	-
+6.2	G	0	HIT	-
+6.2	Z	3	HIT	-
+6.2	C	10	HIT	-
+6.2	G	14	MISS	-
+6.2	U	7	HIT	-
+6.3	X	8	HIT	-
+6.3	O	0	HIT	-
+6.3	A	8	HIT	-
+6.3	N	10	HIT	-
+6.3	O	0	HIT	-
+6.3	F	0	HIT	-
+6.3	G	1	HIT	-
+6.3	Z	4	HIT	-
+6.3	C	0	HIT	-
+6.3	G	13	MISS	-
+6.3	U	6	MISS	-
+6.4	X	9	HIT	-
+6.4	O	0	HIT	-
+6.4	A	0	HIT	-
+6.4	N	0	HIT	-
+6.4	O	16	HIT	-
+6.4	F	0	HIT	-
+6.4	G	4	HIT	-
+6.4	Z	3	HIT	-
+6.4	C	3	HIT	-
+6.4	G	8	MISS	-
+6.4	U	6	HIT	-
+6.5	X	11	MISS	-
+6.5	O	1	HIT	-
+6.5	A	10	HIT	-
+6.5	N	1	MISS	-
+6.5	O	0	HIT	-
+6.5	F	16	MISS	-
+6.5	G	2	HIT	-
+6.5	Z	2	HIT	-
+6.5	C	3	HIT	-
+6.5	G	9	MISS	-
+6.5	U	7	HIT	-
+6.6	X	10	MISS	-
+6.6	O	1	HIT	-
+6.6	A	9	HIT	-
+6.6	N	1	HIT	-
+6.6	O	16	HIT	-
+6.6	F	8	HIT	-
+6.6	G	2	HIT	-
+6.6	Z	4	HIT	-
+6.6	C	3	HIT	-
+6.6	G	10	MISS	-
+6.6	U	1	HIT	-
+6.7	X	11	HIT	-
+6.7	O	2	HIT	-
+6.7	A	8	HIT	-
+6.7	N	1	HIT	-
+6.7	O	0	HIT	-
+6.7	F	9	HIT	-
+6.7	G	3	HIT	-
+6.7	Z	0	HIT	-
+6.7	C	2	MISS	-
+6.7	G	8	HIT	-
+6.7	U	7	HIT	-
+6.8	X	10	HIT	-
+6.8	O	4	HIT	-
+6.8	A	9	HIT	-
+6.8	N	0	HIT	-
+6.8	O	0	HIT	-
+6.8	F	8	HIT	-
+6.8	G	4	HIT	-
+6.8	Z	0	HIT	-
+6.8	C	8	MISS	-
+6.8	G	2	HIT	-
+6.8	U	8	HIT	-
+6.9	X	13	MISS	-
+6.9	O	3	HIT	-
+6.9	A	8	HIT	-
+6.9	N	10	HIT	-
+6.9	O	4	HIT	-
+6.9	F	8	HIT	-
+6.9	G	1	HIT	-
+6.9	Z	4	HIT	-
+6.9	C	7	MISS	-
+6.9	G	1	HIT	-
+6.9	U	7	HIT	-
+7.0	A	7	MISS	-
+7.0	N	9	HIT	-
+7.0	O	8	HIT	-
+7.0	F	9	HIT	-
+7.0	G	4	HIT	-
+7.0	G	2	HIT	-
+7.0	U	10	MISS	-
+
+7.0	X	Exit	17	5	<UGCGGUZUZGFUGXNFGXGXXCCXXXXXXCXAOANONAXOAXNOAXAFOFONFNONONOAOXNXOFGZCUUOGZC.UOCGOFZ.GUF.GUF.GXACGUNC>
+
+7.0	O	Exit	5	4	<UGCGGUZUZGFUG.NFG.G..CC......C.AOANONA.OA.NOA.AFOFONFNONONOAO.N.OFGZCUUOGZC.UOCGOFZ.GUF.GUF.G.ACGUNC>
+
+7.0	Z	Exit	5	2	<UGCGGUZUZGFUG.NFG.G..CC......C.A.AN.NA..A.N.A.AF.F.NFN.N.N.A..N..FGZCUU.GZC.U.CG.FZ.GUF.GUF.G.ACGUNC>
+
+7.0	C	Exit	11	2	<UGCGGU.U.GFUG.NFG.G..CC......C.A.AN.NA..A.N.A.AF.F.NFN.N.N.A..N..FG.CUU.G.C.U.CG.F..GUF.GUF.G.ACGUNC>
+7.1	A	10	HIT	-
+7.1	N	9	HIT	-
+7.1	O	9	MISS	-
+7.1	F	10	MISS	-
+7.1	G	4	HIT	-
+7.1	G	2	HIT	-
+7.1	U	0	HIT	-
+7.2	A	10	HIT	-
+7.2	N	4	HIT	-
+7.2	O	0	MISS	-
+7.2	F	13	MISS	-
+7.2	G	4	HIT	-
+7.2	G	13	HIT	-
+7.2	U	3	HIT	-
+7.3	A	0	HIT	-
+7.3	N	4	HIT	-
+7.3	O	1	MISS	-
+7.3	F	13	HIT	-
+7.3	G	4	HIT	-
+7.3	G	5	HIT	-
+7.3	U	4	HIT	-
+7.4	A	1	HIT	-
+7.4	N	0	HIT	-
+7.4	O	2	MISS	-
+7.4	F	13	HIT	-
+7.4	G	0	HIT	-
+7.4	G	4	HIT	-
+7.4	U	4	HIT	-
+7.5	A	0	HIT	-
+7.5	N	1	HIT	-
+7.5	O	7	MISS	-
+7.5	F	9	HIT	-
+7.5	G	4	HIT	-
+7.5	G	3	HIT	-
+7.5	U	4	HIT	-
+7.6	A	10	HIT	-
+7.6	N	8	HIT	-
+7.6	O	1	HIT	-
+7.6	F	0	HIT	-
+7.6	G	4	HIT	-
+7.6	G	2	HIT	-
+7.6	U	4	HIT	-
+7.7	A	0	HIT	-
+7.7	N	9	HIT	-
+7.7	O	5	MISS	-
+7.7	F	4	MISS	-
+7.7	G	0	HIT	-
+7.7	G	1	HIT	-
+7.7	U	4	HIT	-
+7.8	A	4	MISS	-
+7.8	N	9	HIT	-
+7.8	O	6	MISS	-
+7.8	F	5	HIT	-
+7.8	G	0	HIT	-
+7.8	G	2	HIT	-
+7.8	U	5	MISS	-
+7.9	A	7	HIT	-
+7.9	N	8	HIT	-
+7.9	O	3	MISS	-
+7.9	F	4	HIT	-
+7.9	G	4	HIT	-
+7.9	G	8	HIT	-
+7.9	U	6	HIT	-
+8.0	O	3	HIT	-
+8.0	F	4	HIT	-
+8.0	U	5	HIT	-
+
+8.0	A	Exit	11	5	<UGOGGUFUOGFUGFNFGOGOOOFAOUO....A.AN.NA..A.N.A.AF.F.NFN.N.N.A..N..FG..UU.G...U..G.F..GUF.GUF.G.A.GUN.>
+
+8.0	N	Exit	11	5	<UGOGGUFUOGFUGFNFGOGOOOF.OUO.......N.N.....N....F.F.NFN.N.N....N..FG..UU.G...U..G.F..GUF.GUF.G...GUN.>
+
+8.0	G	Exit	5	3	<UGOGGUFUOGFUGF.FGOGOOOF.OUO....................F.F..F............FG..UU.G...U..G.F..GUF.GUF.G...GU..>
+
+8.0	G	Exit	17	3	<U.O..UFUO.FU.F.F.O.OOOF.OUO....................F.F..F............F...UU.....U....F...UF..UF......U..>
+8.1	O	8	MISS	-
+8.1	F	3	MISS	-
+8.1	U	6	HIT	-
+8.2	O	3	HIT	-
+8.2	F	2	MISS	-
+8.2	U	5	HIT	-
+8.3	O	4	MISS	-
+8.3	F	11	MISS	-
+8.3	U	4	HIT	-
+8.4	O	4	HIT	-
+8.4	F	12	MISS	-
+8.4	U	6	HIT	-
+8.5	O	4	HIT	-
+8.5	F	4	HIT	-
+8.5	U	7	HIT	-
+8.6	O	12	MISS	-
+8.6	F	16	HIT	-
+8.6	U	6	HIT	-
+8.7	O	11	MISS	-
+8.7	F	16	HIT	-
+8.7	U	7	HIT	-
+8.8	O	9	HIT	-
+8.8	F	12	HIT	-
+8.8	U	8	HIT	-
+8.9	O	11	HIT	-
+8.9	F	3	HIT	-
+8.9	U	4	HIT	-
+9.0	U	0	HIT	-
+
+9.0	O	Exit	17	5	<UOOFFUFUOOFUFFFFOOOOOOF.OUO....................F.F..F............F...UU.....U....F...UF..UF......U..>
+
+9.0	F	Exit	17	5	<U..FFUFU..FUFFFF......F..U.....................F.F..F............F...UU.....U....F...UF..UF......U..>
+9.1	U	6	HIT	-
+9.2	U	5	HIT	-
+9.3	U	5	HIT	-
+9.4	U	1	HIT	-
+9.5	U	1	HIT	-
+9.6	U	1	HIT	-
+9.7	U	2	HIT	-
+9.8	U	3	HIT	-
+9.9	U	10	HIT	-
+
+10.0	U	Exit	11	5	<U....U.U...U.............U...........................................UU.....U........U...U.......U..>
+
+Simulation Results:
+Total References: 515
+Hits: 366, Misses: 149
+Hit Ratio: 0.71, Miss Ratio: 0.29
+Processes Swapped In: 15
+
+Running LFU Algorithm Simulation
+Time	Process	Page	Result	Evicted
+----	-------	----	------	-------
+0.0	H	Enter	5	2	<....................................................................................................>
+
+0.0	H	0	MISS	-
+0.0	H	2	MISS	-
+0.1	H	3	MISS	-
+0.2	H	0	HIT	-
+0.3	H	4	MISS	-
+0.4	H	4	HIT	-
+0.5	H	3	HIT	-
+0.6	H	2	HIT	-
+0.7	H	2	HIT	-
+0.8	H	3	HIT	-
+0.9	H	0	HIT	-
+1.0	L	Enter	11	1	<HHHH................................................................................................>
+
+1.0	L	0	MISS	-
+1.0	S	Enter	31	2	<HHHHL...............................................................................................>
+
+1.0	S	0	MISS	-
+1.0	H	4	HIT	-
+1.0	L	9	MISS	-
+1.0	S	13	MISS	-
+1.1	H	2	HIT	-
+1.1	L	8	MISS	-
+1.1	S	13	HIT	-
+1.2	H	2	HIT	-
+1.2	L	7	MISS	-
+1.2	S	11	MISS	-
+1.3	H	0	HIT	-
+1.3	L	6	MISS	-
+1.3	S	12	MISS	-
+1.4	H	0	HIT	-
+1.4	L	6	HIT	-
+1.4	S	11	HIT	-
+1.5	H	3	HIT	-
+1.5	L	7	HIT	-
+1.5	S	11	HIT	-
+1.6	H	3	HIT	-
+1.6	L	8	HIT	-
+1.6	S	11	HIT	-
+1.7	H	3	HIT	-
+1.7	L	8	HIT	-
+1.7	S	12	HIT	-
+1.8	H	4	HIT	-
+1.8	L	8	HIT	-
+1.8	S	12	HIT	-
+1.9	H	4	HIT	-
+1.9	L	1	MISS	-
+1.9	S	4	MISS	-
+2.0	X	Enter	17	5	<HHHHLSLSLLSLSLS.....................................................................................>
+
+2.0	X	0	MISS	-
+2.0	S	30	MISS	-
+2.0	X	5	MISS	-
+
+2.0	H	Exit	5	2	<HHHHLSLSLLSLSLSXSX..................................................................................>
+
+2.0	L	Exit	11	1	<....LSLSLLSLSLSXSX..................................................................................>
+2.1	S	30	HIT	-
+2.1	X	10	MISS	-
+2.2	S	0	HIT	-
+2.2	X	11	MISS	-
+2.3	S	1	MISS	-
+2.3	X	15	MISS	-
+2.4	S	1	HIT	-
+2.4	X	16	MISS	-
+2.5	S	1	HIT	-
+2.5	X	0	HIT	-
+2.6	S	25	MISS	-
+2.6	X	16	HIT	-
+2.7	S	26	MISS	-
+2.7	X	5	HIT	-
+2.8	S	14	MISS	-
+2.8	X	8	MISS	-
+2.9	S	15	MISS	-
+2.9	X	7	MISS	-
+3.0	O	Enter	5	4	<.....S.S..S.S.SXSXXXSXXSSSXSX.......................................................................>
+
+3.0	O	0	MISS	-
+3.0	A	Enter	11	5	<.....S.S..S.S.SXSXXXSXXSSSXSXO......................................................................>
+
+3.0	A	0	MISS	-
+3.0	N	Enter	11	5	<.....S.S..S.S.SXSXXXSXXSSSXSXOA.....................................................................>
+
+3.0	N	0	MISS	-
+3.0	X	6	MISS	-
+3.0	O	4	MISS	-
+3.0	A	8	MISS	-
+3.0	N	9	MISS	-
+
+3.0	S	Exit	31	2	<.....S.S..S.S.SXSXXXSXXSSSXSXOANXOAN................................................................>
+3.1	X	7	HIT	-
+3.1	O	4	HIT	-
+3.1	A	7	MISS	-
+3.1	N	8	MISS	-
+3.2	X	10	HIT	-
+3.2	O	1	MISS	-
+3.2	A	8	HIT	-
+3.2	N	9	HIT	-
+3.3	X	5	HIT	-
+3.3	O	0	HIT	-
+3.3	A	7	HIT	-
+3.3	N	0	HIT	-
+3.4	X	5	HIT	-
+3.4	O	2	MISS	-
+3.4	A	7	HIT	-
+3.4	N	8	HIT	-
+3.5	X	14	MISS	-
+3.5	O	3	MISS	-
+3.5	A	6	MISS	-
+3.5	N	7	MISS	-
+3.6	X	14	HIT	-
+3.6	O	1	HIT	-
+3.6	A	7	HIT	-
+3.6	N	6	MISS	-
+3.7	X	8	HIT	-
+3.7	O	1	HIT	-
+3.7	A	7	HIT	-
+3.7	N	9	HIT	-
+3.8	X	10	HIT	-
+3.8	O	2	HIT	-
+3.8	A	0	HIT	-
+3.8	N	9	HIT	-
+3.9	X	8	HIT	-
+3.9	O	2	HIT	-
+3.9	A	10	MISS	-
+3.9	N	10	MISS	-
+4.0	O	Enter	17	5	<...............X.XXX.XX...X.XOANXOANANOOXOANNAN.....................................................>
+
+4.0	O	0	HIT	-
+4.0	F	Enter	17	5	<...............X.XXX.XX...X.XOANXOANANOOXOANNAN.....................................................>
+
+4.0	F	0	MISS	-
+4.0	X	8	HIT	-
+4.0	O	3	HIT	-
+4.0	A	10	HIT	-
+4.0	N	10	HIT	-
+4.0	O	9	MISS	-
+4.0	F	4	MISS	-
+4.1	X	10	HIT	-
+4.1	O	4	HIT	-
+4.1	A	0	HIT	-
+4.1	N	9	HIT	-
+4.1	O	2	HIT	-
+4.1	F	5	MISS	-
+4.2	X	15	HIT	-
+4.2	O	4	HIT	-
+4.2	A	10	HIT	-
+4.2	N	9	HIT	-
+4.2	O	1	HIT	-
+4.2	F	4	HIT	-
+4.3	X	14	HIT	-
+4.3	O	4	HIT	-
+4.3	A	9	MISS	-
+4.3	N	0	HIT	-
+4.3	O	1	HIT	-
+4.3	F	4	HIT	-
+4.4	X	15	HIT	-
+4.4	O	0	HIT	-
+4.4	A	8	HIT	-
+4.4	N	10	HIT	-
+4.4	O	9	HIT	-
+4.4	F	3	MISS	-
+4.5	X	16	HIT	-
+4.5	O	4	HIT	-
+4.5	A	4	MISS	-
+4.5	N	3	MISS	-
+4.5	O	14	MISS	-
+4.5	F	4	HIT	-
+4.6	X	9	MISS	-
+4.6	O	4	HIT	-
+4.6	A	3	MISS	-
+4.6	N	4	MISS	-
+4.6	O	14	HIT	-
+4.6	F	4	HIT	-
+4.7	X	12	MISS	-
+4.7	O	0	HIT	-
+4.7	A	3	HIT	-
+4.7	N	3	HIT	-
+4.7	O	14	HIT	-
+4.7	F	14	MISS	-
+4.8	X	7	HIT	-
+4.8	O	3	HIT	-
+4.8	A	7	HIT	-
+4.8	N	4	HIT	-
+4.8	O	13	MISS	-
+4.8	F	6	MISS	-
+4.9	X	8	HIT	-
+4.9	O	2	HIT	-
+4.9	A	6	HIT	-
+4.9	N	4	HIT	-
+4.9	O	14	HIT	-
+4.9	F	5	HIT	-
+5.0	G	Enter	5	3	<...............X.XXX.XX...X.XOANXOANANOOXOANNANFOFFAFANOXANXFOF.....................................>
+
+5.0	G	0	MISS	-
+5.0	Z	Enter	5	2	<...............X.XXX.XX...X.XOANXOANANOOXOANNANFOFFAFANOXANXFOFG....................................>
+
+5.0	Z	0	MISS	-
+5.0	C	Enter	11	2	<...............X.XXX.XX...X.XOANXOANANOOXOANNANFOFFAFANOXANXFOFGZ...................................>
+
+5.0	C	0	MISS	-
+5.0	D	Enter	31	1	<...............X.XXX.XX...X.XOANXOANANOOXOANNANFOFFAFANOXANXFOFGZC..................................>
+
+5.0	D	0	MISS	-
+5.0	G	Enter	17	3	<...............X.XXX.XX...X.XOANXOANANOOXOANNANFOFFAFANOXANXFOFGZCD.................................>
+
+5.0	G	0	HIT	-
+5.0	U	Enter	11	5	<...............X.XXX.XX...X.XOANXOANANOOXOANNANFOFFAFANOXANXFOFGZCD.................................>
+
+5.0	U	0	MISS	-
+5.0	X	1	MISS	-
+5.0	O	3	HIT	-
+5.0	A	7	HIT	-
+5.0	N	1	MISS	-
+5.0	O	13	HIT	-
+5.0	F	5	HIT	-
+5.0	G	2	MISS	-
+5.0	Z	0	HIT	-
+5.0	C	7	MISS	-
+5.0	D	29	MISS	-
+5.0	G	7	MISS	-
+5.0	U	10	MISS	-
+5.1	X	2	MISS	-
+5.1	O	2	HIT	-
+5.1	A	7	HIT	-
+5.1	N	1	HIT	-
+5.1	O	13	HIT	-
+5.1	F	6	HIT	-
+5.1	G	1	MISS	-
+5.1	Z	4	MISS	-
+5.1	C	8	MISS	-
+5.1	D	0	HIT	-
+5.1	G	6	MISS	-
+5.1	U	10	HIT	-
+5.2	X	3	MISS	-
+5.2	O	4	HIT	-
+5.2	A	7	HIT	-
+5.2	N	2	MISS	-
+5.2	O	10	MISS	-
+5.2	F	5	HIT	-
+5.2	G	2	HIT	-
+5.2	Z	1	MISS	-
+5.2	C	5	MISS	-
+5.2	D	0	HIT	-
+5.2	G	7	HIT	-
+5.2	U	0	HIT	-
+5.3	X	2	HIT	-
+5.3	O	4	HIT	-
+5.3	A	8	HIT	-
+5.3	N	2	HIT	-
+5.3	O	8	MISS	-
+5.3	F	5	HIT	-
+5.3	G	1	HIT	-
+5.3	Z	4	HIT	-
+5.3	C	6	MISS	-
+5.3	D	8	MISS	-
+5.3	G	7	HIT	-
+5.3	U	1	MISS	-
+5.4	X	9	HIT	-
+5.4	O	3	HIT	-
+5.4	A	7	HIT	-
+5.4	N	2	HIT	-
+5.4	O	1	HIT	-
+5.4	F	5	HIT	-
+5.4	G	0	HIT	-
+5.4	Z	4	HIT	-
+5.4	C	9	MISS	-
+5.4	D	27	MISS	-
+5.4	G	7	HIT	-
+5.4	U	1	HIT	-
+5.5	X	8	HIT	-
+5.5	O	4	HIT	-
+5.5	A	5	MISS	-
+5.5	N	10	HIT	-
+5.5	O	1	HIT	-
+5.5	F	6	HIT	-
+5.5	G	0	HIT	-
+5.5	Z	4	HIT	-
+5.5	C	3	MISS	-
+5.5	D	27	HIT	-
+5.5	G	8	MISS	-
+5.5	U	1	HIT	-
+5.6	X	8	HIT	-
+5.6	O	3	HIT	-
+5.6	A	4	HIT	-
+5.6	N	8	HIT	-
+5.6	O	7	MISS	-
+5.6	F	15	MISS	-
+5.6	G	3	MISS	-
+5.6	Z	0	HIT	-
+5.6	C	4	MISS	-
+5.6	D	28	MISS	-
+5.6	G	5	MISS	-
+5.6	U	10	HIT	-
+5.7	X	9	HIT	-
+5.7	O	4	HIT	-
+5.7	A	3	HIT	-
+5.7	N	8	HIT	-
+5.7	O	7	HIT	-
+5.7	F	16	MISS	-
+5.7	G	2	HIT	-
+5.7	Z	4	HIT	-
+5.7	C	3	HIT	-
+5.7	D	29	HIT	-
+5.7	G	4	MISS	-
+5.7	U	9	MISS	-
+5.8	X	9	HIT	-
+5.8	O	0	HIT	-
+5.8	A	3	HIT	-
+5.8	N	5	MISS	-
+5.8	O	16	MISS	-
+5.8	F	4	HIT	-
+5.8	G	1	HIT	-
+5.8	Z	2	MISS	-
+5.8	C	9	HIT	-
+5.8	D	10	MISS	-
+5.8	G	5	HIT	-
+5.8	U	8	MISS	-
+5.9	X	9	HIT	-
+5.9	O	2	HIT	-
+5.9	A	3	HIT	-
+5.9	N	2	HIT	-
+5.9	O	0	HIT	-
+5.9	F	5	HIT	-
+5.9	G	0	HIT	-
+5.9	Z	3	MISS	-
+5.9	C	9	HIT	-
+5.9	D	10	HIT	-
+5.9	G	5	HIT	-
+5.9	U	7	MISS	-
+6.0	X	11	HIT	-
+6.0	O	2	HIT	-
+6.0	A	3	HIT	-
+6.0	N	2	HIT	-
+6.0	O	3	HIT	-
+6.0	F	5	HIT	-
+6.0	G	1	HIT	-
+6.0	Z	3	HIT	-
+6.0	C	10	MISS	-
+6.0	G	6	HIT	-
+6.0	U	6	MISS	-
+
+6.0	D	Exit	31	1	<FGUNOZDUZUCU...X.XXX.XX...X.XOANXOANANOOXOANNANFOFFAFANOXANXFOFGZCDUXNGCDGUXGZCGXNOZCOCDUCDACGOFGCDG>
+6.1	X	10	HIT	-
+6.1	O	4	HIT	-
+6.1	A	2	MISS	-
+6.1	N	2	HIT	-
+6.1	O	2	HIT	-
+6.1	F	6	HIT	-
+6.1	G	1	HIT	-
+6.1	Z	2	HIT	-
+6.1	C	10	HIT	-
+6.1	G	5	HIT	-
+6.1	U	7	HIT	-
+6.2	X	9	HIT	-
+6.2	O	0	HIT	-
+6.2	A	6	HIT	-
+6.2	N	4	HIT	-
+6.2	O	0	HIT	-
+6.2	F	5	HIT	-
+6.2	G	2	HIT	-
+6.2	Z	4	HIT	-
+6.2	C	5	HIT	-
+6.2	G	6	HIT	-
+6.2	U	6	HIT	-
+6.3	X	8	HIT	-
+6.3	O	1	HIT	-
+6.3	A	6	HIT	-
+6.3	N	9	HIT	-
+6.3	O	1	HIT	-
+6.3	F	4	HIT	-
+6.3	G	4	HIT	-
+6.3	Z	2	HIT	-
+6.3	C	3	HIT	-
+6.3	G	0	HIT	-
+6.3	U	5	MISS	-
+6.4	X	9	HIT	-
+6.4	O	1	HIT	-
+6.4	A	10	HIT	-
+6.4	N	10	HIT	-
+6.4	O	1	HIT	-
+6.4	F	3	HIT	-
+6.4	G	4	HIT	-
+6.4	Z	3	HIT	-
+6.4	C	4	HIT	-
+6.4	G	9	MISS	-
+6.4	U	1	HIT	-
+6.5	X	9	HIT	-
+6.5	O	2	HIT	-
+6.5	A	9	HIT	-
+6.5	N	5	HIT	-
+6.5	O	0	HIT	-
+6.5	F	10	MISS	-
+6.5	G	2	HIT	-
+6.5	Z	2	HIT	-
+6.5	C	4	HIT	-
+6.5	G	10	MISS	-
+6.5	U	8	HIT	-
+6.6	X	7	HIT	-
+6.6	O	1	HIT	-
+6.6	A	7	HIT	-
+6.6	N	8	HIT	-
+6.6	O	0	HIT	-
+6.6	F	10	HIT	-
+6.6	G	2	HIT	-
+6.6	Z	3	HIT	-
+6.6	C	5	HIT	-
+6.6	G	10	HIT	-
+6.6	U	9	HIT	-
+6.7	X	6	HIT	-
+6.7	O	0	HIT	-
+6.7	A	9	HIT	-
+6.7	N	9	HIT	-
+6.7	O	0	HIT	-
+6.7	F	9	MISS	-
+6.7	G	3	HIT	-
+6.7	Z	2	HIT	-
+6.7	C	6	HIT	-
+6.7	G	11	MISS	-
+6.7	U	9	HIT	-
+6.8	X	15	HIT	-
+6.8	O	3	HIT	-
+6.8	A	9	HIT	-
+6.8	N	9	HIT	-
+6.8	O	2	HIT	-
+6.8	F	9	HIT	-
+6.8	G	1	HIT	-
+6.8	Z	2	HIT	-
+6.8	C	5	HIT	-
+6.8	G	10	HIT	-
+6.8	U	4	MISS	-
+6.9	X	16	HIT	-
+6.9	O	3	HIT	-
+6.9	A	9	HIT	-
+6.9	N	10	HIT	-
+6.9	O	1	HIT	-
+6.9	F	7	MISS	-
+6.9	G	3	HIT	-
+6.9	Z	3	HIT	-
+6.9	C	6	HIT	-
+6.9	G	9	HIT	-
+6.9	U	5	HIT	-
+7.0	A	10	HIT	-
+7.0	N	2	HIT	-
+7.0	O	0	HIT	-
+7.0	F	8	MISS	-
+7.0	G	4	HIT	-
+7.0	G	13	MISS	-
+7.0	U	5	HIT	-
+
+7.0	X	Exit	17	5	<FGUNOZAUZUCUUGFXGXXXFXXGUFXFXOANXOANANOOXOANNANFOFFAFANOXANXFOFGZCGUXNGC.GUXGZCGXNOZCOC.UC.ACGOFGC.G>
+
+7.0	O	Exit	5	4	<FGUNOZAUZUCUUGF.G...F..GUF.F.OAN.OANANOO.OANNANFOFFAFANO.AN.FOFGZCGU.NGC.GU.GZCG.NOZCOC.UC.ACGOFGC.G>
+
+7.0	Z	Exit	5	2	<FGUN.ZAUZUCUUGF.G...F..GUF.F..AN..ANAN....ANNANF.FFAFAN..AN.F.FGZCGU.NGC.GU.GZCG.N.ZC.C.UC.ACG.FGC.G>
+
+7.0	C	Exit	11	2	<FGUN..AU.UCUUGF.G...F..GUF.F..AN..ANAN....ANNANF.FFAFAN..AN.F.FG.CGU.NGC.GU.G.CG.N..C.C.UC.ACG.FGC.G>
+7.1	A	4	HIT	-
+7.1	N	2	HIT	-
+7.1	O	16	MISS	-
+7.1	F	8	HIT	-
+7.1	G	3	HIT	-
+7.1	G	14	MISS	-
+7.1	U	2	MISS	-
+7.2	A	4	HIT	-
+7.2	N	8	HIT	-
+7.2	O	15	MISS	-
+7.2	F	11	MISS	-
+7.2	G	2	HIT	-
+7.2	G	12	MISS	-
+7.2	U	9	HIT	-
+7.3	A	0	HIT	-
+7.3	N	9	HIT	-
+7.3	O	16	HIT	-
+7.3	F	5	HIT	-
+7.3	G	2	HIT	-
+7.3	G	13	HIT	-
+7.3	U	8	HIT	-
+7.4	A	0	HIT	-
+7.4	N	4	HIT	-
+7.4	O	10	MISS	-
+7.4	F	4	HIT	-
+7.4	G	2	HIT	-
+7.4	G	12	HIT	-
+7.4	U	6	HIT	-
+7.5	A	1	MISS	-
+7.5	N	4	HIT	-
+7.5	O	10	HIT	-
+7.5	F	5	HIT	-
+7.5	G	3	HIT	-
+7.5	G	12	HIT	-
+7.5	U	2	HIT	-
+7.6	A	2	HIT	-
+7.6	N	8	HIT	-
+7.6	O	9	MISS	-
+7.6	F	4	HIT	-
+7.6	G	3	HIT	-
+7.6	G	2	HIT	-
+7.6	U	9	HIT	-
+7.7	A	1	HIT	-
+7.7	N	4	HIT	-
+7.7	O	10	HIT	-
+7.7	F	6	HIT	-
+7.7	G	1	HIT	-
+7.7	G	16	MISS	-
+7.7	U	10	HIT	-
+7.8	A	2	HIT	-
+7.8	N	5	HIT	-
+7.8	O	10	HIT	-
+7.8	F	6	HIT	-
+7.8	G	2	HIT	-
+7.8	G	0	HIT	-
+7.8	U	10	HIT	-
+7.9	A	9	HIT	-
+7.9	N	0	HIT	-
+7.9	O	10	HIT	-
+7.9	F	7	HIT	-
+7.9	G	4	HIT	-
+7.9	G	0	HIT	-
+7.9	U	2	HIT	-
+8.0	O	1	MISS	-
+8.0	F	7	HIT	-
+8.0	U	7	HIT	-
+
+8.0	A	Exit	11	5	<FGUNOGAUUUOUUGFFGGOAFOGGUFOF..AN..ANAN....ANNANF.FFAFAN..AN.F.FG..GU.NG..GU.G..G.N......U..A.G.FG..G>
+
+8.0	N	Exit	11	5	<FGUNOG.UUUOUUGFFGGO.FOGGUFOF...N...N.N.....NN.NF.FF.F.N...N.F.FG..GU.NG..GU.G..G.N......U....G.FG..G>
+
+8.0	G	Exit	5	3	<FGU.OG.UUUOUUGFFGGO.FOGGUFOF...................F.FF.F.......F.FG..GU..G..GU.G..G........U....G.FG..G>
+
+8.0	G	Exit	17	3	<F.U.O..UUUOUU.FF..O.FO..UFOF...................F.FF.F.......F.F....U......U.............U......F....>
+8.1	O	1	HIT	-
+8.1	F	11	HIT	-
+8.1	U	7	HIT	-
+8.2	O	15	HIT	-
+8.2	F	12	MISS	-
+8.2	U	7	HIT	-
+8.3	O	14	MISS	-
+8.3	F	13	MISS	-
+8.3	U	7	HIT	-
+8.4	O	14	HIT	-
+8.4	F	13	HIT	-
+8.4	U	8	HIT	-
+8.5	O	14	HIT	-
+8.5	F	13	HIT	-
+8.5	U	5	HIT	-
+8.6	O	8	MISS	-
+8.6	F	14	HIT	-
+8.6	U	4	HIT	-
+8.7	O	12	MISS	-
+8.7	F	12	HIT	-
+8.7	U	3	MISS	-
+8.8	O	11	MISS	-
+8.8	F	5	HIT	-
+8.8	U	4	HIT	-
+8.9	O	0	MISS	-
+8.9	F	7	HIT	-
+8.9	U	2	HIT	-
+9.0	U	0	HIT	-
+
+9.0	O	Exit	17	5	<FFUOOFOUUUOUUOFFUOOOFO..UFOF...................F.FF.F.......F.F....U......U.............U......F....>
+
+9.0	F	Exit	17	5	<FFU..F.UUU.UU.FFU...F...UF.F...................F.FF.F.......F.F....U......U.............U......F....>
+9.1	U	1	HIT	-
+9.2	U	2	HIT	-
+9.3	U	1	HIT	-
+9.4	U	2	HIT	-
+9.5	U	6	HIT	-
+9.6	U	5	HIT	-
+9.7	U	5	HIT	-
+9.8	U	6	HIT	-
+9.9	U	1	HIT	-
+
+10.0	U	Exit	11	5	<..U....UUU.UU...U.......U..........................................U......U.............U...........>
+
+Simulation Results:
+Total References: 515
+Hits: 373, Misses: 142
+Hit Ratio: 0.72, Miss Ratio: 0.28
+Processes Swapped In: 15
+
+Running LFU Algorithm Simulation
+Time	Process	Page	Result	Evicted
+----	-------	----	------	-------
+0.0	H	Enter	5	2	<....................................................................................................>
+
+0.0	H	0	MISS	-
+0.0	H	3	MISS	-
+0.1	H	0	HIT	-
+0.2	H	4	MISS	-
+0.3	H	3	HIT	-
+0.4	H	3	HIT	-
+0.5	H	0	HIT	-
+0.6	H	4	HIT	-
+0.7	H	4	HIT	-
+0.8	H	4	HIT	-
+0.9	H	0	HIT	-
+1.0	L	Enter	11	1	<HHH.................................................................................................>
+
+1.0	L	0	MISS	-
+1.0	S	Enter	31	2	<HHHL................................................................................................>
+
+1.0	S	0	MISS	-
+1.0	H	1	MISS	-
+1.0	L	3	MISS	-
+1.0	S	16	MISS	-
+1.1	H	1	HIT	-
+1.1	L	2	MISS	-
+1.1	S	17	MISS	-
+1.2	H	4	HIT	-
+1.2	L	1	MISS	-
+1.2	S	18	MISS	-
+1.3	H	0	HIT	-
+1.3	L	0	HIT	-
+1.3	S	22	MISS	-
+1.4	H	4	HIT	-
+1.4	L	10	MISS	-
+1.4	S	21	MISS	-
+1.5	H	3	HIT	-
+1.5	L	6	MISS	-
+1.5	S	9	MISS	-
+1.6	H	3	HIT	-
+1.6	L	3	HIT	-
+1.6	S	8	MISS	-
+1.7	H	3	HIT	-
+1.7	L	2	HIT	-
+1.7	S	9	HIT	-
+1.8	H	3	HIT	-
+1.8	L	10	HIT	-
+1.8	S	8	HIT	-
+1.9	H	2	MISS	-
+1.9	L	9	MISS	-
+1.9	S	2	MISS	-
+2.0	X	Enter	17	5	<HHHLSHLSLSLSSLSLSSHLS...............................................................................>
+
+2.0	X	0	MISS	-
+2.0	S	14	MISS	-
+2.0	X	16	MISS	-
+
+2.0	H	Exit	5	2	<HHHLSHLSLSLSSLSLSSHLSXSX............................................................................>
+
+2.0	L	Exit	11	1	<...LS.LSLSLSSLSLSS.LSXSX............................................................................>
+2.1	S	2	HIT	-
+2.1	X	16	HIT	-
+2.2	S	1	MISS	-
+2.2	X	4	MISS	-
+2.3	S	2	HIT	-
+2.3	X	3	MISS	-
+2.4	S	3	MISS	-
+2.4	X	3	HIT	-
+2.5	S	4	MISS	-
+2.5	X	9	MISS	-
+2.6	S	5	MISS	-
+2.6	X	2	MISS	-
+2.7	S	5	HIT	-
+2.7	X	1	MISS	-
+2.8	S	6	MISS	-
+2.8	X	0	HIT	-
+2.9	S	17	HIT	-
+2.9	X	12	MISS	-
+3.0	O	Enter	5	4	<....S..S.S.SS.S.SS..SXSXSXXSSXSXXSX.................................................................>
+
+3.0	O	0	MISS	-
+3.0	A	Enter	11	5	<....S..S.S.SS.S.SS..SXSXSXXSSXSXXSXO................................................................>
+
+3.0	A	0	MISS	-
+3.0	N	Enter	11	5	<....S..S.S.SS.S.SS..SXSXSXXSSXSXXSXOA...............................................................>
+
+3.0	N	0	MISS	-
+3.0	X	13	MISS	-
+3.0	O	0	HIT	-
+3.0	A	1	MISS	-
+3.0	N	0	HIT	-
+
+3.0	S	Exit	31	2	<....S..S.S.SS.S.SS..SXSXSXXSSXSXXSXOANXA............................................................>
+3.1	X	13	HIT	-
+3.1	O	1	MISS	-
+3.1	A	1	HIT	-
+3.1	N	6	MISS	-
+3.2	X	9	HIT	-
+3.2	O	3	MISS	-
+3.2	A	0	HIT	-
+3.2	N	6	HIT	-
+3.3	X	6	MISS	-
+3.3	O	3	HIT	-
+3.3	A	6	MISS	-
+3.3	N	5	MISS	-
+3.4	X	10	MISS	-
+3.4	O	3	HIT	-
+3.4	A	7	MISS	-
+3.4	N	6	HIT	-
+3.5	X	11	MISS	-
+3.5	O	3	HIT	-
+3.5	A	6	HIT	-
+3.5	N	5	HIT	-
+3.6	X	12	HIT	-
+3.6	O	2	MISS	-
+3.6	A	5	MISS	-
+3.6	N	2	MISS	-
+3.7	X	11	HIT	-
+3.7	O	1	HIT	-
+3.7	A	0	HIT	-
+3.7	N	2	HIT	-
+3.8	X	2	HIT	-
+3.8	O	0	HIT	-
+3.8	A	0	HIT	-
+3.8	N	8	MISS	-
+3.9	X	2	HIT	-
+3.9	O	1	HIT	-
+3.9	A	0	HIT	-
+3.9	N	9	MISS	-
+4.0	O	Enter	17	5	<.....................X.X.XX..X.XX.XOANXAONOXANXAXOANNN..............................................>
+
+4.0	O	0	HIT	-
+4.0	F	Enter	17	5	<.....................X.X.XX..X.XX.XOANXAONOXANXAXOANNN..............................................>
+
+4.0	F	0	MISS	-
+4.0	X	3	HIT	-
+4.0	O	0	HIT	-
+4.0	A	10	MISS	-
+4.0	N	8	HIT	-
+4.0	O	14	MISS	-
+4.0	F	11	MISS	-
+4.1	X	4	HIT	-
+4.1	O	0	HIT	-
+4.1	A	1	HIT	-
+4.1	N	7	MISS	-
+4.1	O	15	MISS	-
+4.1	F	11	HIT	-
+4.2	X	3	HIT	-
+4.2	O	1	HIT	-
+4.2	A	1	HIT	-
+4.2	N	6	HIT	-
+4.2	O	16	MISS	-
+4.2	F	4	MISS	-
+4.3	X	2	HIT	-
+4.3	O	2	HIT	-
+4.3	A	2	MISS	-
+4.3	N	7	HIT	-
+4.3	O	15	HIT	-
+4.3	F	13	MISS	-
+4.4	X	2	HIT	-
+4.4	O	1	HIT	-
+4.4	A	10	HIT	-
+4.4	N	7	HIT	-
+4.4	O	14	HIT	-
+4.4	F	10	MISS	-
+4.5	X	1	HIT	-
+4.5	O	1	HIT	-
+4.5	A	7	HIT	-
+4.5	N	6	HIT	-
+4.5	O	15	HIT	-
+4.5	F	6	MISS	-
+4.6	X	16	HIT	-
+4.6	O	0	HIT	-
+4.6	A	6	HIT	-
+4.6	N	10	MISS	-
+4.6	O	3	HIT	-
+4.6	F	5	MISS	-
+4.7	X	15	MISS	-
+4.7	O	0	HIT	-
+4.7	A	6	HIT	-
+4.7	N	10	HIT	-
+4.7	O	2	HIT	-
+4.7	F	4	HIT	-
+4.8	X	12	HIT	-
+4.8	O	1	HIT	-
+4.8	A	5	HIT	-
+4.8	N	10	HIT	-
+4.8	O	2	HIT	-
+4.8	F	5	HIT	-
+4.9	X	10	HIT	-
+4.9	O	4	MISS	-
+4.9	A	6	HIT	-
+4.9	N	6	HIT	-
+4.9	O	3	HIT	-
+4.9	F	5	HIT	-
+5.0	G	Enter	5	3	<.....................X.X.XX..X.XX.XOANXAONOXANXAXOANNNFAOFNOOFAFFFNFXO..............................>
+
+5.0	G	0	MISS	-
+5.0	Z	Enter	5	2	<.....................X.X.XX..X.XX.XOANXAONOXANXAXOANNNFAOFNOOFAFFFNFXOG.............................>
+
+5.0	Z	0	MISS	-
+5.0	C	Enter	11	2	<.....................X.X.XX..X.XX.XOANXAONOXANXAXOANNNFAOFNOOFAFFFNFXOGZ............................>
+
+5.0	C	0	MISS	-
+5.0	D	Enter	31	1	<.....................X.X.XX..X.XX.XOANXAONOXANXAXOANNNFAOFNOOFAFFFNFXOGZC...........................>
+
+5.0	D	0	MISS	-
+5.0	G	Enter	17	3	<.....................X.X.XX..X.XX.XOANXAONOXANXAXOANNNFAOFNOOFAFFFNFXOGZCD..........................>
+
+5.0	G	0	HIT	-
+5.0	U	Enter	11	5	<.....................X.X.XX..X.XX.XOANXAONOXANXAXOANNNFAOFNOOFAFFFNFXOGZCD..........................>
+
+5.0	U	0	MISS	-
+5.0	X	10	HIT	-
+5.0	O	4	HIT	-
+5.0	A	0	HIT	-
+5.0	N	7	HIT	-
+5.0	O	3	HIT	-
+5.0	F	10	HIT	-
+5.0	G	3	MISS	-
+5.0	Z	2	MISS	-
+5.0	C	2	MISS	-
+5.0	D	11	MISS	-
+5.0	G	16	MISS	-
+5.0	U	2	MISS	-
+5.1	X	9	HIT	-
+5.1	O	1	HIT	-
+5.1	A	0	HIT	-
+5.1	N	1	MISS	-
+5.1	O	4	HIT	-
+5.1	F	9	MISS	-
+5.1	G	0	HIT	-
+5.1	Z	0	HIT	-
+5.1	C	9	MISS	-
+5.1	D	30	MISS	-
+5.1	G	16	HIT	-
+5.1	U	2	HIT	-
+5.2	X	14	MISS	-
+5.2	O	1	HIT	-
+5.2	A	1	HIT	-
+5.2	N	1	HIT	-
+5.2	O	4	HIT	-
+5.2	F	10	HIT	-
+5.2	G	0	HIT	-
+5.2	Z	0	HIT	-
+5.2	C	10	MISS	-
+5.2	D	29	MISS	-
+5.2	G	9	MISS	-
+5.2	U	1	MISS	-
+5.3	X	15	HIT	-
+5.3	O	0	HIT	-
+5.3	A	0	HIT	-
+5.3	N	0	HIT	-
+5.3	O	5	MISS	-
+5.3	F	10	HIT	-
+5.3	G	4	MISS	-
+5.3	Z	2	HIT	-
+5.3	C	9	HIT	-
+5.3	D	11	HIT	-
+5.3	G	12	MISS	-
+5.3	U	1	HIT	-
+5.4	X	15	HIT	-
+5.4	O	2	HIT	-
+5.4	A	1	HIT	-
+5.4	N	0	HIT	-
+5.4	O	4	HIT	-
+5.4	F	1	MISS	-
+5.4	G	3	HIT	-
+5.4	Z	1	MISS	-
+5.4	C	10	HIT	-
+5.4	D	16	MISS	-
+5.4	G	13	MISS	-
+5.4	U	9	MISS	-
+5.5	X	8	MISS	-
+5.5	O	1	HIT	-
+5.5	A	2	HIT	-
+5.5	N	8	HIT	-
+5.5	O	3	HIT	-
+5.5	F	0	HIT	-
+5.5	G	2	MISS	-
+5.5	Z	4	MISS	-
+5.5	C	3	MISS	-
+5.5	D	15	MISS	-
+5.5	G	15	MISS	-
+5.5	U	8	MISS	-
+5.6	X	9	HIT	-
+5.6	O	1	HIT	-
+5.6	A	2	HIT	-
+5.6	N	9	HIT	-
+5.6	O	4	HIT	-
+5.6	F	0	HIT	-
+5.6	G	1	MISS	-
+5.6	Z	0	HIT	-
+5.6	C	5	MISS	-
+5.6	D	14	MISS	-
+5.6	G	16	HIT	-
+5.6	U	7	MISS	-
+5.7	X	10	HIT	-
+5.7	O	3	HIT	-
+5.7	A	2	HIT	-
+5.7	N	8	HIT	-
+5.7	O	1	HIT	-
+5.7	F	16	MISS	-
+5.7	G	4	HIT	-
+5.7	Z	4	HIT	-
+5.7	C	2	HIT	-
+5.7	D	13	MISS	-
+5.7	G	15	HIT	-
+5.7	U	6	MISS	-
+5.8	X	9	HIT	-
+5.8	O	2	HIT	-
+5.8	A	6	HIT	-
+5.8	N	7	HIT	-
+5.8	O	0	HIT	-
+5.8	F	4	HIT	-
+5.8	G	3	HIT	-
+5.8	Z	4	HIT	-
+5.8	C	7	MISS	-
+5.8	D	26	MISS	-
+5.8	G	14	MISS	-
+5.8	U	6	HIT	-
+5.9	X	8	HIT	-
+5.9	O	2	HIT	-
+5.9	A	5	HIT	-
+5.9	N	7	HIT	-
+5.9	O	16	HIT	-
+5.9	F	4	HIT	-
+5.9	G	3	HIT	-
+5.9	Z	4	HIT	-
+5.9	C	6	MISS	-
+5.9	D	26	HIT	-
+5.9	G	15	HIT	-
+5.9	U	6	HIT	-
+6.0	X	14	HIT	-
+6.0	O	0	HIT	-
+6.0	A	5	HIT	-
+6.0	N	0	HIT	-
+6.0	O	16	HIT	-
+6.0	F	3	MISS	-
+6.0	G	2	HIT	-
+6.0	Z	0	HIT	-
+6.0	C	6	HIT	-
+6.0	G	15	HIT	-
+6.0	U	5	MISS	-
+
+6.0	D	Exit	31	1	<ZCDGUGCDUFDUCDGCFU...X.X.XX..X.XX.XOANXAONOXANXAXOANNNFAOFNOOFAFFFNFXOGZCDUGZCDGUNFCDXCDGUOGGFZDGUXG>
+6.1	X	14	HIT	-
+6.1	O	1	HIT	-
+6.1	A	6	HIT	-
+6.1	N	6	HIT	-
+6.1	O	16	HIT	-
+6.1	F	4	HIT	-
+6.1	G	1	HIT	-
+6.1	Z	0	HIT	-
+6.1	C	10	HIT	-
+6.1	G	16	HIT	-
+6.1	U	5	HIT	-
+6.2	X	15	HIT	-
+6.2	O	0	HIT	-
+6.2	A	7	HIT	-
+6.2	N	9	HIT	-
+6.2	O	0	HIT	-
+6.2	F	5	HIT	-
+6.2	G	0	HIT	-
+6.2	Z	0	HIT	-
+6.2	C	6	HIT	-
+6.2	G	0	HIT	-
+6.2	U	4	MISS	-
+6.3	X	15	HIT	-
+6.3	O	2	HIT	-
+6.3	A	8	MISS	-
+6.3	N	9	HIT	-
+6.3	O	16	HIT	-
+6.3	F	3	HIT	-
+6.3	G	1	HIT	-
+6.3	Z	3	MISS	-
+6.3	C	2	HIT	-
+6.3	G	16	HIT	-
+6.3	U	5	HIT	-
+6.4	X	10	HIT	-
+6.4	O	1	HIT	-
+6.4	A	9	MISS	-
+6.4	N	3	MISS	-
+6.4	O	16	HIT	-
+6.4	F	6	HIT	-
+6.4	G	0	HIT	-
+6.4	Z	2	HIT	-
+6.4	C	9	HIT	-
+6.4	G	15	HIT	-
+6.4	U	6	HIT	-
+6.5	X	13	HIT	-
+6.5	O	1	HIT	-
+6.5	A	8	HIT	-
+6.5	N	4	MISS	-
+6.5	O	15	HIT	-
+6.5	F	0	HIT	-
+6.5	G	4	HIT	-
+6.5	Z	2	HIT	-
+6.5	C	9	HIT	-
+6.5	G	15	HIT	-
+6.5	U	5	HIT	-
+6.6	X	1	HIT	-
+6.6	O	1	HIT	-
+6.6	A	8	HIT	-
+6.6	N	5	HIT	-
+6.6	O	13	MISS	-
+6.6	F	1	HIT	-
+6.6	G	0	HIT	-
+6.6	Z	3	HIT	-
+6.6	C	8	MISS	-
+6.6	G	8	MISS	-
+6.6	U	5	HIT	-
+6.7	X	16	HIT	-
+6.7	O	2	HIT	-
+6.7	A	9	HIT	-
+6.7	N	2	HIT	-
+6.7	O	14	HIT	-
+6.7	F	8	MISS	-
+6.7	G	1	HIT	-
+6.7	Z	3	HIT	-
+6.7	C	7	HIT	-
+6.7	G	7	MISS	-
+6.7	U	2	HIT	-
+6.8	X	0	HIT	-
+6.8	O	2	HIT	-
+6.8	A	9	HIT	-
+6.8	N	3	HIT	-
+6.8	O	13	HIT	-
+6.8	F	12	MISS	-
+6.8	G	0	HIT	-
+6.8	Z	1	HIT	-
+6.8	C	0	HIT	-
+6.8	G	6	MISS	-
+6.8	U	3	MISS	-
+6.9	X	5	MISS	-
+6.9	O	3	HIT	-
+6.9	A	10	HIT	-
+6.9	N	9	HIT	-
+6.9	O	16	HIT	-
+6.9	F	13	HIT	-
+6.9	G	0	HIT	-
+6.9	Z	2	HIT	-
+6.9	C	6	HIT	-
+6.9	G	6	HIT	-
+6.9	U	3	HIT	-
+7.0	A	9	HIT	-
+7.0	N	8	HIT	-
+7.0	O	5	HIT	-
+7.0	F	9	HIT	-
+7.0	G	4	HIT	-
+7.0	G	7	HIT	-
+7.0	U	3	HIT	-
+
+7.0	X	Exit	17	5	<ZCUGUGCAUFZUCAGCFUNNOXCXGXXFGXFXXGXOANXAONOXANXAXOANNNFAOFNOOFAFFFNFXOGZCUUGZCXGUNFC.XC.GUOGGFZ.GUXG>
+
+7.0	O	Exit	5	4	<ZCUGUGCAUFZUCAGCFUNNO.C.G..FG.F..G.OAN.AONO.AN.A.OANNNFAOFNOOFAFFFNF.OGZCUUGZC.GUNFC..C.GUOGGFZ.GU.G>
+
+7.0	Z	Exit	5	2	<ZCUGUGCAUFZUCAGCFUNN..C.G..FG.F..G..AN.A.N..AN.A..ANNNFA.FN..FAFFFNF..GZCUUGZC.GUNFC..C.GU.GGFZ.GU.G>
+
+7.0	C	Exit	11	2	<.CUGUGCAUF.UCAGCFUNN..C.G..FG.F..G..AN.A.N..AN.A..ANNNFA.FN..FAFFFNF..G.CUUG.C.GUNFC..C.GU.GGF..GU.G>
+7.1	A	9	HIT	-
+7.1	N	8	HIT	-
+7.1	O	6	MISS	-
+7.1	F	5	HIT	-
+7.1	G	4	HIT	-
+7.1	G	7	HIT	-
+7.1	U	6	HIT	-
+7.2	A	8	HIT	-
+7.2	N	10	HIT	-
+7.2	O	5	MISS	-
+7.2	F	10	HIT	-
+7.2	G	0	HIT	-
+7.2	G	6	HIT	-
+7.2	U	5	HIT	-
+7.3	A	9	HIT	-
+7.3	N	6	HIT	-
+7.3	O	6	HIT	-
+7.3	F	6	HIT	-
+7.3	G	4	HIT	-
+7.3	G	6	HIT	-
+7.3	U	10	MISS	-
+7.4	A	9	HIT	-
+7.4	N	6	HIT	-
+7.4	O	16	MISS	-
+7.4	F	6	HIT	-
+7.4	G	3	HIT	-
+7.4	G	6	HIT	-
+7.4	U	9	HIT	-
+7.5	A	8	HIT	-
+7.5	N	10	HIT	-
+7.5	O	8	MISS	-
+7.5	F	6	HIT	-
+7.5	G	2	HIT	-
+7.5	G	6	HIT	-
+7.5	U	10	HIT	-
+7.6	A	1	HIT	-
+7.6	N	0	HIT	-
+7.6	O	14	MISS	-
+7.6	F	7	MISS	-
+7.6	G	1	HIT	-
+7.6	G	13	HIT	-
+7.6	U	0	HIT	-
+7.7	A	0	HIT	-
+7.7	N	0	HIT	-
+7.7	O	2	MISS	-
+7.7	F	6	HIT	-
+7.7	G	1	HIT	-
+7.7	G	14	HIT	-
+7.7	U	4	HIT	-
+7.8	A	0	HIT	-
+7.8	N	0	HIT	-
+7.8	O	11	MISS	-
+7.8	F	6	HIT	-
+7.8	G	2	HIT	-
+7.8	G	14	HIT	-
+7.8	U	3	HIT	-
+7.9	A	0	HIT	-
+7.9	N	10	HIT	-
+7.9	O	5	HIT	-
+7.9	F	6	HIT	-
+7.9	G	4	HIT	-
+7.9	G	13	HIT	-
+7.9	U	10	HIT	-
+8.0	O	11	HIT	-
+8.0	F	10	HIT	-
+8.0	U	10	HIT	-
+
+8.0	A	Exit	11	5	<OOUGUGUAUFOUOAGOFUNNFOO.G..FG.F..G..AN.A.N..AN.A..ANNNFA.FN..FAFFFNF..G..UUG...GUNF.....GU.GGF..GU.G>
+
+8.0	N	Exit	11	5	<OOUGUGU.UFOUO.GOFUNNFOO.G..FG.F..G...N...N...N.....NNNF..FN..F.FFFNF..G..UUG...GUNF.....GU.GGF..GU.G>
+
+8.0	G	Exit	5	3	<OOUGUGU.UFOUO.GOFU..FOO.G..FG.F..G....................F..F...F.FFF.F..G..UUG...GU.F.....GU.GGF..GU.G>
+
+8.0	G	Exit	17	3	<OOU.U.U.UFOUO..OFU..FOO....F..F.......................F..F...F.FFF.F.....UU.....U.F......U...F...U..>
+8.1	O	6	HIT	-
+8.1	F	5	HIT	-
+8.1	U	9	HIT	-
+8.2	O	9	MISS	-
+8.2	F	6	HIT	-
+8.2	U	10	HIT	-
+8.3	O	10	MISS	-
+8.3	F	14	MISS	-
+8.3	U	9	HIT	-
+8.4	O	13	MISS	-
+8.4	F	15	MISS	-
+8.4	U	8	HIT	-
+8.5	O	8	HIT	-
+8.5	F	16	HIT	-
+8.5	U	7	HIT	-
+8.6	O	6	HIT	-
+8.6	F	15	HIT	-
+8.6	U	10	HIT	-
+8.7	O	5	HIT	-
+8.7	F	8	HIT	-
+8.7	U	10	HIT	-
+8.8	O	1	MISS	-
+8.8	F	7	HIT	-
+8.8	U	9	HIT	-
+8.9	O	12	MISS	-
+8.9	F	7	HIT	-
+8.9	U	8	HIT	-
+9.0	U	9	HIT	-
+
+9.0	O	Exit	17	5	<OOUOUOUFUFOUOOFOFUOOFOO....F..F.......................F..F...F.FFF.F.....UU.....U.F......U...F...U..>
+
+9.0	F	Exit	17	5	<..U.U.UFUF.U..F.FU..F......F..F.......................F..F...F.FFF.F.....UU.....U.F......U...F...U..>
+9.1	U	10	HIT	-
+9.2	U	0	HIT	-
+9.3	U	0	HIT	-
+9.4	U	2	HIT	-
+9.5	U	6	HIT	-
+9.6	U	6	HIT	-
+9.7	U	5	HIT	-
+9.8	U	10	HIT	-
+9.9	U	0	HIT	-
+
+10.0	U	Exit	11	5	<..U.U.U.U..U.....U.......................................................UU.....U........U.......U..>
+
+Simulation Results:
+Total References: 515
+Hits: 366, Misses: 149
+Hit Ratio: 0.71, Miss Ratio: 0.29
+Processes Swapped In: 15
+
+Running LFU Algorithm Simulation
+Time	Process	Page	Result	Evicted
+----	-------	----	------	-------
+0.0	H	Enter	5	2	<....................................................................................................>
+
+0.0	H	0	MISS	-
+0.0	H	2	MISS	-
+0.1	H	1	MISS	-
+0.2	H	2	HIT	-
+0.3	H	1	HIT	-
+0.4	H	3	MISS	-
+0.5	H	1	HIT	-
+0.6	H	0	HIT	-
+0.7	H	1	HIT	-
+0.8	H	1	HIT	-
+0.9	H	0	HIT	-
+1.0	L	Enter	11	1	<HHHH................................................................................................>
+
+1.0	L	0	MISS	-
+1.0	S	Enter	31	2	<HHHHL...............................................................................................>
+
+1.0	S	0	MISS	-
+1.0	H	1	HIT	-
+1.0	L	4	MISS	-
+1.0	S	18	MISS	-
+1.1	H	2	HIT	-
+1.1	L	4	HIT	-
+1.1	S	19	MISS	-
+1.2	H	0	HIT	-
+1.2	L	4	HIT	-
+1.2	S	18	HIT	-
+1.3	H	3	HIT	-
+1.3	L	4	HIT	-
+1.3	S	17	MISS	-
+1.4	H	0	HIT	-
+1.4	L	5	MISS	-
+1.4	S	18	HIT	-
+1.5	H	1	HIT	-
+1.5	L	6	MISS	-
+1.5	S	18	HIT	-
+1.6	H	2	HIT	-
+1.6	L	6	HIT	-
+1.6	S	18	HIT	-
+1.7	H	1	HIT	-
+1.7	L	7	MISS	-
+1.7	S	19	HIT	-
+1.8	H	2	HIT	-
+1.8	L	6	HIT	-
+1.8	S	20	MISS	-
+1.9	H	4	MISS	-
+1.9	L	6	HIT	-
+1.9	S	21	MISS	-
+2.0	X	Enter	17	5	<HHHHLSLSSSLLLSHS....................................................................................>
+
+2.0	X	0	MISS	-
+2.0	S	21	HIT	-
+2.0	X	4	MISS	-
+
+2.0	H	Exit	5	2	<HHHHLSLSSSLLLSHSXX..................................................................................>
+
+2.0	L	Exit	11	1	<....LSLSSSLLLS.SXX..................................................................................>
+2.1	S	4	MISS	-
+2.1	X	5	MISS	-
+2.2	S	6	MISS	-
+2.2	X	2	MISS	-
+2.3	S	4	HIT	-
+2.3	X	13	MISS	-
+2.4	S	27	MISS	-
+2.4	X	13	HIT	-
+2.5	S	26	MISS	-
+2.5	X	6	MISS	-
+2.6	S	25	MISS	-
+2.6	X	6	HIT	-
+2.7	S	24	MISS	-
+2.7	X	6	HIT	-
+2.8	S	24	HIT	-
+2.8	X	13	HIT	-
+2.9	S	25	HIT	-
+2.9	X	14	MISS	-
+3.0	O	Enter	5	4	<.....S.SSS...S.SXXSXSXXSSXSSX.......................................................................>
+
+3.0	O	0	MISS	-
+3.0	A	Enter	11	5	<.....S.SSS...S.SXXSXSXXSSXSSXO......................................................................>
+
+3.0	A	0	MISS	-
+3.0	N	Enter	11	5	<.....S.SSS...S.SXXSXSXXSSXSSXOA.....................................................................>
+
+3.0	N	0	MISS	-
+3.0	X	15	MISS	-
+3.0	O	0	HIT	-
+3.0	A	0	HIT	-
+3.0	N	9	MISS	-
+
+3.0	S	Exit	31	2	<.....S.SSS...S.SXXSXSXXSSXSSXOANXN..................................................................>
+3.1	X	16	MISS	-
+3.1	O	1	MISS	-
+3.1	A	0	HIT	-
+3.1	N	8	MISS	-
+3.2	X	15	HIT	-
+3.2	O	2	MISS	-
+3.2	A	1	MISS	-
+3.2	N	8	HIT	-
+3.3	X	8	MISS	-
+3.3	O	0	HIT	-
+3.3	A	1	HIT	-
+3.3	N	8	HIT	-
+3.4	X	8	HIT	-
+3.4	O	1	HIT	-
+3.4	A	0	HIT	-
+3.4	N	9	HIT	-
+3.5	X	13	HIT	-
+3.5	O	2	HIT	-
+3.5	A	1	HIT	-
+3.5	N	9	HIT	-
+3.6	X	10	MISS	-
+3.6	O	3	MISS	-
+3.6	A	2	MISS	-
+3.6	N	9	HIT	-
+3.7	X	9	MISS	-
+3.7	O	4	MISS	-
+3.7	A	9	MISS	-
+3.7	N	8	HIT	-
+3.8	X	9	HIT	-
+3.8	O	4	HIT	-
+3.8	A	5	MISS	-
+3.8	N	9	HIT	-
+3.9	X	8	HIT	-
+3.9	O	4	HIT	-
+3.9	A	4	MISS	-
+3.9	N	8	HIT	-
+4.0	O	Enter	17	5	<................XX.X.XX..X..XOANXNXONOAXXOAXOAAA....................................................>
+
+4.0	O	0	HIT	-
+4.0	F	Enter	17	5	<................XX.X.XX..X..XOANXNXONOAXXOAXOAAA....................................................>
+
+4.0	F	0	MISS	-
+4.0	X	7	MISS	-
+4.0	O	0	HIT	-
+4.0	A	5	HIT	-
+4.0	N	9	HIT	-
+4.0	O	5	MISS	-
+4.0	F	0	HIT	-
+4.1	X	8	HIT	-
+4.1	O	0	HIT	-
+4.1	A	5	HIT	-
+4.1	N	4	MISS	-
+4.1	O	6	MISS	-
+4.1	F	1	MISS	-
+4.2	X	16	HIT	-
+4.2	O	1	HIT	-
+4.2	A	6	MISS	-
+4.2	N	4	HIT	-
+4.2	O	4	HIT	-
+4.2	F	5	MISS	-
+4.3	X	11	MISS	-
+4.3	O	1	HIT	-
+4.3	A	8	MISS	-
+4.3	N	4	HIT	-
+4.3	O	3	HIT	-
+4.3	F	5	HIT	-
+4.4	X	11	HIT	-
+4.4	O	3	HIT	-
+4.4	A	6	HIT	-
+4.4	N	5	MISS	-
+4.4	O	4	HIT	-
+4.4	F	15	MISS	-
+4.5	X	10	HIT	-
+4.5	O	1	HIT	-
+4.5	A	5	HIT	-
+4.5	N	5	HIT	-
+4.5	O	5	HIT	-
+4.5	F	15	HIT	-
+4.6	X	9	HIT	-
+4.6	O	2	HIT	-
+4.6	A	5	HIT	-
+4.6	N	5	HIT	-
+4.6	O	4	HIT	-
+4.6	F	9	MISS	-
+4.7	X	0	HIT	-
+4.7	O	2	HIT	-
+4.7	A	5	HIT	-
+4.7	N	10	MISS	-
+4.7	O	3	HIT	-
+4.7	F	10	MISS	-
+4.8	X	16	HIT	-
+4.8	O	1	HIT	-
+4.8	A	6	HIT	-
+4.8	N	10	HIT	-
+4.8	O	4	HIT	-
+4.8	F	5	HIT	-
+4.9	X	0	HIT	-
+4.9	O	2	HIT	-
+4.9	A	8	HIT	-
+4.9	N	10	HIT	-
+4.9	O	4	HIT	-
+4.9	F	12	MISS	-
+5.0	G	Enter	5	3	<................XX.X.XX..X..XOANXNXONOAXXOAXOAAAFXONOFAFXANFFNFF....................................>
+
+5.0	G	0	MISS	-
+5.0	Z	Enter	5	2	<................XX.X.XX..X..XOANXNXONOAXXOAXOAAAFXONOFAFXANFFNFFG...................................>
+
+5.0	Z	0	MISS	-
+5.0	C	Enter	11	2	<................XX.X.XX..X..XOANXNXONOAXXOAXOAAAFXONOFAFXANFFNFFGZ..................................>
+
+5.0	C	0	MISS	-
+5.0	D	Enter	31	1	<................XX.X.XX..X..XOANXNXONOAXXOAXOAAAFXONOFAFXANFFNFFGZC.................................>
+
+5.0	D	0	MISS	-
+5.0	G	Enter	17	3	<................XX.X.XX..X..XOANXNXONOAXXOAXOAAAFXONOFAFXANFFNFFGZCD................................>
+
+5.0	G	0	HIT	-
+5.0	U	Enter	11	5	<................XX.X.XX..X..XOANXNXONOAXXOAXOAAAFXONOFAFXANFFNFFGZCD................................>
+
+5.0	U	0	MISS	-
+5.0	X	1	MISS	-
+5.0	O	3	HIT	-
+5.0	A	9	HIT	-
+5.0	N	9	HIT	-
+5.0	O	9	MISS	-
+5.0	F	13	MISS	-
+5.0	G	4	MISS	-
+5.0	Z	0	HIT	-
+5.0	C	2	MISS	-
+5.0	D	25	MISS	-
+5.0	G	12	MISS	-
+5.0	U	1	MISS	-
+5.1	X	2	HIT	-
+5.1	O	1	HIT	-
+5.1	A	8	HIT	-
+5.1	N	5	HIT	-
+5.1	O	10	MISS	-
+5.1	F	14	MISS	-
+5.1	G	3	MISS	-
+5.1	Z	1	MISS	-
+5.1	C	3	MISS	-
+5.1	D	26	MISS	-
+5.1	G	1	MISS	-
+5.1	U	9	MISS	-
+5.2	X	2	HIT	-
+5.2	O	3	HIT	-
+5.2	A	7	MISS	-
+5.2	N	9	HIT	-
+5.2	O	9	HIT	-
+5.2	F	10	HIT	-
+5.2	G	3	HIT	-
+5.2	Z	3	MISS	-
+5.2	C	10	MISS	-
+5.2	D	26	HIT	-
+5.2	G	0	HIT	-
+5.2	U	10	MISS	-
+5.3	X	9	HIT	-
+5.3	O	2	HIT	-
+5.3	A	7	HIT	-
+5.3	N	6	MISS	-
+5.3	O	9	HIT	-
+5.3	F	0	HIT	-
+5.3	G	0	HIT	-
+5.3	Z	1	HIT	-
+5.3	C	9	MISS	-
+5.3	D	27	MISS	-
+5.3	G	11	MISS	-
+5.3	U	3	MISS	-
+5.4	X	1	HIT	-
+5.4	O	0	HIT	-
+5.4	A	6	HIT	-
+5.4	N	7	MISS	-
+5.4	O	8	MISS	-
+5.4	F	9	HIT	-
+5.4	G	1	HIT	-
+5.4	Z	0	HIT	-
+5.4	C	8	MISS	-
+5.4	D	27	HIT	-
+5.4	G	12	HIT	-
+5.4	U	8	MISS	-
+5.5	X	10	HIT	-
+5.5	O	4	HIT	-
+5.5	A	8	HIT	-
+5.5	N	8	HIT	-
+5.5	O	3	HIT	-
+5.5	F	10	HIT	-
+5.5	G	2	MISS	-
+5.5	Z	3	HIT	-
+5.5	C	7	MISS	-
+5.5	D	1	MISS	-
+5.5	G	12	HIT	-
+5.5	U	8	HIT	-
+5.6	X	10	HIT	-
+5.6	O	1	HIT	-
+5.6	A	6	HIT	-
+5.6	N	4	HIT	-
+5.6	O	4	HIT	-
+5.6	F	11	MISS	-
+5.6	G	1	HIT	-
+5.6	Z	0	HIT	-
+5.6	C	1	MISS	-
+5.6	D	0	HIT	-
+5.6	G	11	HIT	-
+5.6	U	7	MISS	-
+5.7	X	10	HIT	-
+5.7	O	3	HIT	-
+5.7	A	7	HIT	-
+5.7	N	4	HIT	-
+5.7	O	12	MISS	-
+5.7	F	16	MISS	-
+5.7	G	2	HIT	-
+5.7	Z	4	MISS	-
+5.7	C	1	HIT	-
+5.7	D	0	HIT	-
+5.7	G	10	MISS	-
+5.7	U	8	HIT	-
+5.8	X	15	HIT	-
+5.8	O	3	HIT	-
+5.8	A	7	HIT	-
+5.8	N	4	HIT	-
+5.8	O	12	HIT	-
+5.8	F	11	HIT	-
+5.8	G	2	HIT	-
+5.8	Z	3	HIT	-
+5.8	C	2	HIT	-
+5.8	D	1	HIT	-
+5.8	G	15	MISS	-
+5.8	U	9	HIT	-
+5.9	X	14	HIT	-
+5.9	O	2	HIT	-
+5.9	A	6	HIT	-
+5.9	N	5	HIT	-
+5.9	O	13	MISS	-
+5.9	F	3	MISS	-
+5.9	G	2	HIT	-
+5.9	Z	4	HIT	-
+5.9	C	6	MISS	-
+5.9	D	0	HIT	-
+5.9	G	11	HIT	-
+5.9	U	9	HIT	-
+6.0	X	13	HIT	-
+6.0	O	2	HIT	-
+6.0	A	5	HIT	-
+6.0	N	6	HIT	-
+6.0	O	8	HIT	-
+6.0	F	13	HIT	-
+6.0	G	1	HIT	-
+6.0	Z	0	HIT	-
+6.0	C	6	HIT	-
+6.0	G	13	MISS	-
+6.0	U	10	HIT	-
+
+6.0	D	Exit	31	1	<DFCUOFZGGOFCG...XX.X.XX..X..XOANXNXONOAXXOAXOAAAFXONOFAFXANFFNFFGZCDUXOFGCDGUOFGZCDGUAZCUNCDGUNOCUGC>
+6.1	X	13	HIT	-
+6.1	O	1	HIT	-
+6.1	A	1	HIT	-
+6.1	N	6	HIT	-
+6.1	O	9	HIT	-
+6.1	F	14	HIT	-
+6.1	G	3	HIT	-
+6.1	Z	0	HIT	-
+6.1	C	0	HIT	-
+6.1	G	13	HIT	-
+6.1	U	0	HIT	-
+6.2	X	7	HIT	-
+6.2	O	0	HIT	-
+6.2	A	0	HIT	-
+6.2	N	6	HIT	-
+6.2	O	9	HIT	-
+6.2	F	1	HIT	-
+6.2	G	4	HIT	-
+6.2	Z	4	HIT	-
+6.2	C	5	MISS	-
+6.2	G	12	HIT	-
+6.2	U	6	MISS	-
+6.3	X	7	HIT	-
+6.3	O	2	HIT	-
+6.3	A	0	HIT	-
+6.3	N	1	MISS	-
+6.3	O	10	HIT	-
+6.3	F	10	HIT	-
+6.3	G	4	HIT	-
+6.3	Z	3	HIT	-
+6.3	C	5	HIT	-
+6.3	G	5	MISS	-
+6.3	U	2	MISS	-
+6.4	X	7	HIT	-
+6.4	O	3	HIT	-
+6.4	A	10	MISS	-
+6.4	N	2	MISS	-
+6.4	O	9	HIT	-
+6.4	F	2	MISS	-
+6.4	G	3	HIT	-
+6.4	Z	4	HIT	-
+6.4	C	3	HIT	-
+6.4	G	4	HIT	-
+6.4	U	3	HIT	-
+6.5	X	8	HIT	-
+6.5	O	1	HIT	-
+6.5	A	10	HIT	-
+6.5	N	2	HIT	-
+6.5	O	10	HIT	-
+6.5	F	2	HIT	-
+6.5	G	4	HIT	-
+6.5	Z	4	HIT	-
+6.5	C	2	HIT	-
+6.5	G	11	HIT	-
+6.5	U	2	HIT	-
+6.6	X	9	HIT	-
+6.6	O	0	HIT	-
+6.6	A	5	HIT	-
+6.6	N	9	HIT	-
+6.6	O	9	HIT	-
+6.6	F	3	HIT	-
+6.6	G	4	HIT	-
+6.6	Z	1	HIT	-
+6.6	C	2	HIT	-
+6.6	G	11	HIT	-
+6.6	U	9	HIT	-
+6.7	X	2	HIT	-
+6.7	O	1	HIT	-
+6.7	A	6	HIT	-
+6.7	N	2	HIT	-
+6.7	O	1	HIT	-
+6.7	F	2	HIT	-
+6.7	G	4	HIT	-
+6.7	Z	2	MISS	-
+6.7	C	2	HIT	-
+6.7	G	11	HIT	-
+6.7	U	5	MISS	-
+6.8	X	2	HIT	-
+6.8	O	1	HIT	-
+6.8	A	7	HIT	-
+6.8	N	1	HIT	-
+6.8	O	2	HIT	-
+6.8	F	3	HIT	-
+6.8	G	0	HIT	-
+6.8	Z	1	HIT	-
+6.8	C	2	HIT	-
+6.8	G	16	MISS	-
+6.8	U	5	HIT	-
+6.9	X	15	HIT	-
+6.9	O	1	HIT	-
+6.9	A	6	HIT	-
+6.9	N	7	HIT	-
+6.9	O	3	HIT	-
+6.9	F	6	MISS	-
+6.9	G	0	HIT	-
+6.9	Z	1	HIT	-
+6.9	C	3	HIT	-
+6.9	G	6	MISS	-
+6.9	U	6	HIT	-
+7.0	A	5	HIT	-
+7.0	N	8	HIT	-
+7.0	O	7	MISS	-
+7.0	F	5	HIT	-
+7.0	G	2	HIT	-
+7.0	G	7	MISS	-
+7.0	U	6	HIT	-
+
+7.0	X	Exit	17	5	<CFCGOFZGGOFCGUNGXXUXAXXNFXZUXOANXNXONOAXXOAXOAAAFXONOFAFXANFFNFFGZCGUXOFGCFGUOFGZCGGUAZCUNCOGUNOCUGC>
+
+7.0	O	Exit	5	4	<CFCGOFZGGOFCGUNG..U.A..NF.ZU.OAN.N.ONOA..OA.OAAAF.ONOFAF.ANFFNFFGZCGU.OFGCFGUOFGZCGGUAZCUNCOGUNOCUGC>
+
+7.0	Z	Exit	5	2	<CFCG.FZGG.FCGUNG..U.A..NF.ZU..AN.N..N.A...A..AAAF..N.FAF.ANFFNFFGZCGU..FGCFGU.FGZCGGUAZCUNC.GUN.CUGC>
+
+7.0	C	Exit	11	2	<CFCG.F.GG.FCGUNG..U.A..NF..U..AN.N..N.A...A..AAAF..N.FAF.ANFFNFFG.CGU..FGCFGU.FG.CGGUA.CUNC.GUN.CUGC>
+7.1	A	7	HIT	-
+7.1	N	9	HIT	-
+7.1	O	6	MISS	-
+7.1	F	5	HIT	-
+7.1	G	2	HIT	-
+7.1	G	8	MISS	-
+7.1	U	9	HIT	-
+7.2	A	8	HIT	-
+7.2	N	10	HIT	-
+7.2	O	0	MISS	-
+7.2	F	7	MISS	-
+7.2	G	3	HIT	-
+7.2	G	8	HIT	-
+7.2	U	3	HIT	-
+7.3	A	8	HIT	-
+7.3	N	6	HIT	-
+7.3	O	1	MISS	-
+7.3	F	7	HIT	-
+7.3	G	0	HIT	-
+7.3	G	9	MISS	-
+7.3	U	3	HIT	-
+7.4	A	7	HIT	-
+7.4	N	7	HIT	-
+7.4	O	1	HIT	-
+7.4	F	8	MISS	-
+7.4	G	4	HIT	-
+7.4	G	9	HIT	-
+7.4	U	2	HIT	-
+7.5	A	0	HIT	-
+7.5	N	5	HIT	-
+7.5	O	2	MISS	-
+7.5	F	8	HIT	-
+7.5	G	0	HIT	-
+7.5	G	1	HIT	-
+7.5	U	2	HIT	-
+7.6	A	10	HIT	-
+7.6	N	5	HIT	-
+7.6	O	2	HIT	-
+7.6	F	10	HIT	-
+7.6	G	0	HIT	-
+7.6	G	2	HIT	-
+7.6	U	2	HIT	-
+7.7	A	6	HIT	-
+7.7	N	4	HIT	-
+7.7	O	3	MISS	-
+7.7	F	9	HIT	-
+7.7	G	1	HIT	-
+7.7	G	3	HIT	-
+7.7	U	2	HIT	-
+7.8	A	2	HIT	-
+7.8	N	0	HIT	-
+7.8	O	4	MISS	-
+7.8	F	9	HIT	-
+7.8	G	0	HIT	-
+7.8	G	14	MISS	-
+7.8	U	4	MISS	-
+7.9	A	2	HIT	-
+7.9	N	3	MISS	-
+7.9	O	3	HIT	-
+7.9	F	9	HIT	-
+7.9	G	0	HIT	-
+7.9	G	15	HIT	-
+7.9	U	8	HIT	-
+8.0	O	4	HIT	-
+8.0	F	8	HIT	-
+8.0	U	7	MISS	-
+
+8.0	A	Exit	11	5	<OFGGOFFGGOFGGUNGFOUOAOGNFUNUU.AN.N..N.A...A..AAAF..N.FAF.ANFFNFFG..GU..FG.FGU.FG..GGUA..UN..GUN..UG.>
+
+8.0	N	Exit	11	5	<OFGGOFFGGOFGGUNGFOUO.OGNFUNUU..N.N..N...........F..N.F.F..NFFNFFG..GU..FG.FGU.FG..GGU...UN..GUN..UG.>
+
+8.0	G	Exit	5	3	<OFGGOFFGGOFGGU.GFOUO.OG.FU.UU...................F....F.F...FF.FFG..GU..FG.FGU.FG..GGU...U...GU...UG.>
+
+8.0	G	Exit	17	3	<OF..OFF..OF..U..FOUO.O..FU.UU...................F....F.F...FF.FF....U..F..F.U.F.....U...U....U...U..>
+8.1	O	3	HIT	-
+8.1	F	6	HIT	-
+8.1	U	0	HIT	-
+8.2	O	1	HIT	-
+8.2	F	6	HIT	-
+8.2	U	8	HIT	-
+8.3	O	2	HIT	-
+8.3	F	13	HIT	-
+8.3	U	7	HIT	-
+8.4	O	2	HIT	-
+8.4	F	13	HIT	-
+8.4	U	3	HIT	-
+8.5	O	2	HIT	-
+8.5	F	13	HIT	-
+8.5	U	6	HIT	-
+8.6	O	1	HIT	-
+8.6	F	14	HIT	-
+8.6	U	5	HIT	-
+8.7	O	5	MISS	-
+8.7	F	13	HIT	-
+8.7	U	4	HIT	-
+8.8	O	6	HIT	-
+8.8	F	14	HIT	-
+8.8	U	8	HIT	-
+8.9	O	6	HIT	-
+8.9	F	15	HIT	-
+8.9	U	8	HIT	-
+9.0	U	9	HIT	-
+
+9.0	O	Exit	17	5	<OFO.OFF..OF..U..FOUO.O..FU.UU...................F....F.F...FF.FF....U..F..F.U.F.....U...U....U...U..>
+
+9.0	F	Exit	17	5	<.F...FF...F..U..F.U.....FU.UU...................F....F.F...FF.FF....U..F..F.U.F.....U...U....U...U..>
+9.1	U	8	HIT	-
+9.2	U	3	HIT	-
+9.3	U	4	HIT	-
+9.4	U	5	HIT	-
+9.5	U	5	HIT	-
+9.6	U	6	HIT	-
+9.7	U	10	HIT	-
+9.8	U	9	HIT	-
+9.9	U	10	HIT	-
+
+10.0	U	Exit	11	5	<.............U....U......U.UU.......................................U.......U.......U...U....U...U..>
+
+Simulation Results:
+Total References: 515
+Hits: 372, Misses: 143
+Hit Ratio: 0.72, Miss Ratio: 0.28
+Processes Swapped In: 15
+
+Average Results for LFU Algorithm 
+Average Hit Ratio: 0.72
+Average Miss Ratio: 0.28
+Average Processes Swapped-In: 15.00

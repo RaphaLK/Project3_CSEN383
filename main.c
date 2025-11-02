@@ -9,11 +9,11 @@ int main()
 
     // int (*algorithms[])(Memory *, char, int, int) = {FIFO, LRU, LFU, MFU, RandomPick};
     // int (*algorithms[])(Memory *, char, int, int) = {FIFO, LRU, LFU, RandomPick};
-    int (*algorithms[])(Memory *, char, int, int) = {FIFO};
+    int (*algorithms[])(Memory *, char, int, int) = {RandomPick};
 
     // char *algorithmNames[] = {"FIFO", "LRU", "LFU", "MFU", "RandomPick"};
     // char *algorithmNames[] = {"LRU", "LFU", "RandomPick"};
-    char *algorithmNames[] = {"FIFO"};
+    char *algorithmNames[] = {"RandomPick"};
 
     // Change the constant as we implement the other algos pls.
     int numSims = 1;
@@ -116,21 +116,18 @@ void generateWorkload(JobQueue *jobQueue)
 
 void generateMemoryMap(Memory *memory, char *mapString)
 {
-    // Initialize all positions to '.' (holes)
     for (int i = 0; i < MAX_PAGES; i++)
-    {
-        mapString[i] = '.';
-    }
-
-    // Fill with process names
-    for (int i = 0; i < memory->count; i++)
     {
         if (memory->pages[i].processName != '\0')
         {
             mapString[i] = memory->pages[i].processName;
         }
+        else
+        {
+            mapString[i] = '.'; // This frame is a hole
+        }
     }
-    mapString[MAX_PAGES] = '\0'; // Null terminate
+    mapString[MAX_PAGES] = '\0';
 }
 
 void runSimulation(JobQueue *jobQueue, Memory *memory,
@@ -263,7 +260,7 @@ void runSimulation(JobQueue *jobQueue, Memory *memory,
 // Generate next page reference with 70% locality
 int generateNextPageReference(int currentPage, int processSize)
 {
-    int r = rand() % 11; // 0-10
+    int r = rand() % 10; // 0-9
     int nextPage;
 
     if (r < 7)
@@ -295,13 +292,12 @@ void removeJobPages(Memory *memory, char processName)
     {
         if (memory->pages[i].processName == processName)
         {
-            // Shift remaining pages down
-            for (int j = i; j < memory->count - 1; j++)
-            {
-                memory->pages[j] = memory->pages[j + 1];
-            }
-            memory->count--;
-            i--; // Recheck this position
+            // Reset fields
+            memory->pages[i].processName = '\0'; 
+            memory->pages[i].pageNumber = -1;
+            memory->pages[i].lastUsed = -1;
+            memory->pages[i].frequency = 0;
+            memory->pages[i].timestamp = -1;
         }
     }
 }
