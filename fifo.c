@@ -20,11 +20,8 @@ int FIFO(Memory *memory, char processName, int pageNumber, int timestamp)
     // add page to memory
     memory->pages[memory->count].processName = processName;
     memory->pages[memory->count].pageNumber = pageNumber;
-    memory->pages[memory->count].timestamp = timestamp;
     memory->pages[memory->count].frequency = 1;
-    memory->pages[memory->count].lastUsed = timestamp;
     memory->count++;
-    return 1;
   }
   else
   {
@@ -42,6 +39,6 @@ int FIFO(Memory *memory, char processName, int pageNumber, int timestamp)
     memory->pages[oldestIndex].timestamp = timestamp;
     memory->pages[oldestIndex].frequency = 1;
     memory->pages[oldestIndex].lastUsed = timestamp;
-    return oldestIndex;
   }
+  return 1;
 }

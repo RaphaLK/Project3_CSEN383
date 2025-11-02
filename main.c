@@ -146,6 +146,7 @@ void runSimulation(JobQueue *jobQueue, Memory *memory,
     int currentTime = 0;
     char memoryMap[MAX_PAGES + 1];
 
+    // total mem = 100, each process needs 4 free pages to start, 25 max processes running simulatenously
     Job *runningJobs[25]; // Maximum 25 jobs can run simultaneously
     int runningJobsCount = 0;
     int jobEndTimes[25];
@@ -239,7 +240,7 @@ void runSimulation(JobQueue *jobQueue, Memory *memory,
                     jobEndTimes[j] = jobEndTimes[j + 1];
                 }
                 runningJobsCount--;
-                i--; // Recheck this position
+                i--;
             }
         }
     }
