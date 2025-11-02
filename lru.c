@@ -10,6 +10,7 @@ int LRU(Memory *memory, char processName, int pageNumber, int timestamp)
     // Checks if a page is already in memory, in that case just update the last retrieved time
     if (memory->pages[i].processName == processName && memory->pages[i].pageNumber == pageNumber)
     {
+      // update last recently used
       memory->pages[i].lastUsed = timestamp;
       return 0;
     }
