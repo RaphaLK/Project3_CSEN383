@@ -264,22 +264,22 @@ int generateNextPageReference(int currentPage, int processSize)
     int nextPage;
 
     if (r < 7)
-    {                                 // 70% probability: locality of reference
-        int delta = (rand() % 3) - 1; // -1, 0, or 1
+    {                                 
+        // 70% probability: locality of reference
+        int delta = (rand() % 3) - 1; 
         nextPage = currentPage + delta;
 
-        // Handle wraparound
         if (nextPage < 0)
             nextPage = processSize - 1;
         if (nextPage >= processSize)
             nextPage = 0;
     }
     else
-    { // 30% probability: random jump
+    { 
         do
         {
             nextPage = rand() % processSize;
-        } while (abs(nextPage - currentPage) < 2); // Ensure |Δi| >= 2
+        } while (abs(nextPage - currentPage) < 2); 
     }
 
     return nextPage;

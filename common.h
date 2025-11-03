@@ -24,15 +24,15 @@ typedef struct Job {
 typedef struct {
     char processName;            // Process that owns the page
     int pageNumber;              
-    int lastUsed;                // Used for LRU
-    int frequency;               // Used for LFU and MFU
-    int timestamp;               // Used for FIFO
+    int lastUsed;               
+    int frequency;               
+    int timestamp;               
 } Page;
 
 // Memory structure
 typedef struct {
     Page pages[MAX_PAGES];       // Array of pages in memory
-    int count;                   // Number of used pages
+    int count;                   
 } Memory;
 
 // Job queue
