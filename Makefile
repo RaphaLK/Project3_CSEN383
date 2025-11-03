@@ -1,11 +1,26 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -std=c99 -I.
-TARGET = simulation
-TEST_TARGET = test_lru
+CC=gcc
+OBJS = main.o random_pick.o lru.o lfu.o fifo.o mfu.o
 
-SOURCES = main.c lru.c random_pick.c lfu.c mfu.c
-HEADERS = common.h
+simulation: $(OBJS)
+	$(CC) $(CFLAGS) -o simulation $(OBJS)
 
-OBJECTS = $(SOURCES:.c=.o)
+main.o: main.c common.h
+	$(CC) $(CFLAGS) -c main.c
 
-#gcc -o simulation main.c lru.c
+random_pick.o: random_pick.c common.h
+	$(CC) $(CFLAGS) -c random_pick.c
+
+lru.o: lru.c common.h
+	$(CC) $(CFLAGS) -c lru.c
+
+lfu.o: lfu.c common.h
+	$(CC) $(CFLAGS) -c lfu.c
+
+fifo.o: fifo.c common.h
+	$(CC) $(CFLAGS) -c fifo.c
+
+mfu.o: mfu.c common.h
+	$(CC) $(CFLAGS) -c mfu.c
+
+clean:
+	rm -f *.o simulation

@@ -7,16 +7,16 @@ int main()
     JobQueue jobQueue;
     generateWorkload(&jobQueue);
 
-    // int (*algorithms[])(Memory *, char, int, int) = {FIFO, LRU, LFU, MFU, RandomPick};
+    int (*algorithms[])(Memory *, char, int, int) = {FIFO, LRU, LFU, MFU, RandomPick};
     // int (*algorithms[])(Memory *, char, int, int) = {FIFO, LRU, LFU, RandomPick};
-    int (*algorithms[])(Memory *, char, int, int) = {RandomPick};
+    // int (*algorithms[])(Memory *, char, int, int) = {MFU};
 
-    // char *algorithmNames[] = {"FIFO", "LRU", "LFU", "MFU", "RandomPick"};
+    char *algorithmNames[] = {"FIFO", "LRU", "LFU", "MFU", "RandomPick"};
     // char *algorithmNames[] = {"LRU", "LFU", "RandomPick"};
-    char *algorithmNames[] = {"RandomPick"};
+    // char *algorithmNames[] = {"MFU"};
 
     // Change the constant as we implement the other algos pls.
-    int numSims = 1;
+    int numSims = 5;
     for (int i = 0; i < numSims; i++)
     {
         double hitRatioSum = 0, missRatioSum = 0;

@@ -1,0 +1,2105 @@
+
+Running MFU Algorithm Simulation
+Time	Process	Page	Result	Evicted
+----	-------	----	------	-------
+0.0	W	Enter	11	3	<....................................................................................................>
+
+0.0	W	0	MISS	-
+0.0	Y	Enter	17	5	<W...................................................................................................>
+
+0.0	Y	0	MISS	-
+0.0	U	Enter	11	1	<WY..................................................................................................>
+
+0.0	U	0	MISS	-
+0.0	W	10	MISS	-
+0.0	Y	0	HIT	-
+0.0	U	2	MISS	-
+0.1	W	9	MISS	-
+0.1	Y	0	HIT	-
+0.1	U	3	MISS	-
+0.2	W	10	HIT	-
+0.2	Y	1	MISS	-
+0.2	U	2	HIT	-
+0.3	W	0	HIT	-
+0.3	Y	0	HIT	-
+0.3	U	7	MISS	-
+0.4	W	0	HIT	-
+0.4	Y	16	MISS	-
+0.4	U	6	MISS	-
+0.5	W	7	MISS	-
+0.5	Y	16	HIT	-
+0.5	U	5	MISS	-
+0.6	W	4	MISS	-
+0.6	Y	15	MISS	-
+0.6	U	9	MISS	-
+0.7	W	5	MISS	-
+0.7	Y	6	MISS	-
+0.7	U	10	MISS	-
+0.8	W	5	HIT	-
+0.8	Y	5	MISS	-
+0.8	U	9	HIT	-
+0.9	W	1	MISS	-
+0.9	Y	15	HIT	-
+0.9	U	4	MISS	-
+1.0	V	Enter	5	1	<WYUWUWUYUYUWUWYUWYUYWU..............................................................................>
+
+1.0	V	0	MISS	-
+1.0	U	Enter	31	2	<WYUWUWUYUYUWUWYUWYUYWUV.............................................................................>
+
+1.0	U	0	HIT	-
+1.0	V	Enter	5	5	<WYUWUWUYUYUWUWYUWYUYWUV.............................................................................>
+
+1.0	V	0	HIT	-
+1.0	H	Enter	11	1	<WYUWUWUYUYUWUWYUWYUYWUV.............................................................................>
+
+1.0	H	0	MISS	-
+1.0	W	2	MISS	-
+1.0	Y	14	MISS	-
+1.0	V	1	MISS	-
+1.0	U	1	MISS	-
+1.0	V	4	MISS	-
+1.0	H	1	MISS	-
+
+1.0	U	Exit	11	1	<WYUWUWUYUYUWUWYUWYUYWUVHWYVUVH......................................................................>
+1.1	W	4	HIT	-
+1.1	Y	14	HIT	-
+1.1	V	2	MISS	-
+1.1	U	1	MISS	-
+1.1	V	3	MISS	-
+1.1	H	1	HIT	-
+1.2	W	5	HIT	-
+1.2	Y	8	MISS	-
+1.2	V	2	HIT	-
+1.2	U	0	MISS	-
+1.2	V	3	HIT	-
+1.2	H	7	MISS	-
+1.3	W	5	HIT	-
+1.3	Y	9	MISS	-
+1.3	V	2	HIT	-
+1.3	U	12	MISS	-
+1.3	V	3	HIT	-
+1.3	H	1	HIT	-
+1.4	W	1	HIT	-
+1.4	Y	7	MISS	-
+1.4	V	1	HIT	-
+1.4	U	13	MISS	-
+1.4	V	4	HIT	-
+1.4	H	1	HIT	-
+1.5	W	0	HIT	-
+1.5	Y	12	MISS	-
+1.5	V	4	HIT	-
+1.5	U	6	MISS	-
+1.5	V	0	HIT	-
+1.5	H	0	HIT	-
+1.6	W	1	HIT	-
+1.6	Y	11	MISS	-
+1.6	V	0	HIT	-
+1.6	U	7	MISS	-
+1.6	V	4	HIT	-
+1.6	H	1	HIT	-
+1.7	W	0	HIT	-
+1.7	Y	15	HIT	-
+1.7	V	0	HIT	-
+1.7	U	30	MISS	-
+1.7	V	4	HIT	-
+1.7	H	1	HIT	-
+1.8	W	0	HIT	-
+1.8	Y	0	HIT	-
+1.8	V	4	HIT	-
+1.8	U	29	MISS	-
+1.8	V	0	HIT	-
+1.8	H	2	MISS	-
+1.9	W	0	HIT	-
+1.9	Y	2	MISS	-
+1.9	V	3	HIT	-
+1.9	U	28	MISS	-
+1.9	V	0	HIT	-
+1.9	H	3	MISS	-
+2.0	W	0	HIT	-
+2.0	Y	2	HIT	-
+2.0	U	27	MISS	-
+2.0	V	0	HIT	-
+
+2.0	V	Exit	5	1	<WY.W.W.Y.Y.W.WY.WY.YW.VHWYV.VHVUVYUHYUYUYUYUUUHYUHU.................................................>
+
+2.0	H	Exit	11	1	<WY.W.W.Y.Y.W.WY.WY.YW..HWY...H.U.YUHYUYUYUYUUUHYUHU.................................................>
+2.1	W	1	HIT	-
+2.1	Y	1	HIT	-
+2.1	U	26	MISS	-
+2.1	V	4	MISS	-
+2.2	W	6	MISS	-
+2.2	Y	0	HIT	-
+2.2	U	5	MISS	-
+2.2	V	4	HIT	-
+2.3	W	5	HIT	-
+2.3	Y	16	HIT	-
+2.3	U	5	HIT	-
+2.3	V	1	MISS	-
+2.4	W	5	HIT	-
+2.4	Y	16	HIT	-
+2.4	U	6	HIT	-
+2.4	V	0	MISS	-
+2.5	W	6	HIT	-
+2.5	Y	0	HIT	-
+2.5	U	5	HIT	-
+2.5	V	1	HIT	-
+2.6	W	5	HIT	-
+2.6	Y	8	HIT	-
+2.6	U	4	MISS	-
+2.6	V	1	HIT	-
+2.7	W	5	HIT	-
+2.7	Y	0	HIT	-
+2.7	U	0	HIT	-
+2.7	V	1	HIT	-
+2.8	W	5	HIT	-
+2.8	Y	0	HIT	-
+2.8	U	0	HIT	-
+2.8	V	4	HIT	-
+2.9	W	2	HIT	-
+2.9	Y	1	HIT	-
+2.9	U	1	HIT	-
+2.9	V	0	HIT	-
+3.0	A	Enter	17	2	<WY.W.W.Y.Y.W.WY.WY.YW...WY.....U.YU.YUYUYUYUUU.YU.UUVWUVVU..........................................>
+
+3.0	A	0	MISS	-
+3.0	M	Enter	5	4	<WY.W.W.Y.Y.W.WY.WY.YW...WY.....U.YU.YUYUYUYUUU.YU.UUVWUVVUA.........................................>
+
+3.0	M	0	MISS	-
+3.0	K	Enter	17	2	<WY.W.W.Y.Y.W.WY.WY.YW...WY.....U.YU.YUYUYUYUUU.YU.UUVWUVVUAM........................................>
+
+3.0	K	0	MISS	-
+3.0	Y	9	HIT	-
+3.0	V	2	MISS	-
+3.0	A	0	HIT	-
+3.0	M	0	HIT	-
+3.0	K	16	MISS	-
+
+3.0	W	Exit	11	3	<WY.W.W.Y.Y.W.WY.WY.YW...WY.....U.YU.YUYUYUYUUU.YU.UUVWUVVUAMKVK.....................................>
+
+3.0	U	Exit	31	2	<.Y.....Y.Y....Y..Y.Y.....Y.....U.YU.YUYUYUYUUU.YU.UUV.UVVUAMKVK.....................................>
+3.1	Y	10	MISS	-
+3.1	V	3	MISS	-
+3.1	A	16	MISS	-
+3.1	M	1	MISS	-
+3.1	K	15	MISS	-
+3.2	Y	9	HIT	-
+3.2	V	2	HIT	-
+3.2	A	16	HIT	-
+3.2	M	4	MISS	-
+3.2	K	16	HIT	-
+3.3	Y	5	HIT	-
+3.3	V	3	HIT	-
+3.3	A	16	HIT	-
+3.3	M	0	HIT	-
+3.3	K	0	HIT	-
+3.4	Y	6	HIT	-
+3.4	V	3	HIT	-
+3.4	A	16	HIT	-
+3.4	M	4	HIT	-
+3.4	K	1	MISS	-
+3.5	Y	16	HIT	-
+3.5	V	2	HIT	-
+3.5	A	15	MISS	-
+3.5	M	1	HIT	-
+3.5	K	2	MISS	-
+3.6	Y	15	HIT	-
+3.6	V	1	HIT	-
+3.6	A	14	MISS	-
+3.6	M	1	HIT	-
+3.6	K	3	MISS	-
+3.7	Y	15	HIT	-
+3.7	V	0	HIT	-
+3.7	A	3	MISS	-
+3.7	M	4	HIT	-
+3.7	K	3	HIT	-
+3.8	Y	9	HIT	-
+3.8	V	0	HIT	-
+3.8	A	14	HIT	-
+3.8	M	4	HIT	-
+3.8	K	2	HIT	-
+3.9	Y	5	HIT	-
+3.9	V	1	HIT	-
+3.9	A	15	HIT	-
+3.9	M	0	HIT	-
+3.9	K	15	HIT	-
+4.0	B	Enter	11	1	<.Y.....Y.Y....Y..Y.Y.....Y.......Y..Y.Y.Y.Y....Y....V..VV.AMKVKYVAMKMKAKAKA.........................>
+
+4.0	B	0	MISS	-
+4.0	E	Enter	11	4	<.Y.....Y.Y....Y..Y.Y.....Y.......Y..Y.Y.Y.Y....Y....V..VV.AMKVKYVAMKMKAKAKAB........................>
+
+4.0	E	0	MISS	-
+4.0	R	Enter	5	1	<.Y.....Y.Y....Y..Y.Y.....Y.......Y..Y.Y.Y.Y....Y....V..VV.AMKVKYVAMKMKAKAKABE.......................>
+
+4.0	R	0	MISS	-
+4.0	Y	6	HIT	-
+4.0	V	0	HIT	-
+4.0	A	15	HIT	-
+4.0	M	3	MISS	-
+4.0	K	16	HIT	-
+4.0	B	2	MISS	-
+4.0	E	0	HIT	-
+4.0	R	0	HIT	-
+4.1	Y	7	HIT	-
+4.1	V	3	HIT	-
+4.1	A	16	HIT	-
+4.1	M	3	HIT	-
+4.1	K	15	HIT	-
+4.1	B	2	HIT	-
+4.1	E	0	HIT	-
+4.1	R	0	HIT	-
+4.2	Y	7	HIT	-
+4.2	V	2	HIT	-
+4.2	A	16	HIT	-
+4.2	M	3	HIT	-
+4.2	K	16	HIT	-
+4.2	B	2	HIT	-
+4.2	E	4	MISS	-
+4.2	R	2	MISS	-
+4.3	Y	15	HIT	-
+4.3	V	0	HIT	-
+4.3	A	16	HIT	-
+4.3	M	3	HIT	-
+4.3	K	15	HIT	-
+4.3	B	3	MISS	-
+4.3	E	10	MISS	-
+4.3	R	0	HIT	-
+4.4	Y	7	HIT	-
+4.4	V	2	HIT	-
+4.4	A	0	HIT	-
+4.4	M	4	HIT	-
+4.4	K	14	MISS	-
+4.4	B	2	HIT	-
+4.4	E	9	MISS	-
+4.4	R	4	MISS	-
+4.5	Y	8	HIT	-
+4.5	V	0	HIT	-
+4.5	A	0	HIT	-
+4.5	M	4	HIT	-
+4.5	K	0	HIT	-
+4.5	B	0	HIT	-
+4.5	E	9	HIT	-
+4.5	R	4	HIT	-
+4.6	Y	8	HIT	-
+4.6	V	4	HIT	-
+4.6	A	0	HIT	-
+4.6	M	4	HIT	-
+4.6	K	1	HIT	-
+4.6	B	10	MISS	-
+4.6	E	9	HIT	-
+4.6	R	0	HIT	-
+4.7	Y	9	HIT	-
+4.7	V	3	HIT	-
+4.7	A	11	MISS	-
+4.7	M	3	HIT	-
+4.7	K	2	HIT	-
+4.7	B	9	MISS	-
+4.7	E	8	MISS	-
+4.7	R	0	HIT	-
+4.8	Y	9	HIT	-
+4.8	V	3	HIT	-
+4.8	A	10	MISS	-
+4.8	M	2	MISS	-
+4.8	K	6	MISS	-
+4.8	B	9	HIT	-
+4.8	E	7	MISS	-
+4.8	R	0	HIT	-
+4.9	Y	9	HIT	-
+4.9	V	2	HIT	-
+4.9	A	15	HIT	-
+4.9	M	4	HIT	-
+4.9	K	4	MISS	-
+4.9	B	8	MISS	-
+4.9	E	8	HIT	-
+4.9	R	0	HIT	-
+5.0	V	3	HIT	-
+5.0	M	2	HIT	-
+5.0	E	4	HIT	-
+
+5.0	Y	Exit	17	5	<.Y.....Y.Y....Y..Y.Y.....Y.......Y..Y.Y.Y.Y....Y....V..VV.AMKVKYVAMKMKAKAKABERMBERBEKERBABEAMKEKB...>
+
+5.0	A	Exit	17	2	<....................................................V..VV.AMKVK.VAMKMKAKAKABERMBERBEKERBABEAMKEKB...>
+
+5.0	K	Exit	17	2	<....................................................V..VV..MKVK.V.MKMK.K.K.BERMBERBEKERB.BE.MKEKB...>
+
+5.0	B	Exit	11	1	<....................................................V..VV..M.V..V.M.M......BERMBERBE.ERB.BE.M.E.B...>
+
+5.0	R	Exit	5	1	<....................................................V..VV..M.V..V.M.M.......ERM.ER.E.ER...E.M.E.....>
+5.1	V	1	HIT	-
+5.1	M	0	HIT	-
+5.1	E	4	HIT	-
+5.2	V	1	HIT	-
+5.2	M	0	HIT	-
+5.2	E	2	MISS	-
+5.3	V	2	HIT	-
+5.3	M	1	HIT	-
+5.3	E	0	HIT	-
+5.4	V	4	HIT	-
+5.4	M	3	HIT	-
+5.4	E	0	HIT	-
+5.5	V	0	HIT	-
+5.5	M	3	HIT	-
+5.5	E	10	HIT	-
+5.6	V	0	HIT	-
+5.6	M	2	HIT	-
+5.6	E	9	HIT	-
+5.7	V	1	HIT	-
+5.7	M	4	HIT	-
+5.7	E	7	HIT	-
+5.8	V	3	HIT	-
+5.8	M	0	HIT	-
+5.8	E	10	HIT	-
+5.9	V	1	HIT	-
+5.9	M	0	HIT	-
+5.9	E	10	HIT	-
+6.0	M	4	HIT	-
+6.0	E	9	HIT	-
+
+6.0	V	Exit	5	5	<....................................................V..VV..M.V..V.M.M.......E.M.E..E.E....E.M.E..E..>
+6.1	M	3	HIT	-
+6.1	E	1	MISS	-
+6.2	M	0	HIT	-
+6.2	E	2	HIT	-
+6.3	M	0	HIT	-
+6.3	E	1	HIT	-
+6.4	M	1	HIT	-
+6.4	E	2	HIT	-
+6.5	M	1	HIT	-
+6.5	E	2	HIT	-
+6.6	M	4	HIT	-
+6.6	E	3	MISS	-
+6.7	M	3	HIT	-
+6.7	E	4	HIT	-
+6.8	M	4	HIT	-
+6.8	E	5	MISS	-
+6.9	M	0	HIT	-
+6.9	E	6	MISS	-
+7.0	E	2	HIT	-
+
+7.0	M	Exit	5	4	<...........................................................E......M.E.......E.M.E..E.E....E.M.E..EEE>
+7.1	E	2	HIT	-
+7.2	E	8	HIT	-
+7.3	E	6	HIT	-
+7.4	E	6	HIT	-
+7.5	E	1	HIT	-
+7.6	E	9	HIT	-
+7.7	E	4	HIT	-
+7.8	E	4	HIT	-
+7.9	E	9	HIT	-
+
+8.0	E	Exit	11	4	<...........................................................E........E.......E...E..E.E....E...E..EEE>
+
+Simulation Results:
+Total References: 333
+Hits: 231, Misses: 102
+Hit Ratio: 0.69, Miss Ratio: 0.31
+Processes Swapped In: 13
+
+Running MFU Algorithm Simulation
+Time	Process	Page	Result	Evicted
+----	-------	----	------	-------
+0.0	W	Enter	11	3	<....................................................................................................>
+
+0.0	W	0	MISS	-
+0.0	Y	Enter	17	5	<W...................................................................................................>
+
+0.0	Y	0	MISS	-
+0.0	U	Enter	11	1	<WY..................................................................................................>
+
+0.0	U	0	MISS	-
+0.0	W	3	MISS	-
+0.0	Y	8	MISS	-
+0.0	U	4	MISS	-
+0.1	W	2	MISS	-
+0.1	Y	15	MISS	-
+0.1	U	7	MISS	-
+0.2	W	2	HIT	-
+0.2	Y	16	MISS	-
+0.2	U	6	MISS	-
+0.3	W	1	MISS	-
+0.3	Y	15	HIT	-
+0.3	U	10	MISS	-
+0.4	W	2	HIT	-
+0.4	Y	16	HIT	-
+0.4	U	0	HIT	-
+0.5	W	3	HIT	-
+0.5	Y	16	HIT	-
+0.5	U	10	HIT	-
+0.6	W	9	MISS	-
+0.6	Y	15	HIT	-
+0.6	U	8	MISS	-
+0.7	W	8	MISS	-
+0.7	Y	16	HIT	-
+0.7	U	8	HIT	-
+0.8	W	8	HIT	-
+0.8	Y	15	HIT	-
+0.8	U	10	HIT	-
+0.9	W	7	MISS	-
+0.9	Y	15	HIT	-
+0.9	U	10	HIT	-
+1.0	V	Enter	5	1	<WYUWYUWYUYUWUWUWW...................................................................................>
+
+1.0	V	0	MISS	-
+1.0	U	Enter	31	2	<WYUWYUWYUYUWUWUWWV..................................................................................>
+
+1.0	U	0	HIT	-
+1.0	V	Enter	5	5	<WYUWYUWYUYUWUWUWWV..................................................................................>
+
+1.0	V	0	HIT	-
+1.0	H	Enter	11	1	<WYUWYUWYUYUWUWUWWV..................................................................................>
+
+1.0	H	0	MISS	-
+1.0	W	8	HIT	-
+1.0	Y	1	MISS	-
+1.0	V	4	MISS	-
+1.0	U	2	MISS	-
+1.0	V	1	MISS	-
+1.0	H	4	MISS	-
+
+1.0	U	Exit	11	1	<WYUWYUWYUYUWUWUWWVHYVUVH............................................................................>
+1.1	W	8	HIT	-
+1.1	Y	3	MISS	-
+1.1	V	3	MISS	-
+1.1	U	10	MISS	-
+1.1	V	4	HIT	-
+1.1	H	4	HIT	-
+1.2	W	7	HIT	-
+1.2	Y	4	MISS	-
+1.2	V	2	MISS	-
+1.2	U	1	MISS	-
+1.2	V	3	HIT	-
+1.2	H	5	MISS	-
+1.3	W	7	HIT	-
+1.3	Y	5	MISS	-
+1.3	V	0	HIT	-
+1.3	U	0	MISS	-
+1.3	V	3	HIT	-
+1.3	H	6	MISS	-
+1.4	W	6	MISS	-
+1.4	Y	0	HIT	-
+1.4	V	0	HIT	-
+1.4	U	1	HIT	-
+1.4	V	1	HIT	-
+1.4	H	1	MISS	-
+1.5	W	7	HIT	-
+1.5	Y	0	HIT	-
+1.5	V	4	HIT	-
+1.5	U	2	MISS	-
+1.5	V	2	HIT	-
+1.5	H	1	HIT	-
+1.6	W	7	HIT	-
+1.6	Y	14	MISS	-
+1.6	V	0	HIT	-
+1.6	U	2	HIT	-
+1.6	V	3	HIT	-
+1.6	H	2	MISS	-
+1.7	W	8	HIT	-
+1.7	Y	14	HIT	-
+1.7	V	3	HIT	-
+1.7	U	18	MISS	-
+1.7	V	0	HIT	-
+1.7	H	3	MISS	-
+1.8	W	0	HIT	-
+1.8	Y	8	HIT	-
+1.8	V	3	HIT	-
+1.8	U	5	MISS	-
+1.8	V	1	HIT	-
+1.8	H	3	HIT	-
+1.9	W	10	MISS	-
+1.9	Y	8	HIT	-
+1.9	V	3	HIT	-
+1.9	U	9	MISS	-
+1.9	V	1	HIT	-
+1.9	H	3	HIT	-
+2.0	W	4	MISS	-
+2.0	Y	8	HIT	-
+2.0	U	8	MISS	-
+2.0	V	0	HIT	-
+
+2.0	V	Exit	5	1	<WY.WY.WY.Y.W.W.WWVHYV.VHYVUYVUHYUHWHUYHUHUWUWU......................................................>
+
+2.0	H	Exit	11	1	<WY.WY.WY.Y.W.W.WW.HY...HY.UY.UHYUHWHUYHUHUWUWU......................................................>
+2.1	W	3	HIT	-
+2.1	Y	8	HIT	-
+2.1	U	9	HIT	-
+2.1	V	2	MISS	-
+2.2	W	9	HIT	-
+2.2	Y	14	HIT	-
+2.2	U	10	HIT	-
+2.2	V	0	MISS	-
+2.3	W	9	HIT	-
+2.3	Y	14	HIT	-
+2.3	U	9	HIT	-
+2.3	V	0	HIT	-
+2.4	W	10	HIT	-
+2.4	Y	15	HIT	-
+2.4	U	9	HIT	-
+2.4	V	4	MISS	-
+2.5	W	3	HIT	-
+2.5	Y	6	MISS	-
+2.5	U	7	MISS	-
+2.5	V	4	HIT	-
+2.6	W	3	HIT	-
+2.6	Y	14	HIT	-
+2.6	U	19	MISS	-
+2.6	V	0	HIT	-
+2.7	W	5	MISS	-
+2.7	Y	13	MISS	-
+2.7	U	19	HIT	-
+2.7	V	2	HIT	-
+2.8	W	6	HIT	-
+2.8	Y	5	HIT	-
+2.8	U	20	MISS	-
+2.8	V	1	MISS	-
+2.9	W	6	HIT	-
+2.9	Y	6	HIT	-
+2.9	U	25	MISS	-
+2.9	V	1	HIT	-
+3.0	A	Enter	17	2	<WY.WY.WY.Y.W.W.WW..Y....Y.UY.U.YU.W.UY.U.UWUWUVVVYUUWYUVU...........................................>
+
+3.0	A	0	MISS	-
+3.0	M	Enter	5	4	<WY.WY.WY.Y.W.W.WW..Y....Y.UY.U.YU.W.UY.U.UWUWUVVVYUUWYUVUA..........................................>
+
+3.0	M	0	MISS	-
+3.0	K	Enter	17	2	<WY.WY.WY.Y.W.W.WW..Y....Y.UY.U.YU.W.UY.U.UWUWUVVVYUUWYUVUAM.........................................>
+
+3.0	K	0	MISS	-
+3.0	Y	7	MISS	-
+3.0	V	4	HIT	-
+3.0	A	3	MISS	-
+3.0	M	0	HIT	-
+3.0	K	3	MISS	-
+
+3.0	W	Exit	11	3	<WY.WY.WY.Y.W.W.WW..Y....Y.UY.U.YU.W.UY.U.UWUWUVVVYUUWYUVUAMKYAK.....................................>
+
+3.0	U	Exit	31	2	<.Y..Y..Y.Y.........Y....Y.UY.U.YU...UY.U.U.U.UVVVYUU.YUVUAMKYAK.....................................>
+3.1	Y	2	MISS	-
+3.1	V	1	HIT	-
+3.1	A	4	MISS	-
+3.1	M	0	HIT	-
+3.1	K	4	MISS	-
+3.2	Y	3	HIT	-
+3.2	V	0	HIT	-
+3.2	A	4	HIT	-
+3.2	M	4	MISS	-
+3.2	K	5	MISS	-
+3.3	Y	0	HIT	-
+3.3	V	1	HIT	-
+3.3	A	3	HIT	-
+3.3	M	0	HIT	-
+3.3	K	11	MISS	-
+3.4	Y	16	HIT	-
+3.4	V	0	HIT	-
+3.4	A	2	MISS	-
+3.4	M	3	MISS	-
+3.4	K	12	MISS	-
+3.5	Y	7	HIT	-
+3.5	V	2	HIT	-
+3.5	A	1	MISS	-
+3.5	M	2	MISS	-
+3.5	K	13	MISS	-
+3.6	Y	15	HIT	-
+3.6	V	1	HIT	-
+3.6	A	9	MISS	-
+3.6	M	2	HIT	-
+3.6	K	13	HIT	-
+3.7	Y	14	HIT	-
+3.7	V	0	HIT	-
+3.7	A	10	MISS	-
+3.7	M	0	HIT	-
+3.7	K	15	MISS	-
+3.8	Y	13	HIT	-
+3.8	V	1	HIT	-
+3.8	A	10	HIT	-
+3.8	M	1	MISS	-
+3.8	K	16	MISS	-
+3.9	Y	13	HIT	-
+3.9	V	0	HIT	-
+3.9	A	9	HIT	-
+3.9	M	2	HIT	-
+3.9	K	15	HIT	-
+4.0	B	Enter	11	1	<.Y..Y..Y.Y.........Y....Y..Y...Y.....Y........VVVY...Y.V.AMKYAKYAKMKKAMKAMKAAKMK....................>
+
+4.0	B	0	MISS	-
+4.0	E	Enter	11	4	<.Y..Y..Y.Y.........Y....Y..Y...Y.....Y........VVVY...Y.V.AMKYAKYAKMKKAMKAMKAAKMKB...................>
+
+4.0	E	0	MISS	-
+4.0	R	Enter	5	1	<.Y..Y..Y.Y.........Y....Y..Y...Y.....Y........VVVY...Y.V.AMKYAKYAKMKKAMKAMKAAKMKBE..................>
+
+4.0	R	0	MISS	-
+4.0	Y	12	MISS	-
+4.0	V	1	HIT	-
+4.0	A	8	MISS	-
+4.0	M	1	HIT	-
+4.0	K	15	HIT	-
+4.0	B	10	MISS	-
+4.0	E	9	MISS	-
+4.0	R	2	MISS	-
+4.1	Y	13	HIT	-
+4.1	V	1	HIT	-
+4.1	A	8	HIT	-
+4.1	M	0	HIT	-
+4.1	K	14	MISS	-
+4.1	B	9	MISS	-
+4.1	E	8	MISS	-
+4.1	R	2	HIT	-
+4.2	Y	6	HIT	-
+4.2	V	0	HIT	-
+4.2	A	8	HIT	-
+4.2	M	4	HIT	-
+4.2	K	13	HIT	-
+4.2	B	10	HIT	-
+4.2	E	10	MISS	-
+4.2	R	2	HIT	-
+4.3	Y	5	HIT	-
+4.3	V	1	HIT	-
+4.3	A	9	HIT	-
+4.3	M	4	HIT	-
+4.3	K	13	HIT	-
+4.3	B	10	HIT	-
+4.3	E	0	HIT	-
+4.3	R	3	MISS	-
+4.4	Y	2	HIT	-
+4.4	V	0	HIT	-
+4.4	A	8	HIT	-
+4.4	M	2	HIT	-
+4.4	K	13	HIT	-
+4.4	B	7	MISS	-
+4.4	E	10	HIT	-
+4.4	R	3	HIT	-
+4.5	Y	1	HIT	-
+4.5	V	0	HIT	-
+4.5	A	4	HIT	-
+4.5	M	1	HIT	-
+4.5	K	12	HIT	-
+4.5	B	6	MISS	-
+4.5	E	9	HIT	-
+4.5	R	1	MISS	-
+4.6	Y	6	HIT	-
+4.6	V	4	HIT	-
+4.6	A	1	HIT	-
+4.6	M	1	HIT	-
+4.6	K	13	HIT	-
+4.6	B	5	MISS	-
+4.6	E	2	MISS	-
+4.6	R	0	HIT	-
+4.7	Y	15	HIT	-
+4.7	V	3	MISS	-
+4.7	A	1	HIT	-
+4.7	M	3	HIT	-
+4.7	K	16	HIT	-
+4.7	B	6	HIT	-
+4.7	E	2	HIT	-
+4.7	R	1	HIT	-
+4.8	Y	15	HIT	-
+4.8	V	3	HIT	-
+4.8	A	2	HIT	-
+4.8	M	4	HIT	-
+4.8	K	0	HIT	-
+4.8	B	7	HIT	-
+4.8	E	2	HIT	-
+4.8	R	4	MISS	-
+4.9	Y	4	HIT	-
+4.9	V	0	HIT	-
+4.9	A	11	MISS	-
+4.9	M	3	HIT	-
+4.9	K	11	HIT	-
+4.9	B	4	MISS	-
+4.9	E	2	HIT	-
+4.9	R	3	HIT	-
+5.0	V	0	MISS	-
+5.0	M	1	HIT	-
+5.0	E	2	HIT	-
+
+5.0	Y	Exit	17	5	<.Y..Y..B.Y.........Y....Y..Y...Y.....Y........VAVY...Y.V.AMKYAKYAKMKKAMKAMKAAKMKBERYABERKBEERBBRBEVR>
+
+5.0	A	Exit	17	2	<.......B......................................VAV......V.AMK.AK.AKMKKAMKAMKAAKMKBER.ABERKBEERBBRBEVR>
+
+5.0	K	Exit	17	2	<.......B......................................V.V......V..MK..K..KMKK.MK.MK..KMKBER..BERKBEERBBRBEVR>
+
+5.0	B	Exit	11	1	<.......B......................................V.V......V..M.......M...M..M....M.BER..BER.BEERBBRBEVR>
+
+5.0	R	Exit	5	1	<..............................................V.V......V..M.......M...M..M....M..ER...ER..EER..R.EVR>
+5.1	V	1	MISS	-
+5.1	M	1	HIT	-
+5.1	E	8	HIT	-
+5.2	V	1	HIT	-
+5.2	M	4	HIT	-
+5.2	E	6	MISS	-
+5.3	V	0	HIT	-
+5.3	M	1	MISS	-
+5.3	E	5	MISS	-
+5.4	V	1	HIT	-
+5.4	M	1	HIT	-
+5.4	E	3	MISS	-
+5.5	V	2	HIT	-
+5.5	M	0	MISS	-
+5.5	E	2	MISS	-
+5.6	V	3	HIT	-
+5.6	M	2	MISS	-
+5.6	E	3	HIT	-
+5.7	V	2	MISS	-
+5.7	M	1	HIT	-
+5.7	E	3	HIT	-
+5.8	V	0	HIT	-
+5.8	M	4	MISS	-
+5.8	E	3	MISS	-
+5.9	V	0	MISS	-
+5.9	M	4	HIT	-
+5.9	E	3	HIT	-
+6.0	M	1	MISS	-
+6.0	E	4	MISS	-
+
+6.0	V	Exit	5	5	<..............................................M.E......E..M.......V...V..E....E..E....E...EE.....EM.>
+6.1	M	2	HIT	-
+6.1	E	3	HIT	-
+6.2	M	3	MISS	-
+6.2	E	4	HIT	-
+6.3	M	0	HIT	-
+6.3	E	6	HIT	-
+6.4	M	0	HIT	-
+6.4	E	5	HIT	-
+6.5	M	4	MISS	-
+6.5	E	8	HIT	-
+6.6	M	1	HIT	-
+6.6	E	9	HIT	-
+6.7	M	4	HIT	-
+6.7	E	6	HIT	-
+6.8	M	3	HIT	-
+6.8	E	10	HIT	-
+6.9	M	0	MISS	-
+6.9	E	9	HIT	-
+7.0	E	8	HIT	-
+
+7.0	M	Exit	5	4	<..............................................M.E......M..M..............E....M..E....E...EE.....EM.>
+7.1	E	8	HIT	-
+7.2	E	8	HIT	-
+7.3	E	2	HIT	-
+7.4	E	2	HIT	-
+7.5	E	6	MISS	-
+7.6	E	0	HIT	-
+7.7	E	2	HIT	-
+7.8	E	3	MISS	-
+7.9	E	3	HIT	-
+
+8.0	E	Exit	11	4	<................................................E........................E.......E....E...EE.....E..>
+
+Simulation Results:
+Total References: 333
+Hits: 211, Misses: 122
+Hit Ratio: 0.63, Miss Ratio: 0.37
+Processes Swapped In: 13
+
+Running MFU Algorithm Simulation
+Time	Process	Page	Result	Evicted
+----	-------	----	------	-------
+0.0	W	Enter	11	3	<....................................................................................................>
+
+0.0	W	0	MISS	-
+0.0	Y	Enter	17	5	<W...................................................................................................>
+
+0.0	Y	0	MISS	-
+0.0	U	Enter	11	1	<WY..................................................................................................>
+
+0.0	U	0	MISS	-
+0.0	W	6	MISS	-
+0.0	Y	5	MISS	-
+0.0	U	9	MISS	-
+0.1	W	2	MISS	-
+0.1	Y	1	MISS	-
+0.1	U	2	MISS	-
+0.2	W	2	HIT	-
+0.2	Y	3	MISS	-
+0.2	U	2	HIT	-
+0.3	W	3	MISS	-
+0.3	Y	3	HIT	-
+0.3	U	9	HIT	-
+0.4	W	6	HIT	-
+0.4	Y	4	MISS	-
+0.4	U	6	MISS	-
+0.5	W	5	MISS	-
+0.5	Y	5	HIT	-
+0.5	U	5	MISS	-
+0.6	W	0	HIT	-
+0.6	Y	4	HIT	-
+0.6	U	5	HIT	-
+0.7	W	10	MISS	-
+0.7	Y	4	HIT	-
+0.7	U	9	HIT	-
+0.8	W	0	HIT	-
+0.8	Y	4	HIT	-
+0.8	U	9	HIT	-
+0.9	W	10	HIT	-
+0.9	Y	11	MISS	-
+0.9	U	10	MISS	-
+1.0	V	Enter	5	1	<WYUWYUWYUYWYUWUWYU..................................................................................>
+
+1.0	V	0	MISS	-
+1.0	U	Enter	31	2	<WYUWYUWYUYWYUWUWYUV.................................................................................>
+
+1.0	U	0	HIT	-
+1.0	V	Enter	5	5	<WYUWYUWYUYWYUWUWYUV.................................................................................>
+
+1.0	V	0	HIT	-
+1.0	H	Enter	11	1	<WYUWYUWYUYWYUWUWYUV.................................................................................>
+
+1.0	H	0	MISS	-
+1.0	W	2	HIT	-
+1.0	Y	11	HIT	-
+1.0	V	4	MISS	-
+1.0	U	25	MISS	-
+1.0	V	0	HIT	-
+1.0	H	4	MISS	-
+
+1.0	U	Exit	11	1	<WYUWYUWYUYWYUWUWYUVHVUH.............................................................................>
+1.1	W	2	HIT	-
+1.1	Y	11	HIT	-
+1.1	V	4	HIT	-
+1.1	U	29	MISS	-
+1.1	V	3	MISS	-
+1.1	H	5	MISS	-
+1.2	W	8	MISS	-
+1.2	Y	12	MISS	-
+1.2	V	4	HIT	-
+1.2	U	30	MISS	-
+1.2	V	1	MISS	-
+1.2	H	5	HIT	-
+1.3	W	7	MISS	-
+1.3	Y	11	HIT	-
+1.3	V	4	HIT	-
+1.3	U	30	HIT	-
+1.3	V	4	HIT	-
+1.3	H	4	HIT	-
+1.4	W	10	HIT	-
+1.4	Y	8	MISS	-
+1.4	V	0	HIT	-
+1.4	U	30	HIT	-
+1.4	V	3	HIT	-
+1.4	H	5	HIT	-
+1.5	W	10	HIT	-
+1.5	Y	9	MISS	-
+1.5	V	3	HIT	-
+1.5	U	7	MISS	-
+1.5	V	1	HIT	-
+1.5	H	5	HIT	-
+1.6	W	10	HIT	-
+1.6	Y	8	HIT	-
+1.6	V	4	HIT	-
+1.6	U	8	MISS	-
+1.6	V	0	HIT	-
+1.6	H	1	MISS	-
+1.7	W	0	HIT	-
+1.7	Y	7	MISS	-
+1.7	V	4	HIT	-
+1.7	U	7	HIT	-
+1.7	V	1	HIT	-
+1.7	H	1	HIT	-
+1.8	W	8	HIT	-
+1.8	Y	6	MISS	-
+1.8	V	4	HIT	-
+1.8	U	2	MISS	-
+1.8	V	4	HIT	-
+1.8	H	1	HIT	-
+1.9	W	10	HIT	-
+1.9	Y	6	HIT	-
+1.9	V	3	HIT	-
+1.9	U	30	HIT	-
+1.9	V	2	MISS	-
+1.9	H	2	MISS	-
+2.0	W	0	HIT	-
+2.0	Y	16	MISS	-
+2.0	U	0	MISS	-
+2.0	V	3	HIT	-
+
+2.0	V	Exit	5	1	<WY.WY.WY.YWY.W.WY.VHV.HUVHWYUVWYYUUHYYUVHYU.........................................................>
+
+2.0	H	Exit	11	1	<WY.WY.WY.YWY.W.WY..H..HU.HWYU.WYYUUHYYU.HYU.........................................................>
+2.1	W	10	HIT	-
+2.1	Y	3	HIT	-
+2.1	U	26	MISS	-
+2.1	V	4	MISS	-
+2.2	W	0	HIT	-
+2.2	Y	12	HIT	-
+2.2	U	17	MISS	-
+2.2	V	3	MISS	-
+2.3	W	2	HIT	-
+2.3	Y	13	MISS	-
+2.3	U	9	MISS	-
+2.3	V	4	HIT	-
+2.4	W	2	HIT	-
+2.4	Y	16	HIT	-
+2.4	U	9	HIT	-
+2.4	V	0	MISS	-
+2.5	W	1	MISS	-
+2.5	Y	0	HIT	-
+2.5	U	12	MISS	-
+2.5	V	3	HIT	-
+2.6	W	1	HIT	-
+2.6	Y	1	HIT	-
+2.6	U	13	MISS	-
+2.6	V	0	HIT	-
+2.7	W	1	HIT	-
+2.7	Y	16	HIT	-
+2.7	U	14	MISS	-
+2.7	V	4	HIT	-
+2.8	W	2	HIT	-
+2.8	Y	0	HIT	-
+2.8	U	14	HIT	-
+2.8	V	3	HIT	-
+2.9	W	2	HIT	-
+2.9	Y	13	HIT	-
+2.9	U	4	MISS	-
+2.9	V	2	MISS	-
+3.0	A	Enter	17	2	<WY.WY.WY.YWY.W.WY......U..WYU.WYYUU.YYU..YUUVUVYUVWUUUUV............................................>
+
+3.0	A	0	MISS	-
+3.0	M	Enter	5	4	<WY.WY.WY.YWY.W.WY......U..WYU.WYYUU.YYU..YUUVUVYUVWUUUUVA...........................................>
+
+3.0	M	0	MISS	-
+3.0	K	Enter	17	2	<WY.WY.WY.YWY.W.WY......U..WYU.WYYUU.YYU..YUUVUVYUVWUUUUVAM..........................................>
+
+3.0	K	0	MISS	-
+3.0	Y	0	HIT	-
+3.0	V	3	HIT	-
+3.0	A	12	MISS	-
+3.0	M	1	MISS	-
+3.0	K	12	MISS	-
+
+3.0	W	Exit	11	3	<WY.WY.WY.YWY.W.WY......U..WYU.WYYUU.YYU..YUUVUVYUVWUUUUVAMKAMK......................................>
+
+3.0	U	Exit	31	2	<.Y..Y..Y.Y.Y....Y......U...YU..YYUU.YYU..YUUVUVYUV.UUUUVAMKAMK......................................>
+3.1	Y	7	HIT	-
+3.1	V	2	HIT	-
+3.1	A	7	MISS	-
+3.1	M	1	HIT	-
+3.1	K	6	MISS	-
+3.2	Y	6	HIT	-
+3.2	V	3	HIT	-
+3.2	A	8	MISS	-
+3.2	M	0	HIT	-
+3.2	K	11	MISS	-
+3.3	Y	7	HIT	-
+3.3	V	0	HIT	-
+3.3	A	8	HIT	-
+3.3	M	2	MISS	-
+3.3	K	11	HIT	-
+3.4	Y	6	HIT	-
+3.4	V	2	HIT	-
+3.4	A	9	MISS	-
+3.4	M	2	HIT	-
+3.4	K	2	MISS	-
+3.5	Y	6	HIT	-
+3.5	V	4	HIT	-
+3.5	A	10	MISS	-
+3.5	M	0	HIT	-
+3.5	K	14	MISS	-
+3.6	Y	6	HIT	-
+3.6	V	2	HIT	-
+3.6	A	9	HIT	-
+3.6	M	0	HIT	-
+3.6	K	7	MISS	-
+3.7	Y	5	HIT	-
+3.7	V	2	HIT	-
+3.7	A	10	HIT	-
+3.7	M	2	HIT	-
+3.7	K	7	HIT	-
+3.8	Y	15	MISS	-
+3.8	V	2	HIT	-
+3.8	A	2	MISS	-
+3.8	M	4	MISS	-
+3.8	K	16	MISS	-
+3.9	Y	14	MISS	-
+3.9	V	2	HIT	-
+3.9	A	3	MISS	-
+3.9	M	3	MISS	-
+3.9	K	9	MISS	-
+4.0	B	Enter	11	1	<.Y..Y..Y.Y.Y....Y..........Y...YY...YY...Y..V.VY.V.....VAMKAMKAKAKMAKAKKYAMKYAMK....................>
+
+4.0	B	0	MISS	-
+4.0	E	Enter	11	4	<.Y..Y..Y.Y.Y....Y..........Y...YY...YY...Y..V.VY.V.....VAMKAMKAKAKMAKAKKYAMKYAMKB...................>
+
+4.0	E	0	MISS	-
+4.0	R	Enter	5	1	<.Y..Y..Y.Y.Y....Y..........Y...YY...YY...Y..V.VY.V.....VAMKAMKAKAKMAKAKKYAMKYAMKBE..................>
+
+4.0	R	0	MISS	-
+4.0	Y	15	HIT	-
+4.0	V	3	HIT	-
+4.0	A	6	MISS	-
+4.0	M	3	HIT	-
+4.0	K	9	HIT	-
+4.0	B	3	MISS	-
+4.0	E	3	MISS	-
+4.0	R	4	MISS	-
+4.1	Y	15	HIT	-
+4.1	V	3	HIT	-
+4.1	A	9	HIT	-
+4.1	M	4	HIT	-
+4.1	K	8	MISS	-
+4.1	B	7	MISS	-
+4.1	E	9	MISS	-
+4.1	R	4	HIT	-
+4.2	Y	14	HIT	-
+4.2	V	4	HIT	-
+4.2	A	8	HIT	-
+4.2	M	0	HIT	-
+4.2	K	16	HIT	-
+4.2	B	5	MISS	-
+4.2	E	3	HIT	-
+4.2	R	0	HIT	-
+4.3	Y	3	HIT	-
+4.3	V	0	HIT	-
+4.3	A	0	HIT	-
+4.3	M	0	HIT	-
+4.3	K	16	HIT	-
+4.3	B	6	MISS	-
+4.3	E	5	MISS	-
+4.3	R	2	MISS	-
+4.4	Y	2	MISS	-
+4.4	V	0	HIT	-
+4.4	A	14	MISS	-
+4.4	M	4	HIT	-
+4.4	K	15	MISS	-
+4.4	B	5	HIT	-
+4.4	E	5	HIT	-
+4.4	R	3	MISS	-
+4.5	Y	1	HIT	-
+4.5	V	0	HIT	-
+4.5	A	14	HIT	-
+4.5	M	0	HIT	-
+4.5	K	11	HIT	-
+4.5	B	7	HIT	-
+4.5	E	0	HIT	-
+4.5	R	3	HIT	-
+4.6	Y	0	HIT	-
+4.6	V	4	HIT	-
+4.6	A	15	MISS	-
+4.6	M	3	HIT	-
+4.6	K	12	HIT	-
+4.6	B	4	MISS	-
+4.6	E	0	HIT	-
+4.6	R	3	HIT	-
+4.7	Y	16	HIT	-
+4.7	V	2	HIT	-
+4.7	A	7	HIT	-
+4.7	M	0	HIT	-
+4.7	K	13	MISS	-
+4.7	B	4	HIT	-
+4.7	E	10	MISS	-
+4.7	R	4	HIT	-
+4.8	Y	14	HIT	-
+4.8	V	3	HIT	-
+4.8	A	8	HIT	-
+4.8	M	0	MISS	-
+4.8	K	14	HIT	-
+4.8	B	8	MISS	-
+4.8	E	4	MISS	-
+4.8	R	4	HIT	-
+4.9	Y	11	HIT	-
+4.9	V	3	MISS	-
+4.9	A	3	HIT	-
+4.9	M	1	HIT	-
+4.9	K	14	HIT	-
+4.9	B	6	HIT	-
+4.9	E	8	MISS	-
+4.9	R	0	HIT	-
+5.0	V	1	MISS	-
+5.0	M	4	HIT	-
+5.0	E	8	HIT	-
+
+5.0	Y	Exit	17	5	<.E..Y..Y.Y.Y....V..........Y...YY...YB...Y..E.MY.V.....KAEKAMKAKAKMAKAKKYAMKYAMKBERABERKBEBBERYAKRAB>
+
+5.0	A	Exit	17	2	<.E..............V....................B......E.M..V.....KAEKAMKAKAKMAKAKK.AMK.AMKBERABERKBEBBER.AKRAB>
+
+5.0	K	Exit	17	2	<.E..............V....................B......E.M..V.....K.EK.MK.K.KM.K.KK..MK..MKBER.BERKBEBBER..KR.B>
+
+5.0	B	Exit	11	1	<.E..............V....................B......E.M..V.......E..M.....M.......M...M.BER.BER.BEBBER...R.B>
+
+5.0	R	Exit	5	1	<.E..............V...........................E.M..V.......E..M.....M.......M...M..ER..ER..E..ER...R..>
+5.1	V	0	MISS	-
+5.1	M	3	HIT	-
+5.1	E	2	MISS	-
+5.2	V	4	MISS	-
+5.2	M	1	MISS	-
+5.2	E	4	HIT	-
+5.3	V	3	HIT	-
+5.3	M	1	HIT	-
+5.3	E	3	HIT	-
+5.4	V	0	HIT	-
+5.4	M	1	HIT	-
+5.4	E	4	HIT	-
+5.5	V	1	HIT	-
+5.5	M	0	HIT	-
+5.5	E	6	MISS	-
+5.6	V	3	HIT	-
+5.6	M	1	HIT	-
+5.6	E	7	MISS	-
+5.7	V	0	HIT	-
+5.7	M	3	MISS	-
+5.7	E	7	HIT	-
+5.8	V	2	MISS	-
+5.8	M	3	HIT	-
+5.8	E	8	HIT	-
+5.9	V	0	MISS	-
+5.9	M	4	MISS	-
+5.9	E	8	MISS	-
+6.0	M	0	HIT	-
+6.0	E	4	MISS	-
+
+6.0	V	Exit	5	5	<.V..............V...........................E.E..M.......E..V.....E.......V...E..M...E...E..E.......>
+6.1	M	2	MISS	-
+6.1	E	4	HIT	-
+6.2	M	3	MISS	-
+6.2	E	4	MISS	-
+6.3	M	4	HIT	-
+6.3	E	4	HIT	-
+6.4	M	1	MISS	-
+6.4	E	3	MISS	-
+6.5	M	0	MISS	-
+6.5	E	3	HIT	-
+6.6	M	4	MISS	-
+6.6	E	3	MISS	-
+6.7	M	4	HIT	-
+6.7	E	10	HIT	-
+6.8	M	0	HIT	-
+6.8	E	0	MISS	-
+6.9	M	3	HIT	-
+6.9	E	0	HIT	-
+7.0	E	3	HIT	-
+
+7.0	M	Exit	5	4	<............................................E.M..M.......E........M...........E..M...E...E..M.......>
+7.1	E	2	HIT	-
+7.2	E	6	MISS	-
+7.3	E	5	MISS	-
+7.4	E	5	HIT	-
+7.5	E	6	HIT	-
+7.6	E	0	MISS	-
+7.7	E	6	MISS	-
+7.8	E	4	MISS	-
+7.9	E	8	HIT	-
+
+8.0	E	Exit	11	4	<............................................E............E....................E......E...E..........>
+
+Simulation Results:
+Total References: 333
+Hits: 199, Misses: 134
+Hit Ratio: 0.60, Miss Ratio: 0.40
+Processes Swapped In: 13
+
+Running MFU Algorithm Simulation
+Time	Process	Page	Result	Evicted
+----	-------	----	------	-------
+0.0	W	Enter	11	3	<....................................................................................................>
+
+0.0	W	0	MISS	-
+0.0	Y	Enter	17	5	<W...................................................................................................>
+
+0.0	Y	0	MISS	-
+0.0	U	Enter	11	1	<WY..................................................................................................>
+
+0.0	U	0	MISS	-
+0.0	W	3	MISS	-
+0.0	Y	5	MISS	-
+0.0	U	2	MISS	-
+0.1	W	3	HIT	-
+0.1	Y	5	HIT	-
+0.1	U	6	MISS	-
+0.2	W	3	HIT	-
+0.2	Y	4	MISS	-
+0.2	U	5	MISS	-
+0.3	W	3	HIT	-
+0.3	Y	16	MISS	-
+0.3	U	6	HIT	-
+0.4	W	5	MISS	-
+0.4	Y	16	HIT	-
+0.4	U	7	MISS	-
+0.5	W	5	HIT	-
+0.5	Y	15	MISS	-
+0.5	U	10	MISS	-
+0.6	W	6	MISS	-
+0.6	Y	15	HIT	-
+0.6	U	0	HIT	-
+0.7	W	8	MISS	-
+0.7	Y	14	MISS	-
+0.7	U	10	HIT	-
+0.8	W	9	MISS	-
+0.8	Y	14	HIT	-
+0.8	U	0	HIT	-
+0.9	W	10	MISS	-
+0.9	Y	5	HIT	-
+0.9	U	1	MISS	-
+1.0	V	Enter	5	1	<WYUWYUUYUYWUYUWWYWWU................................................................................>
+
+1.0	V	0	MISS	-
+1.0	U	Enter	31	2	<WYUWYUUYUYWUYUWWYWWUV...............................................................................>
+
+1.0	U	0	HIT	-
+1.0	V	Enter	5	5	<WYUWYUUYUYWUYUWWYWWUV...............................................................................>
+
+1.0	V	0	HIT	-
+1.0	H	Enter	11	1	<WYUWYUUYUYWUYUWWYWWUV...............................................................................>
+
+1.0	H	0	MISS	-
+1.0	W	9	HIT	-
+1.0	Y	1	MISS	-
+1.0	V	1	MISS	-
+1.0	U	19	MISS	-
+1.0	V	1	HIT	-
+1.0	H	2	MISS	-
+
+1.0	U	Exit	11	1	<WYUWYUUYUYWUYUWWYWWUVHYVUH..........................................................................>
+1.1	W	9	HIT	-
+1.1	Y	14	HIT	-
+1.1	V	0	HIT	-
+1.1	U	28	MISS	-
+1.1	V	2	MISS	-
+1.1	H	3	MISS	-
+1.2	W	9	HIT	-
+1.2	Y	14	HIT	-
+1.2	V	0	HIT	-
+1.2	U	27	MISS	-
+1.2	V	4	MISS	-
+1.2	H	8	MISS	-
+1.3	W	1	MISS	-
+1.3	Y	13	MISS	-
+1.3	V	2	HIT	-
+1.3	U	24	MISS	-
+1.3	V	3	MISS	-
+1.3	H	10	MISS	-
+1.4	W	9	HIT	-
+1.4	Y	2	MISS	-
+1.4	V	1	HIT	-
+1.4	U	23	MISS	-
+1.4	V	4	HIT	-
+1.4	H	0	HIT	-
+1.5	W	9	HIT	-
+1.5	Y	2	HIT	-
+1.5	V	4	HIT	-
+1.5	U	23	HIT	-
+1.5	V	1	HIT	-
+1.5	H	10	HIT	-
+1.6	W	9	HIT	-
+1.6	Y	5	HIT	-
+1.6	V	0	HIT	-
+1.6	U	23	HIT	-
+1.6	V	2	HIT	-
+1.6	H	5	MISS	-
+1.7	W	7	MISS	-
+1.7	Y	6	MISS	-
+1.7	V	2	HIT	-
+1.7	U	30	MISS	-
+1.7	V	1	HIT	-
+1.7	H	1	MISS	-
+1.8	W	8	HIT	-
+1.8	Y	5	HIT	-
+1.8	V	4	HIT	-
+1.8	U	29	MISS	-
+1.8	V	4	HIT	-
+1.8	H	1	HIT	-
+1.9	W	2	MISS	-
+1.9	Y	6	HIT	-
+1.9	V	0	HIT	-
+1.9	U	6	MISS	-
+1.9	V	3	HIT	-
+1.9	H	3	HIT	-
+2.0	W	9	HIT	-
+2.0	Y	6	HIT	-
+2.0	U	15	MISS	-
+2.0	V	3	HIT	-
+
+2.0	V	Exit	5	1	<WY.WY..Y.YW.Y.WWYWW.VHYV.HUVHUVHWYUVHYUHWYUHUWUU....................................................>
+
+2.0	H	Exit	11	1	<WY.WY..Y.YW.Y.WWYWW..HY..HU.HU.HWYU.HYUHWYUHUWUU....................................................>
+2.1	W	5	HIT	-
+2.1	Y	6	HIT	-
+2.1	U	15	HIT	-
+2.1	V	2	MISS	-
+2.2	W	6	HIT	-
+2.2	Y	7	MISS	-
+2.2	U	14	MISS	-
+2.2	V	3	MISS	-
+2.3	W	6	HIT	-
+2.3	Y	8	MISS	-
+2.3	U	8	MISS	-
+2.3	V	3	HIT	-
+2.4	W	10	HIT	-
+2.4	Y	9	MISS	-
+2.4	U	9	MISS	-
+2.4	V	4	MISS	-
+2.5	W	0	HIT	-
+2.5	Y	5	HIT	-
+2.5	U	8	HIT	-
+2.5	V	2	HIT	-
+2.6	W	10	HIT	-
+2.6	Y	4	HIT	-
+2.6	U	7	MISS	-
+2.6	V	2	HIT	-
+2.7	W	9	HIT	-
+2.7	Y	6	HIT	-
+2.7	U	6	HIT	-
+2.7	V	4	HIT	-
+2.8	W	8	HIT	-
+2.8	Y	9	HIT	-
+2.8	U	7	HIT	-
+2.8	V	0	MISS	-
+2.9	W	8	HIT	-
+2.9	Y	7	HIT	-
+2.9	U	8	HIT	-
+2.9	V	1	MISS	-
+3.0	A	Enter	17	2	<WY.WY..Y.YW.Y.WWYWW...Y...U..U..WYU..YU.WYU.UWUUVYUVYUYUVUVV........................................>
+
+3.0	A	0	MISS	-
+3.0	M	Enter	5	4	<WY.WY..Y.YW.Y.WWYWW...Y...U..U..WYU..YU.WYU.UWUUVYUVYUYUVUVVA.......................................>
+
+3.0	M	0	MISS	-
+3.0	K	Enter	17	2	<WY.WY..Y.YW.Y.WWYWW...Y...U..U..WYU..YU.WYU.UWUUVYUVYUYUVUVVAM......................................>
+
+3.0	K	0	MISS	-
+3.0	Y	14	HIT	-
+3.0	V	0	HIT	-
+3.0	A	3	MISS	-
+3.0	M	4	MISS	-
+3.0	K	9	MISS	-
+
+3.0	W	Exit	11	3	<WY.WY..Y.YW.Y.WWYWW...Y...U..U..WYU..YU.WYU.UWUUVYUVYUYUVUVVAMKAMK..................................>
+
+3.0	U	Exit	31	2	<.Y..Y..Y.Y..Y...Y.....Y...U..U...YU..YU..YU.U.UUVYUVYUYUVUVVAMKAMK..................................>
+3.1	Y	13	HIT	-
+3.1	V	0	HIT	-
+3.1	A	3	HIT	-
+3.1	M	4	HIT	-
+3.1	K	5	MISS	-
+3.2	Y	13	HIT	-
+3.2	V	4	HIT	-
+3.2	A	3	HIT	-
+3.2	M	1	MISS	-
+3.2	K	5	HIT	-
+3.3	Y	13	HIT	-
+3.3	V	4	HIT	-
+3.3	A	4	MISS	-
+3.3	M	2	MISS	-
+3.3	K	8	MISS	-
+3.4	Y	4	HIT	-
+3.4	V	4	HIT	-
+3.4	A	14	MISS	-
+3.4	M	3	MISS	-
+3.4	K	7	MISS	-
+3.5	Y	3	MISS	-
+3.5	V	3	HIT	-
+3.5	A	13	MISS	-
+3.5	M	4	HIT	-
+3.5	K	1	MISS	-
+3.6	Y	3	HIT	-
+3.6	V	3	HIT	-
+3.6	A	14	HIT	-
+3.6	M	4	HIT	-
+3.6	K	0	HIT	-
+3.7	Y	2	HIT	-
+3.7	V	2	HIT	-
+3.7	A	15	MISS	-
+3.7	M	1	HIT	-
+3.7	K	16	MISS	-
+3.8	Y	3	HIT	-
+3.8	V	3	HIT	-
+3.8	A	14	HIT	-
+3.8	M	2	HIT	-
+3.8	K	16	HIT	-
+3.9	Y	14	HIT	-
+3.9	V	2	HIT	-
+3.9	A	14	HIT	-
+3.9	M	4	HIT	-
+3.9	K	0	HIT	-
+4.0	B	Enter	11	1	<.Y..Y..Y.Y..Y...Y.....Y..........Y...Y...Y......VY.VY.Y.V.VVAMKAMKKMAMKAMKYAKAK.....................>
+
+4.0	B	0	MISS	-
+4.0	E	Enter	11	4	<.Y..Y..Y.Y..Y...Y.....Y..........Y...Y...Y......VY.VY.Y.V.VVAMKAMKKMAMKAMKYAKAKB....................>
+
+4.0	E	0	MISS	-
+4.0	R	Enter	5	1	<.Y..Y..Y.Y..Y...Y.....Y..........Y...Y...Y......VY.VY.Y.V.VVAMKAMKKMAMKAMKYAKAKBE...................>
+
+4.0	R	0	MISS	-
+4.0	Y	15	HIT	-
+4.0	V	1	HIT	-
+4.0	A	4	HIT	-
+4.0	M	2	HIT	-
+4.0	K	11	MISS	-
+4.0	B	6	MISS	-
+4.0	E	9	MISS	-
+4.0	R	1	MISS	-
+4.1	Y	6	HIT	-
+4.1	V	0	HIT	-
+4.1	A	5	MISS	-
+4.1	M	0	HIT	-
+4.1	K	10	MISS	-
+4.1	B	7	MISS	-
+4.1	E	2	MISS	-
+4.1	R	0	HIT	-
+4.2	Y	5	HIT	-
+4.2	V	4	HIT	-
+4.2	A	13	HIT	-
+4.2	M	4	HIT	-
+4.2	K	9	HIT	-
+4.2	B	0	HIT	-
+4.2	E	0	HIT	-
+4.2	R	4	MISS	-
+4.3	Y	6	HIT	-
+4.3	V	0	HIT	-
+4.3	A	14	HIT	-
+4.3	M	2	HIT	-
+4.3	K	8	HIT	-
+4.3	B	1	MISS	-
+4.3	E	0	HIT	-
+4.3	R	0	HIT	-
+4.4	Y	7	HIT	-
+4.4	V	0	HIT	-
+4.4	A	13	HIT	-
+4.4	M	1	HIT	-
+4.4	K	7	HIT	-
+4.4	B	6	HIT	-
+4.4	E	9	HIT	-
+4.4	R	2	MISS	-
+4.5	Y	8	HIT	-
+4.5	V	0	HIT	-
+4.5	A	12	MISS	-
+4.5	M	1	HIT	-
+4.5	K	8	HIT	-
+4.5	B	5	MISS	-
+4.5	E	9	HIT	-
+4.5	R	0	HIT	-
+4.6	Y	7	HIT	-
+4.6	V	1	HIT	-
+4.6	A	13	HIT	-
+4.6	M	1	HIT	-
+4.6	K	7	HIT	-
+4.6	B	4	MISS	-
+4.6	E	10	MISS	-
+4.6	R	0	HIT	-
+4.7	Y	7	HIT	-
+4.7	V	3	HIT	-
+4.7	A	12	HIT	-
+4.7	M	0	HIT	-
+4.7	K	0	HIT	-
+4.7	B	6	HIT	-
+4.7	E	6	MISS	-
+4.7	R	4	HIT	-
+4.8	Y	6	HIT	-
+4.8	V	0	HIT	-
+4.8	A	11	MISS	-
+4.8	M	3	HIT	-
+4.8	K	16	HIT	-
+4.8	B	7	HIT	-
+4.8	E	5	MISS	-
+4.8	R	4	HIT	-
+4.9	Y	5	HIT	-
+4.9	V	4	HIT	-
+4.9	A	12	HIT	-
+4.9	M	1	HIT	-
+4.9	K	5	HIT	-
+4.9	B	6	HIT	-
+4.9	E	10	HIT	-
+4.9	R	3	MISS	-
+5.0	V	0	HIT	-
+5.0	M	2	HIT	-
+5.0	E	0	HIT	-
+
+5.0	Y	Exit	17	5	<.Y..R..Y.Y..Y...Y.....Y..........Y...Y...Y......VY.VY.Y.V.VVAMKAMKKMAMKAMKYAKAKBERKBERAKBERBRABBEEAE>
+
+5.0	A	Exit	17	2	<....R...........................................V..V....V.VVAMKAMKKMAMKAMK.AKAKBERKBERAKBERBRABBEEAE>
+
+5.0	K	Exit	17	2	<....R...........................................V..V....V.VV.MK.MKKM.MK.MK..K.KBERKBER.KBERBR.BBEE.E>
+
+5.0	B	Exit	11	1	<....R...........................................V..V....V.VV.M..M..M.M..M......BER.BER..BERBR.BBEE.E>
+
+5.0	R	Exit	5	1	<....R...........................................V..V....V.VV.M..M..M.M..M.......ER..ER...ER.R...EE.E>
+5.1	V	1	HIT	-
+5.1	M	3	HIT	-
+5.1	E	3	MISS	-
+5.2	V	1	HIT	-
+5.2	M	1	HIT	-
+5.2	E	3	HIT	-
+5.3	V	2	HIT	-
+5.3	M	4	HIT	-
+5.3	E	2	HIT	-
+5.4	V	4	HIT	-
+5.4	M	2	HIT	-
+5.4	E	3	HIT	-
+5.5	V	2	HIT	-
+5.5	M	0	HIT	-
+5.5	E	5	HIT	-
+5.6	V	1	HIT	-
+5.6	M	4	HIT	-
+5.6	E	0	HIT	-
+5.7	V	2	HIT	-
+5.7	M	0	HIT	-
+5.7	E	0	HIT	-
+5.8	V	4	HIT	-
+5.8	M	1	HIT	-
+5.8	E	0	HIT	-
+5.9	V	0	MISS	-
+5.9	M	4	HIT	-
+5.9	E	2	HIT	-
+6.0	M	2	HIT	-
+6.0	E	9	HIT	-
+
+6.0	V	Exit	5	5	<................................................V..V....V.EV.M..M..M.M..M.......E...E....E......EE.E>
+6.1	M	2	HIT	-
+6.1	E	8	MISS	-
+6.2	M	4	MISS	-
+6.2	E	9	HIT	-
+6.3	M	3	HIT	-
+6.3	E	0	HIT	-
+6.4	M	2	HIT	-
+6.4	E	0	HIT	-
+6.5	M	1	MISS	-
+6.5	E	10	HIT	-
+6.6	M	3	HIT	-
+6.6	E	10	HIT	-
+6.7	M	2	MISS	-
+6.7	E	0	MISS	-
+6.8	M	1	HIT	-
+6.8	E	10	HIT	-
+6.9	M	1	HIT	-
+6.9	E	6	HIT	-
+7.0	E	5	HIT	-
+
+7.0	M	Exit	5	4	<..........................................................E..E..E..M.M..M.......M...E....E......EE.E>
+7.1	E	4	MISS	-
+7.2	E	3	HIT	-
+7.3	E	5	HIT	-
+7.4	E	1	MISS	-
+7.5	E	9	MISS	-
+7.6	E	5	HIT	-
+7.7	E	5	HIT	-
+7.8	E	4	HIT	-
+7.9	E	3	MISS	-
+
+8.0	E	Exit	11	4	<..........................................................E..E..E...................E....E......EE.E>
+
+Simulation Results:
+Total References: 333
+Hits: 221, Misses: 112
+Hit Ratio: 0.66, Miss Ratio: 0.34
+Processes Swapped In: 13
+
+Running MFU Algorithm Simulation
+Time	Process	Page	Result	Evicted
+----	-------	----	------	-------
+0.0	W	Enter	11	3	<....................................................................................................>
+
+0.0	W	0	MISS	-
+0.0	Y	Enter	17	5	<W...................................................................................................>
+
+0.0	Y	0	MISS	-
+0.0	U	Enter	11	1	<WY..................................................................................................>
+
+0.0	U	0	MISS	-
+0.0	W	0	HIT	-
+0.0	Y	12	MISS	-
+0.0	U	0	HIT	-
+0.1	W	7	MISS	-
+0.1	Y	12	HIT	-
+0.1	U	3	MISS	-
+0.2	W	8	MISS	-
+0.2	Y	11	MISS	-
+0.2	U	6	MISS	-
+0.3	W	7	HIT	-
+0.3	Y	12	HIT	-
+0.3	U	6	HIT	-
+0.4	W	7	HIT	-
+0.4	Y	11	HIT	-
+0.4	U	7	MISS	-
+0.5	W	6	MISS	-
+0.5	Y	14	MISS	-
+0.5	U	7	HIT	-
+0.6	W	6	HIT	-
+0.6	Y	13	MISS	-
+0.6	U	8	MISS	-
+0.7	W	10	MISS	-
+0.7	Y	13	HIT	-
+0.7	U	8	HIT	-
+0.8	W	0	HIT	-
+0.8	Y	6	MISS	-
+0.8	U	2	MISS	-
+0.9	W	0	HIT	-
+0.9	Y	1	MISS	-
+0.9	U	0	HIT	-
+1.0	V	Enter	5	1	<WYUYWUWYUUWYYUWYUY..................................................................................>
+
+1.0	V	0	MISS	-
+1.0	U	Enter	31	2	<WYUYWUWYUUWYYUWYUYV.................................................................................>
+
+1.0	U	0	HIT	-
+1.0	V	Enter	5	5	<WYUYWUWYUUWYYUWYUYV.................................................................................>
+
+1.0	V	0	HIT	-
+1.0	H	Enter	11	1	<WYUYWUWYUUWYYUWYUYV.................................................................................>
+
+1.0	H	0	MISS	-
+1.0	W	1	MISS	-
+1.0	Y	7	MISS	-
+1.0	V	2	MISS	-
+1.0	U	8	HIT	-
+1.0	V	3	MISS	-
+1.0	H	3	MISS	-
+
+1.0	U	Exit	11	1	<WYUYWUWYUUWYYUWYUYVHWYVVH...........................................................................>
+1.1	W	5	MISS	-
+1.1	Y	6	HIT	-
+1.1	V	4	MISS	-
+1.1	U	10	MISS	-
+1.1	V	3	HIT	-
+1.1	H	4	MISS	-
+1.2	W	9	MISS	-
+1.2	Y	0	HIT	-
+1.2	V	1	MISS	-
+1.2	U	10	HIT	-
+1.2	V	3	HIT	-
+1.2	H	8	MISS	-
+1.3	W	10	HIT	-
+1.3	Y	0	HIT	-
+1.3	V	1	HIT	-
+1.3	U	10	HIT	-
+1.3	V	4	HIT	-
+1.3	H	8	HIT	-
+1.4	W	0	HIT	-
+1.4	Y	16	MISS	-
+1.4	V	4	HIT	-
+1.4	U	2	MISS	-
+1.4	V	3	HIT	-
+1.4	H	9	MISS	-
+1.5	W	1	HIT	-
+1.5	Y	16	HIT	-
+1.5	V	3	HIT	-
+1.5	U	2	HIT	-
+1.5	V	2	HIT	-
+1.5	H	9	HIT	-
+1.6	W	0	HIT	-
+1.6	Y	15	MISS	-
+1.6	V	2	HIT	-
+1.6	U	24	MISS	-
+1.6	V	4	HIT	-
+1.6	H	8	HIT	-
+1.7	W	0	HIT	-
+1.7	Y	14	HIT	-
+1.7	V	1	HIT	-
+1.7	U	24	HIT	-
+1.7	V	0	HIT	-
+1.7	H	8	HIT	-
+1.8	W	0	HIT	-
+1.8	Y	4	MISS	-
+1.8	V	4	HIT	-
+1.8	U	25	MISS	-
+1.8	V	3	HIT	-
+1.8	H	9	HIT	-
+1.9	W	6	HIT	-
+1.9	Y	5	MISS	-
+1.9	V	4	HIT	-
+1.9	U	24	HIT	-
+1.9	V	1	HIT	-
+1.9	H	9	HIT	-
+2.0	W	10	HIT	-
+2.0	Y	6	HIT	-
+2.0	U	24	HIT	-
+2.0	V	4	HIT	-
+
+2.0	V	Exit	5	1	<WY.YW.WY..WYY.WY.YVHWYVVHWVUHWVHYUHYUYUY............................................................>
+
+2.0	H	Exit	11	1	<WY.YW.WY..WYY.WY.Y.HWY..HW.UHW.HYUHYUYUY............................................................>
+2.1	W	7	HIT	-
+2.1	Y	11	HIT	-
+2.1	U	24	HIT	-
+2.1	V	1	MISS	-
+2.2	W	8	HIT	-
+2.2	Y	12	HIT	-
+2.2	U	24	HIT	-
+2.2	V	2	MISS	-
+2.3	W	8	HIT	-
+2.3	Y	11	HIT	-
+2.3	U	24	HIT	-
+2.3	V	1	HIT	-
+2.4	W	7	HIT	-
+2.4	Y	10	MISS	-
+2.4	U	0	MISS	-
+2.4	V	2	HIT	-
+2.5	W	8	HIT	-
+2.5	Y	11	HIT	-
+2.5	U	30	MISS	-
+2.5	V	0	MISS	-
+2.6	W	7	HIT	-
+2.6	Y	8	MISS	-
+2.6	U	29	MISS	-
+2.6	V	1	HIT	-
+2.7	W	8	HIT	-
+2.7	Y	8	HIT	-
+2.7	U	7	MISS	-
+2.7	V	0	HIT	-
+2.8	W	9	HIT	-
+2.8	Y	7	HIT	-
+2.8	U	13	MISS	-
+2.8	V	1	HIT	-
+2.9	W	8	HIT	-
+2.9	Y	7	HIT	-
+2.9	U	14	MISS	-
+2.9	V	2	HIT	-
+3.0	A	Enter	17	2	<WY.YW.WY..WYY.WY.Y..WY...W.U.W..YU.YUYUYVVYUUVYUUUU.................................................>
+
+3.0	A	0	MISS	-
+3.0	M	Enter	5	4	<WY.YW.WY..WYY.WY.Y..WY...W.U.W..YU.YUYUYVVYUUVYUUUUA................................................>
+
+3.0	M	0	MISS	-
+3.0	K	Enter	17	2	<WY.YW.WY..WYY.WY.Y..WY...W.U.W..YU.YUYUYVVYUUVYUUUUAM...............................................>
+
+3.0	K	0	MISS	-
+3.0	Y	13	HIT	-
+3.0	V	3	MISS	-
+3.0	A	15	MISS	-
+3.0	M	2	MISS	-
+3.0	K	11	MISS	-
+
+3.0	W	Exit	11	3	<WY.YW.WY..WYY.WY.Y..WY...W.U.W..YU.YUYUYVVYUUVYUUUUAMKVAMK..........................................>
+
+3.0	U	Exit	31	2	<.Y.Y...Y...YY..Y.Y...Y.....U....YU.YUYUYVVYUUVYUUUUAMKVAMK..........................................>
+3.1	Y	12	HIT	-
+3.1	V	3	HIT	-
+3.1	A	14	MISS	-
+3.1	M	1	MISS	-
+3.1	K	12	MISS	-
+3.2	Y	13	HIT	-
+3.2	V	1	HIT	-
+3.2	A	6	MISS	-
+3.2	M	0	HIT	-
+3.2	K	11	HIT	-
+3.3	Y	14	HIT	-
+3.3	V	4	MISS	-
+3.3	A	6	HIT	-
+3.3	M	4	MISS	-
+3.3	K	11	HIT	-
+3.4	Y	13	HIT	-
+3.4	V	4	HIT	-
+3.4	A	4	MISS	-
+3.4	M	0	HIT	-
+3.4	K	11	HIT	-
+3.5	Y	4	HIT	-
+3.5	V	1	HIT	-
+3.5	A	4	HIT	-
+3.5	M	2	HIT	-
+3.5	K	12	HIT	-
+3.6	Y	5	HIT	-
+3.6	V	0	HIT	-
+3.6	A	3	MISS	-
+3.6	M	3	MISS	-
+3.6	K	15	MISS	-
+3.7	Y	5	HIT	-
+3.7	V	4	HIT	-
+3.7	A	3	HIT	-
+3.7	M	3	HIT	-
+3.7	K	14	MISS	-
+3.8	Y	6	HIT	-
+3.8	V	3	HIT	-
+3.8	A	10	MISS	-
+3.8	M	0	HIT	-
+3.8	K	15	HIT	-
+3.9	Y	7	HIT	-
+3.9	V	3	HIT	-
+3.9	A	6	HIT	-
+3.9	M	1	HIT	-
+3.9	K	3	MISS	-
+4.0	B	Enter	11	1	<.Y.Y...Y...YY..Y.Y...Y..........Y..Y.Y.YVVY..VY....AMKVAMKAMKAVMAAMKKAK.............................>
+
+4.0	B	0	MISS	-
+4.0	E	Enter	11	4	<.Y.Y...Y...YY..Y.Y...Y..........Y..Y.Y.YVVY..VY....AMKVAMKAMKAVMAAMKKAKB............................>
+
+4.0	E	0	MISS	-
+4.0	R	Enter	5	1	<.Y.Y...Y...YY..Y.Y...Y..........Y..Y.Y.YVVY..VY....AMKVAMKAMKAVMAAMKKAKBE...........................>
+
+4.0	R	0	MISS	-
+4.0	Y	6	HIT	-
+4.0	V	4	HIT	-
+4.0	A	9	MISS	-
+4.0	M	4	HIT	-
+4.0	K	3	HIT	-
+4.0	B	10	MISS	-
+4.0	E	0	HIT	-
+4.0	R	3	MISS	-
+4.1	Y	5	HIT	-
+4.1	V	0	HIT	-
+4.1	A	13	MISS	-
+4.1	M	4	HIT	-
+4.1	K	14	HIT	-
+4.1	B	2	MISS	-
+4.1	E	0	HIT	-
+4.1	R	3	HIT	-
+4.2	Y	4	HIT	-
+4.2	V	3	HIT	-
+4.2	A	13	HIT	-
+4.2	M	4	HIT	-
+4.2	K	15	HIT	-
+4.2	B	1	MISS	-
+4.2	E	10	MISS	-
+4.2	R	0	HIT	-
+4.3	Y	5	HIT	-
+4.3	V	3	HIT	-
+4.3	A	13	HIT	-
+4.3	M	4	HIT	-
+4.3	K	4	MISS	-
+4.3	B	1	HIT	-
+4.3	E	8	MISS	-
+4.3	R	4	MISS	-
+4.4	Y	6	HIT	-
+4.4	V	1	HIT	-
+4.4	A	12	MISS	-
+4.4	M	3	HIT	-
+4.4	K	4	HIT	-
+4.4	B	0	HIT	-
+4.4	E	9	MISS	-
+4.4	R	4	HIT	-
+4.5	Y	6	HIT	-
+4.5	V	0	HIT	-
+4.5	A	13	HIT	-
+4.5	M	4	HIT	-
+4.5	K	4	HIT	-
+4.5	B	0	HIT	-
+4.5	E	8	HIT	-
+4.5	R	1	MISS	-
+4.6	Y	6	HIT	-
+4.6	V	0	HIT	-
+4.6	A	14	HIT	-
+4.6	M	2	HIT	-
+4.6	K	3	HIT	-
+4.6	B	10	HIT	-
+4.6	E	3	MISS	-
+4.6	R	3	HIT	-
+4.7	Y	7	HIT	-
+4.7	V	1	HIT	-
+4.7	A	13	HIT	-
+4.7	M	1	HIT	-
+4.7	K	3	HIT	-
+4.7	B	5	MISS	-
+4.7	E	3	HIT	-
+4.7	R	4	HIT	-
+4.8	Y	8	HIT	-
+4.8	V	3	HIT	-
+4.8	A	14	HIT	-
+4.8	M	4	HIT	-
+4.8	K	2	MISS	-
+4.8	B	4	MISS	-
+4.8	E	3	HIT	-
+4.8	R	3	HIT	-
+4.9	Y	9	MISS	-
+4.9	V	3	HIT	-
+4.9	A	14	HIT	-
+4.9	M	3	HIT	-
+4.9	K	3	HIT	-
+4.9	B	5	HIT	-
+4.9	E	4	MISS	-
+4.9	R	4	HIT	-
+5.0	F	Enter	31	5	<.Y.Y...Y...YY..Y.Y...Y..........Y..Y.Y.YVVY..VY....AMKVAMKAMKAVMAAMKKAKBERABRABBEKERAEREBKBYE.......>
+
+5.0	F	0	MISS	-
+5.0	L	Enter	11	5	<.Y.Y...Y...YY..Y.Y...Y..........Y..Y.Y.YVVY..VY....AMKVAMKAMKAVMAAMKKAKBERABRABBEKERAEREBKBYEF......>
+
+5.0	L	0	MISS	-
+5.0	M	Enter	31	1	<.Y.Y...Y...YY..Y.Y...Y..........Y..Y.Y.YVVY..VY....AMKVAMKAMKAVMAAMKKAKBERABRABBEKERAEREBKBYEFL.....>
+
+5.0	M	0	HIT	-
+5.0	V	2	HIT	-
+5.0	M	4	HIT	-
+5.0	E	2	MISS	-
+5.0	F	21	MISS	-
+5.0	L	0	HIT	-
+5.0	M	0	HIT	-
+
+5.0	Y	Exit	17	5	<.Y.Y...Y...YY..Y.Y...Y..........Y..Y.Y.YVVY..VY....AMKVAMKAMKAVMAAMKKAKBERABRABBEKERAEREBKBYEFLEF...>
+
+5.0	A	Exit	17	2	<........................................VV...V.....AMKVAMKAMKAVMAAMKKAKBERABRABBEKERAEREBKB.EFLEF...>
+
+5.0	K	Exit	17	2	<........................................VV...V......MKV.MK.MK.VM..MKK.KBER.BR.BBEKER.EREBKB.EFLEF...>
+
+5.0	B	Exit	11	1	<........................................VV...V......M.V.M..M..VM..M....BER.BR.BBE.ER.EREB.B.EFLEF...>
+
+5.0	R	Exit	5	1	<........................................VV...V......M.V.M..M..VM..M.....ER..R...E.ER.ERE....EFLEF...>
+5.1	V	1	HIT	-
+5.1	M	3	HIT	-
+5.1	E	1	MISS	-
+5.1	F	20	MISS	-
+5.1	L	6	MISS	-
+5.1	M	30	MISS	-
+5.2	V	0	HIT	-
+5.2	M	2	HIT	-
+5.2	E	1	HIT	-
+5.2	F	25	MISS	-
+5.2	L	0	HIT	-
+5.2	M	0	HIT	-
+5.3	V	0	HIT	-
+5.3	M	3	HIT	-
+5.3	E	2	HIT	-
+5.3	F	26	MISS	-
+5.3	L	0	HIT	-
+5.3	M	0	HIT	-
+5.4	V	1	MISS	-
+5.4	M	2	HIT	-
+5.4	E	1	HIT	-
+5.4	F	2	MISS	-
+5.4	L	10	MISS	-
+5.4	M	30	HIT	-
+5.5	V	1	HIT	-
+5.5	M	2	HIT	-
+5.5	E	5	MISS	-
+5.5	F	14	MISS	-
+5.5	L	7	MISS	-
+5.5	M	16	MISS	-
+5.6	V	1	HIT	-
+5.6	M	2	MISS	-
+5.6	E	9	HIT	-
+5.6	F	27	MISS	-
+5.6	L	8	MISS	-
+5.6	M	16	HIT	-
+5.7	V	1	MISS	-
+5.7	M	4	MISS	-
+5.7	E	6	MISS	-
+5.7	F	27	HIT	-
+5.7	L	9	MISS	-
+5.7	M	17	MISS	-
+5.8	V	1	HIT	-
+5.8	M	0	MISS	-
+5.8	E	5	HIT	-
+5.8	F	26	HIT	-
+5.8	L	4	MISS	-
+5.8	M	18	MISS	-
+5.9	V	0	MISS	-
+5.9	M	4	HIT	-
+5.9	E	4	HIT	-
+5.9	F	22	MISS	-
+5.9	L	3	MISS	-
+5.9	M	18	HIT	-
+6.0	M	0	HIT	-
+6.0	E	5	MISS	-
+6.0	F	21	HIT	-
+6.0	L	4	HIT	-
+
+6.0	V	Exit	5	5	<........................................EF...L......M.F.E..L..LF..L.....L.......E.M..M.V....FFLEFMFL>
+
+6.0	M	Exit	31	1	<........................................EF...L......M.F.E..L..LF..L.....L.......E.M..M......FFLEFMFL>
+6.1	M	0	MISS	-
+6.1	E	10	HIT	-
+6.1	F	21	HIT	-
+6.1	L	6	HIT	-
+6.2	M	4	MISS	-
+6.2	E	9	MISS	-
+6.2	F	21	MISS	-
+6.2	L	6	HIT	-
+6.3	M	4	HIT	-
+6.3	E	10	MISS	-
+6.3	F	21	HIT	-
+6.3	L	6	MISS	-
+6.4	M	0	HIT	-
+6.4	E	0	MISS	-
+6.4	F	4	MISS	-
+6.4	L	5	MISS	-
+6.5	M	0	MISS	-
+6.5	E	0	HIT	-
+6.5	F	3	MISS	-
+6.5	L	5	MISS	-
+6.6	M	1	MISS	-
+6.6	E	0	MISS	-
+6.6	F	3	HIT	-
+6.6	L	5	MISS	-
+6.7	M	3	MISS	-
+6.7	E	0	MISS	-
+6.7	F	2	HIT	-
+6.7	L	4	MISS	-
+6.8	M	3	MISS	-
+6.8	E	9	HIT	-
+6.8	F	1	MISS	-
+6.8	L	1	MISS	-
+6.9	M	1	MISS	-
+6.9	E	1	MISS	-
+6.9	F	1	HIT	-
+6.9	L	2	MISS	-
+7.0	E	1	HIT	-
+7.0	F	3	MISS	-
+7.0	L	2	HIT	-
+
+7.0	M	Exit	5	4	<........................................FF...L........F.E..L..LL..L.....L.......L...........FFLLF.FE>
+7.1	E	0	MISS	-
+7.1	F	3	HIT	-
+7.1	L	2	MISS	-
+7.2	E	10	HIT	-
+7.2	F	3	MISS	-
+7.2	L	2	HIT	-
+7.3	E	10	MISS	-
+7.3	F	2	MISS	-
+7.3	L	7	HIT	-
+7.4	E	2	MISS	-
+7.4	F	1	MISS	-
+7.4	L	3	HIT	-
+7.5	E	1	MISS	-
+7.5	F	1	HIT	-
+7.5	L	1	MISS	-
+7.6	E	2	HIT	-
+7.6	F	1	MISS	-
+7.6	L	1	HIT	-
+7.7	E	3	MISS	-
+7.7	F	0	HIT	-
+7.7	L	5	HIT	-
+7.8	E	5	HIT	-
+7.8	F	1	HIT	-
+7.8	L	7	MISS	-
+7.9	E	4	MISS	-
+7.9	F	30	MISS	-
+7.9	L	6	HIT	-
+8.0	F	29	MISS	-
+8.0	L	7	HIT	-
+
+8.0	E	Exit	11	4	<........................................EF...L........F.E..L..FL..L.....L.......E...........FFELF.FF>
+8.1	F	13	MISS	-
+8.1	L	8	HIT	-
+8.2	F	14	HIT	-
+8.2	L	0	MISS	-
+8.3	F	15	MISS	-
+8.3	L	0	HIT	-
+8.4	F	14	MISS	-
+8.4	L	0	MISS	-
+8.5	F	15	HIT	-
+8.5	L	10	HIT	-
+8.6	F	14	HIT	-
+8.6	L	2	MISS	-
+8.7	F	15	HIT	-
+8.7	L	2	HIT	-
+8.8	F	8	MISS	-
+8.8	L	2	HIT	-
+8.9	F	4	HIT	-
+8.9	L	1	MISS	-
+9.0	F	4	HIT	-
+9.0	L	8	MISS	-
+9.1	F	1	MISS	-
+9.1	L	5	MISS	-
+9.2	F	26	MISS	-
+9.2	L	4	HIT	-
+9.3	F	26	HIT	-
+9.3	L	5	MISS	-
+9.4	F	27	MISS	-
+9.4	L	5	HIT	-
+9.5	F	27	HIT	-
+9.5	L	6	MISS	-
+9.6	F	28	MISS	-
+9.6	L	9	HIT	-
+9.7	F	5	MISS	-
+9.7	L	8	HIT	-
+9.8	F	6	MISS	-
+9.8	L	6	HIT	-
+9.9	F	29	HIT	-
+9.9	L	8	MISS	-
+
+10.0	F	Exit	31	5	<.........................................L...F........F....F..FF..F.....F...................FF.LF.FF>
+
+10.0	L	Exit	11	5	<.........................................L.....................................................L....>
+
+Simulation Results:
+Total References: 446
+Hits: 262, Misses: 184
+Hit Ratio: 0.59, Miss Ratio: 0.41
+Processes Swapped In: 16
+
+Average Results for MFU Algorithm 
+Average Hit Ratio: 0.64
+Average Miss Ratio: 0.36
+Average Processes Swapped-In: 13.60
