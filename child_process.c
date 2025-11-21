@@ -4,11 +4,7 @@
 #include <stdio.h>
 #include <sys/time.h>
 
-#define RUNTIME 30
-#define BUFFER_SIZE 256
-#define TOTAL_CHILD_PROCESSES 5
-#define SLEEP_TIME 3
-
+#include "project6.h"
 
 void run_child_process(int process_num, int write_fd) {
     struct timeval start, now;
