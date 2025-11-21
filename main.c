@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <stdio.h>
 
 #include "project6.h"
 
@@ -9,17 +10,24 @@ int main(int argc, char argv[]) {
         int pipefds[2];
 	int cpid;
 
-	pipe(pipefd);
-	cpid = fork();
+	if (pipe(pipefds) == -1) {
+	    fprintf(stderr, "pipe failed\n");
+	    return -1;
+	}
 	
-	if (cpid == 0) {
+	cpid = fork();
+	if (cpid < 0) {
+	    /* error */
+	    fprintf(stderr, "fork failed\n");
+	    return -1;
+	} else if (cpid == 0) {
 	    /* child */
-	    close(pipefd[READ_END]);
-	    run_child_process(i, pipefd[WRITE_END]);
+	    close(pipefds[READ_END]);
+	    run_child_process(i, pipefds[WRITE_END]);
 	} else {
 	    /* parent */
-	    close(pipefd[WRITE_END]);
-	    childfds[i-1] = pipefd[READ_END];
+	    close(pipefds[WRITE_END]);
+	    childfds[i-1] = pipefds[READ_END];
 	}
     }
 }
