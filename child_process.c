@@ -3,6 +3,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <sys/time.h>
+#include <string.h>
 
 #include "project6.h"
 
@@ -33,7 +34,10 @@ void run_child_process(int process_num, int write_fd) {
         if (fgets(line, BUFFER_SIZE, stdin) == NULL) {
           break;
         }
+        // trailing newline convert to null terminator
+        line[strcspn(line, "\n")] = '\0';
       } else {
+        // sleep between 0-2s
         sleep(rand() % SLEEP_TIME);
       }
 
@@ -41,7 +45,7 @@ void run_child_process(int process_num, int write_fd) {
       int sec = (int)(now.tv_sec - start.tv_sec);
       double msec = (now.tv_usec - start.tv_usec) / 1000.0;
 
-      char message[BUFFER_SIZE];
+      char message[BUFFER_SIZE * 2];
       ++total_messages;
       if (process_num == 5) {
         snprintf(message, sizeof(message), 
