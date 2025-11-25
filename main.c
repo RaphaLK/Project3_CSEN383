@@ -4,12 +4,14 @@
 #include <sys/time.h>
 #include <string.h>
 #include <sys/wait.h>
+#include <signal.h>
 
 #include "project6.h"
 
 int main(int argc, char argv[])
 {
 	int childfds[TOTAL_CHILD_PROCESSES];
+	pid_t child_pids[TOTAL_CHILD_PROCESSES];
 	struct timeval start, now;
 	gettimeofday(&start, NULL);
 
@@ -50,6 +52,7 @@ int main(int argc, char argv[])
 			/* parent */
 			close(pipefds[WRITE_END]);
 			childfds[i - 1] = pipefds[READ_END];
+			child_pids[i - 1] = cpid; 
 		}
 	}
 
@@ -59,6 +62,21 @@ int main(int argc, char argv[])
 
 	while (active_processes > 0)
 	{
+		gettimeofday(&now, NULL);
+		double parent_lifetime = (now.tv_sec - start.tv_sec) + (now.tv_usec - start.tv_usec) / 1000000.0;
+
+		// check runtime
+		if (parent_lifetime >= RUNTIME)
+		{
+			fprintf(stderr, "Terminate process after 30s\n");
+			// Kill all child processes at 30s
+			for (int i = 0; i < TOTAL_CHILD_PROCESSES; i++)
+			{
+				kill(child_pids[i], SIGTERM);
+			}
+			break;
+		}
+
 		fd_set readfds;
 		FD_ZERO(&readfds);
 

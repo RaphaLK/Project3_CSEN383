@@ -1,113 +1,120 @@
-0:00.346: 0:0.065: Child 3 message 1
-0:00.392: 0:0.027: Child 4 message 1
-0:00.398: 0:0.153: Child 3 message 2
-1:00.411: 1:0.079: Child 2 message 1
-2:00.417: 2:0.108: Child 1 message 1
-2:0.211: Child 1 message 2
-2:00.451: 2:0.222: Child 2 message 2
-2:00.454: 2:0.146: Child 4 message 2
-2:00.471: 2:0.221: Child 3 message 3
-2:00.558: 2:0.281: Child 3 message 4
-2:00.569: 2:0.209: Child 4 message 3
-3:00.570: 3:0.310: Child 2 message 3
-4:00.472: 4:0.296: Child 1 message 3
-4:00.566: 4:0.315: Child 3 message 5
-4:00.573: 4:0.276: Child 4 message 4
-4:00.633: 4:0.343: Child 4 message 5
-5:00.574: 5:0.354: Child 2 message 4
-5:00.690: 5:0.406: Child 4 message 6
-5:660.374: 5:659.984: Child 5: #1 text msg from the terminal: 26:00.648: 6:0.416: Child 1 message 4
-6:00.698: 6:0.528: Child 1 message 5
-6:00.710: 6:0.448: Child 2 message 5
-6:00.723: 6:0.403: Child 3 message 6
-7:00.741: 7:0.528: Child 2 message 6
-7:00.774: 7:0.470: Child 3 message 7
-7:00.777: 7:0.443: Child 4 message 7
-7:00.790: 7:0.589: Child 2 message 7
-8:-122.428: 8:-122.765: Child 5: #2 text msg from the terminal: 38:00.866: 8:0.597: Child 1 message 6
-8:00.891: 8:0.526: Child 4 message 8
-8:0.596: Child 4 message 9
-8:00.897: 8:0.622: Child 3 message 8
-8:00.947: 8:0.701: Child 3 message 9
-8:777.472: 8:777.111: Child 5: #3 text msg from the terminal: 49:01.026: 9:0.685: Child 2 message 8
-9:805.608: 9:805.252: Child 5: #4 text msg from the terminal: 110:00.971: 10:0.682: Child 1 message 7
-10:0.770: Child 1 message 8
-10:01.031: 10:0.833: Child 1 message 9
-10:01.050: 10:0.787: Child 2 message 9
-10:01.060: 10:0.677: Child 4 message 10
-10:01.073: 10:0.795: Child 3 message 10
-11:01.160: 11:0.934: Child 1 message 10
-11:01.222: 11:0.912: Child 3 message 11
-11:709.939: 11:709.580: Child 5: #5 text msg from the terminal: 212:01.109: 12:0.767: Child 4 message 11
-12:01.155: 12:0.898: Child 2 message 10
-13:-62.758: 13:-63.094: Child 5: #6 text msg from the terminal: 313:01.278: 13:1.053: Child 1 message 11
-13:01.337: 13:1.026: Child 3 message 12
-14:-110.888: 14:-111.256: Child 5: #7 text msg from the terminal: 414:01.224: 14:0.991: Child 2 message 11
-14:01.267: 14:0.871: Child 4 message 12
-14:01.338: 14:1.162: Child 1 message 12
-14:01.404: 14:1.236: Child 1 message 13
-15:-29.089: 15:-29.428: Child 5: #8 text msg from the terminal: 115:01.427: 15:1.120: Child 3 message 13
-16:01.293: 16:0.975: Child 4 message 13
-16:01.317: 16:1.083: Child 2 message 12
-16:01.454: 16:1.202: Child 3 message 14
-16:01.471: 16:1.305: Child 1 message 14
-16:01.531: 16:1.370: Child 1 message 15
-16:01.553: 16:1.391: Child 1 message 16
-16:01.626: 16:1.460: Child 1 message 17
-16:01.691: 16:1.525: Child 1 message 18
-16:87.936: 16:87.596: Child 5: #9 text msg from the terminal: 217:-90.801: 17:-91.164: Child 5: #10 text msg from the terminal: 417:01.873: 17:1.611: Child 1 message 19
-18:01.410: 18:1.183: Child 2 message 13
-18:01.463: 18:1.087: Child 4 message 14
-18:1.173: Child 4 message 15
-18:01.478: 18:1.260: Child 2 message 14
-18:01.558: 18:1.327: Child 2 message 15
-18:01.606: 18:1.276: Child 3 message 15
-18:01.617: 18:1.360: Child 2 message 16
-19:01.654: 19:1.428: Child 2 message 17
-19:01.887: 19:1.711: Child 1 message 20
-19:762.442: 19:762.089: Child 5: #11 text msg from the terminal: 520:01.685: 20:1.378: Child 3 message 16
-20:01.758: 20:1.298: Child 4 message 16
-20:01.777: 20:1.536: Child 2 message 18
-20:01.785: 20:1.454: Child 3 message 17
-20:1.516: Child 3 message 18
-20:787.432: 20:787.067: Child 5: #12 text msg from the terminal: 621:01.794: 21:1.445: Child 4 message 17
-21:01.865: 21:1.597: Child 3 message 19
-21:01.877: 21:1.624: Child 3 message 20
-21:01.991: 21:1.794: Child 1 message 21
-21:02.014: 21:1.742: Child 2 message 19
-21:02.073: 21:1.838: Child 2 message 20
-22:01.971: 22:1.705: Child 3 message 21
-22:02.021: 22:1.555: Child 4 message 18
-22:1.642: Child 4 message 19
-22:02.245: 22:1.952: Child 2 message 21
-22:2.036: Child 2 message 22
-22:244.571: 22:244.186: Child 5: #13 text msg from the terminal: 223:02.081: 23:1.792: Child 3 message 22
-23:02.132: 23:1.736: Child 4 message 20
-23:1.837: Child 4 message 21
-23:02.177: 23:1.911: Child 1 message 22
-23:02.185: 23:1.867: Child 3 message 23
-23:02.194: 23:1.906: Child 4 message 22
-23:125.838: 23:125.488: Child 5: #14 text msg from the terminal: 124:02.232: 24:1.943: Child 3 message 24
-24:02.293: 24:1.982: Child 4 message 23
-24:02.340: 24:2.118: Child 2 message 23
-25:02.188: 25:1.994: Child 1 message 23
-25:105.494: 25:105.158: Child 5: #15 text msg from the terminal: 326:02.294: 26:2.025: Child 3 message 25
-26:02.342: 26:2.056: Child 4 message 24
-26:02.408: 26:2.198: Child 2 message 24
-26:02.505: 26:2.256: Child 2 message 25
-26:558.983: 26:558.613: Child 5: #16 text msg from the terminal: 427:02.727: 27:2.376: Child 1 message 24
-27:02.781: 27:2.421: Child 2 message 26
-27:2.508: Child 2 message 27
-27:02.789: 27:2.290: Child 3 message 26
-27:524.884: 27:524.525: Child 5: #17 text msg from the terminal: 528:02.569: 28:2.154: Child 4 message 25
-29:02.555: 29:2.183: Child 5: #18 text msg from the terminal: 629:02.611: 29:2.244: Child 4 message 26
-29:02.766: 29:2.510: Child 1 message 25
-29:02.808: 29:2.421: Child 3 message 27
-29:2.495: Child 3 message 28
-29:02.823: 29:2.579: Child 2 message 28
-29:02.874: 29:2.655: Child 2 message 29
-30:03.033: 30:2.762: Child 2 message 30
-31:02.708: 31:2.344: Child 4 message 27
-31:02.775: 31:2.603: Child 1 message 26
-31:02.925: 31:2.641: Child 3 message 29
-32:-123.654: 32:-124.009: Child 5: #19 text msg from the terminal: 1
+0:00.846: 0:00.095: Child 1 message 1
+0:00.924: 0:00.084: Child 2 message 1
+0:00.935: 0:00.098: Child 3 message 1
+0:00.984: 0:00.101: Child 4 message 1
+1:00.955: 1:00.256: Child 3 message 2
+2:00.669: 2:00.247: Child 1 message 2
+2:00.747: 2:00.247: Child 2 message 2
+2:01.016: 2:00.347: Child 3 message 3
+2:01.060: 2:00.244: Child 4 message 2
+2:01.113: 2:00.309: Child 4 message 3
+3:00.870: 3:00.327: Child 2 message 3
+4:00.748: 4:00.335: Child 1 message 3
+4:00.913: 4:00.426: Child 2 message 4
+4:01.076: 4:00.419: Child 3 message 4
+4:01.173: 4:00.372: Child 4 message 4
+5:01.304: 5:00.597: Child 3 message 5
+5:01.382: 5:00.699: Child 3 message 6
+5:513.424: 5:512.461: Child 5: #1 text msg from the terminal: Hello
+6:01.091: 6:00.593: Child 1 message 4
+6:01.189: 6:00.682: Child 2 message 5
+6:01.294: 6:00.452: Child 4 message 5
+6:01.332: 6:00.834: Child 2 message 6
+6:01.466: 6:00.788: Child 3 message 7
+7:01.462: 7:00.947: Child 2 message 7
+7:01.521: 7:01.032: Child 2 message 8
+7:01.608: 7:01.110: Child 2 message 9
+7:01.676: 7:01.180: Child 2 message 10
+7:181.474: 7:180.487: Child 5: #2 text msg from the terminal: testing
+8:01.179: 8:00.739: Child 1 message 5
+8:01.238: 8:00.824: Child 1 message 6
+8:01.353: 8:00.528: Child 4 message 6
+8:01.551: 8:00.874: Child 3 message 8
+8:01.764: 8:01.259: Child 2 message 11
+9:01.547: 9:00.621: Child 4 message 7
+9:932.460: 9:931.545: Child 5: #3 text msg from the terminal: oh very cool
+10:01.561: 10:01.044: Child 1 message 7
+10:01.134: Child 1 message 8
+10:01.653: 10:00.825: Child 4 message 8
+10:01.738: 10:01.076: Child 3 message 9
+10:01.835: 10:01.343: Child 2 message 12
+10:01.846: 10:01.157: Child 3 message 10
+11:01.616: 11:01.200: Child 1 message 9
+11:01.657: 11:01.271: Child 1 message 10
+11:01.716: 11:00.914: Child 4 message 9
+11:01.773: 11:00.974: Child 4 message 10
+11:01.829: 11:01.030: Child 4 message 11
+11:01.871: 11:01.222: Child 3 message 11
+12:01.733: 12:01.332: Child 1 message 11
+12:01.780: 12:01.397: Child 1 message 12
+12:01.890: 12:01.089: Child 4 message 12
+12:01.900: 12:01.414: Child 2 message 13
+12:01.952: 12:01.475: Child 2 message 14
+12:01.958: 12:01.153: Child 4 message 13
+12:02.006: 12:01.211: Child 4 message 14
+13:01.903: 13:01.477: Child 1 message 13
+13:01.955: 13:01.567: Child 1 message 14
+13:02.035: 13:01.636: Child 1 message 15
+13:02.047: 13:01.377: Child 3 message 12
+13:02.111: 13:01.292: Child 4 message 15
+14:02.166: 14:01.642: Child 2 message 15
+14:950.279: 14:949.337: Child 5: #4 text msg from the terminal: yeah this works
+15:02.189: 15:01.735: Child 1 message 16
+15:02.232: 15:01.485: Child 3 message 13
+15:02.245: 15:01.752: Child 2 message 16
+15:02.251: 15:01.393: Child 4 message 16
+15:02.279: 15:01.470: Child 4 message 17
+16:02.407: 16:01.568: Child 4 message 18
+17:02.283: 17:01.849: Child 1 message 17
+17:02.342: 17:01.588: Child 3 message 14
+17:02.360: 17:01.854: Child 2 message 17
+17:02.477: 17:01.661: Child 4 message 19
+17:02.546: 17:01.736: Child 4 message 20
+18:02.843: 18:01.906: Child 4 message 21
+19:02.448: 19:01.946: Child 1 message 18
+19:02.017: Child 1 message 19
+19:02.481: 19:01.786: Child 3 message 15
+19:02.659: 19:02.168: Child 2 message 18
+19:02.754: 19:02.231: Child 2 message 19
+19:02.771: 19:02.286: Child 2 message 20
+20:02.654: 20:02.120: Child 1 message 20
+20:02.886: 20:02.364: Child 2 message 21
+20:02.930: 20:02.445: Child 2 message 22
+20:02.941: 20:02.109: Child 4 message 22
+20:418.665: 20:417.748: Child 5: #5 text msg from the terminal: great
+21:02.674: 21:01.898: Child 3 message 16
+22:02.765: 22:02.337: Child 1 message 21
+22:02.828: 22:02.105: Child 3 message 17
+22:03.092: 22:02.260: Child 4 message 23
+22:03.148: 22:02.626: Child 2 message 23
+22:03.197: 22:02.708: Child 2 message 24
+22:03.258: 22:02.773: Child 2 message 25
+23:03.122: 23:02.591: Child 1 message 22
+23:02.685: Child 1 message 23
+24:02.957: 24:02.213: Child 3 message 18
+24:03.179: 24:02.363: Child 4 message 24
+24:03.352: 24:02.845: Child 2 message 26
+25:02.995: 25:02.311: Child 3 message 19
+25:03.048: 25:02.392: Child 3 message 20
+25:03.182: 25:02.776: Child 1 message 24
+25:03.247: 25:02.850: Child 1 message 25
+25:03.428: 25:02.922: Child 2 message 27
+25:986.658: 25:985.717: Child 5: #6 text msg from the terminal: should end at 30 right?
+26:03.163: 26:02.472: Child 3 message 21
+26:03.257: 26:02.447: Child 4 message 25
+26:03.496: 26:02.997: Child 2 message 28
+27:03.379: 27:02.933: Child 1 message 26
+27:03.427: 27:03.021: Child 1 message 27
+28:03.281: 28:02.587: Child 3 message 22
+28:03.335: 28:02.674: Child 3 message 23
+28:03.348: 28:02.543: Child 4 message 26
+28:03.509: 28:03.109: Child 1 message 28
+28:12.381: 28:03.070: Child 2 message 29
+28:03.106: Child 2 message 30
+28:03.172: Child 2 message 31
+28:03.233: Child 2 message 32
+28:03.293: Child 2 message 33
+28:750.554: 28:749.631: Child 5: #7 text msg from the terminal: cool
+29:03.698: 29:02.897: Child 3 message 24
+29:03.765: 29:03.315: Child 1 message 29
+30:03.484: 30:02.651: Child 4 message 27
